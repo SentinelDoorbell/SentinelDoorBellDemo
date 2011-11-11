@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* navS */ = {
+		activeExec = 0;
+		executables = (
+			AC0164BF146C66B50092251E /* navS */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = AC0164BF146C66B50092251E /* navS */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* navS */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* navS */,
+		);
+		codeSenseManager = AC0164DA146C66BD0092251E /* Code sense */;
+		executables = (
+			AC0164BF146C66B50092251E /* navS */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					2025,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 342663880;
+			PBXWorkspaceStateSaveDate = 342663880;
+		};
+		perUserProjectItems = {
+			AC01651A146C6FFE0092251E = AC01651A146C6FFE0092251E /* PBXTextBookmark */;
+			AC0165BC146C7F340092251E = AC0165BC146C7F340092251E /* PBXTextBookmark */;
+			AC0165BE146C7F340092251E = AC0165BE146C7F340092251E /* PBXTextBookmark */;
+			AC0165C8146C7FA50092251E = AC0165C8146C7FA50092251E /* PBXTextBookmark */;
+			AC0165D1146C803F0092251E = AC0165D1146C803F0092251E /* PBXTextBookmark */;
+			AC0165D2146C803F0092251E = AC0165D2146C803F0092251E /* PBXTextBookmark */;
+			AC01664D146C9AE40092251E = AC01664D146C9AE40092251E /* PBXTextBookmark */;
+			AC01665B146C9C840092251E = AC01665B146C9C840092251E /* PBXTextBookmark */;
+			AC016662146C9DE10092251E = AC016662146C9DE10092251E /* PBXTextBookmark */;
+			AC016663146C9DE10092251E = AC016663146C9DE10092251E /* PBXTextBookmark */;
+			AC01666A146C9E5F0092251E = AC01666A146C9E5F0092251E /* PBXTextBookmark */;
+			AC016676146C9F360092251E = AC016676146C9F360092251E /* PBXTextBookmark */;
+			AC01667B146C9FB80092251E = AC01667B146C9FB80092251E /* PBXTextBookmark */;
+			AC01667C146C9FB80092251E = AC01667C146C9FB80092251E /* PBXTextBookmark */;
+			AC016682146CA2B90092251E = AC016682146CA2B90092251E /* PBXTextBookmark */;
+			AC210FF9146CA2CB00E0757B /* PBXTextBookmark */ = AC210FF9146CA2CB00E0757B /* PBXTextBookmark */;
+		};
+		sourceControlManager = AC0164D9146C66BD0092251E /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	67A0CEB9146AECA30061F413 /* view0.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 536}";
+		};
+	};
+	67A0CEBA146AECA30061F413 /* view0.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1196}}";
+			sepNavSelRange = "{725, 0}";
+			sepNavVisRange = "{0, 2486}";
+		};
+	};
+	67A0CED3146AF3DE0061F413 /* viewSelectCamera.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 285}";
+		};
+	};
+	67A0CED4146AF3DE0061F413 /* viewSelectCamera.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3974, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4025, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4075, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4795}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 2444}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{38, 2139}";
+		};
+	};
+	67A0CEE0146AFD300061F413 /* viewLiveFeed.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{862, 47}";
+			sepNavVisRange = "{0, 1069}";
+		};
+	};
+	67A0CEE1146AFD300061F413 /* viewLiveFeed.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 4121}}";
+			sepNavSelRange = "{1248, 0}";
+			sepNavVisRange = "{0, 2878}";
+		};
+	};
+	67A0CF86146B1BC80061F413 /* configureCamera.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2291, 1103}}";
+			sepNavSelRange = "{277, 35}";
+			sepNavVisRange = "{0, 319}";
+		};
+	};
+	67A0CF87146B1BC80061F413 /* configureCamera.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4544, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4595, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4645, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5346}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 2535}}";
+			sepNavSelRange = "{5283, 0}";
+			sepNavVisRange = "{5079, 210}";
+		};
+	};
+	AC0164BF146C66B50092251E /* navS */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = navS;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	AC0164D9146C66BD0092251E /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	AC0164DA146C66BD0092251E /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	AC01651A146C6FFE0092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CF86146B1BC80061F413 /* configureCamera.h */;
+		name = "configureCamera.h: 17";
+		rLen = 35;
+		rLoc = 277;
+		rType = 0;
+		vrLen = 319;
+		vrLoc = 0;
+	};
+	AC0165B4146C7EBA0092251E /* defaultCamera.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{226, 0}";
+			sepNavVisRange = "{0, 226}";
+		};
+	};
+	AC0165B5146C7EBA0092251E /* defaultCamera.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3582, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3633, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3683, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4384}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 2262}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{0, 2009}";
+		};
+	};
+	AC0165BC146C7F340092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165B4146C7EBA0092251E /* defaultCamera.h */;
+		name = "defaultCamera.h: 17";
+		rLen = 0;
+		rLoc = 226;
+		rType = 0;
+		vrLen = 226;
+		vrLoc = 0;
+	};
+	AC0165BE146C7F340092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEB9146AECA30061F413 /* view0.h */;
+		name = "view0.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 536;
+		vrLoc = 0;
+	};
+	AC0165C1146C7F550092251E /* viewSnapshots.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 226}";
+		};
+	};
+	AC0165C2146C7F550092251E /* viewSnapshots.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3578, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3629, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3679, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4380}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 2262}}";
+			sepNavSelRange = "{319, 0}";
+			sepNavVisRange = "{0, 2005}";
+		};
+	};
+	AC0165C8146C7FA50092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165C1146C7F550092251E /* viewSnapshots.h */;
+		name = "viewSnapshots.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 226;
+		vrLoc = 0;
+	};
+	AC0165D1146C803F0092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165C2146C7F550092251E /* viewSnapshots.m */;
+		name = "viewSnapshots.m: 21";
+		rLen = 0;
+		rLoc = 319;
+		rType = 0;
+		vrLen = 2005;
+		vrLoc = 0;
+	};
+	AC0165D2146C803F0092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165B5146C7EBA0092251E /* defaultCamera.m */;
+		name = "defaultCamera.m: 21";
+		rLen = 0;
+		rLoc = 324;
+		rType = 0;
+		vrLen = 2009;
+		vrLoc = 0;
+	};
+	AC0165F9146C8F060092251E /* enterCameraParams.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavSelRange = "{776, 1}";
+			sepNavVisRange = "{0, 777}";
+		};
+	};
+	AC0165FA146C8F060092251E /* enterCameraParams.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2203, 1391}}";
+			sepNavSelRange = "{468, 0}";
+			sepNavVisRange = "{0, 2208}";
+		};
+	};
+	AC01664D146C9AE40092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165F9146C8F060092251E /* enterCameraParams.h */;
+		name = "enterCameraParams.h: 30";
+		rLen = 1;
+		rLoc = 776;
+		rType = 0;
+		vrLen = 777;
+		vrLoc = 0;
+	};
+	AC01665B146C9C840092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC0165FA146C8F060092251E /* enterCameraParams.m */;
+		name = "enterCameraParams.m: 21";
+		rLen = 0;
+		rLoc = 468;
+		rType = 0;
+		vrLen = 2208;
+		vrLoc = 0;
+	};
+	AC016662146C9DE10092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CED3146AF3DE0061F413 /* viewSelectCamera.h */;
+		name = "viewSelectCamera.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	AC016663146C9DE10092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CED4146AF3DE0061F413 /* viewSelectCamera.m */;
+		name = "viewSelectCamera.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2139;
+		vrLoc = 38;
+	};
+	AC01666A146C9E5F0092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CF87146B1BC80061F413 /* configureCamera.m */;
+		name = "configureCamera.m: 17";
+		rLen = 195;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 2153;
+		vrLoc = 0;
+	};
+	AC016676146C9F360092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEBA146AECA30061F413 /* view0.m */;
+		name = "view0.m: 25";
+		rLen = 0;
+		rLoc = 725;
+		rType = 0;
+		vrLen = 2486;
+		vrLoc = 0;
+	};
+	AC01667B146C9FB80092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEE0146AFD300061F413 /* viewLiveFeed.h */;
+		name = "viewLiveFeed.h: 40";
+		rLen = 47;
+		rLoc = 862;
+		rType = 0;
+		vrLen = 1069;
+		vrLoc = 0;
+	};
+	AC01667C146C9FB80092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEE1146AFD300061F413 /* viewLiveFeed.m */;
+		name = "viewLiveFeed.m: 50";
+		rLen = 38;
+		rLoc = 1682;
+		rType = 0;
+		vrLen = 3034;
+		vrLoc = 209;
+	};
+	AC016682146CA2B90092251E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEE1146AFD300061F413 /* viewLiveFeed.m */;
+		name = "viewLiveFeed.m: 33";
+		rLen = 1;
+		rLoc = 989;
+		rType = 0;
+		vrLen = 2887;
+		vrLoc = 0;
+	};
+	AC210FF9146CA2CB00E0757B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEE1146AFD300061F413 /* viewLiveFeed.m */;
+		name = "viewLiveFeed.m: 38";
+		rLen = 0;
+		rLoc = 1248;
+		rType = 0;
+		vrLen = 2878;
+		vrLoc = 0;
+	};
+}
