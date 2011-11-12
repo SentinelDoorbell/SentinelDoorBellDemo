@@ -15,6 +15,7 @@
 	IBOutlet UITextField *username;
 	IBOutlet UITextField *password;
 	IBOutlet UITextField *cameraname;
+	IBOutlet UISwitch *alarmEnableSwitch;
 }
 
 - (IBAction) ipaddressEntry:(id)sender;
@@ -26,5 +27,6 @@
 - (IBAction) onTouchOutsidePassword:(id)sender;
 - (IBAction) onTouchOutsideIPaddress:(id)sender;
 - (IBAction) onTouchOutsideUserName:(id)sender;
+- (IBAction) onTouchalarmSwitch:(id)sender;
 
 @end

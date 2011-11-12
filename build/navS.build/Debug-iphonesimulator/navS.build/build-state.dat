@@ -1,34 +1,34 @@
 TnavS
 v7
 r0
-t342664069.483857
+t342758992.604504
 cCheck dependencies
-cProcessInfoPlistFile /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app/Info.plist navS-Info.plist
-cCompileXIB /Users/researcher/Downloads/navS/iPad/MainWindow_iPad.xib
-cCompileXIB /Users/researcher/Downloads/navS/iPhone/MainWindow_iPhone.xib
-cCompileXIB /Users/researcher/Downloads/navS/view0.xib
-cCompileXIB /Users/researcher/Downloads/navS/viewSelectCamera.xib
-cCompileXIB /Users/researcher/Downloads/navS/viewLiveFeed.xib
-cCompileXIB /Users/researcher/Downloads/navS/configureCamera.xib
-cCompileXIB /Users/researcher/Downloads/navS/defaultCamera.xib
-cCompileXIB /Users/researcher/Downloads/navS/viewSnapshots.xib
-cCompileXIB /Users/researcher/Downloads/navS/enterCameraParams.xib
-cProcessPCH /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-dmgrdfaugenitrccwypyxhsofnji/navS_Prefix.pch.gch navS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cDataModelVersionCompile /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS.momd /Users/researcher/Downloads/navS/Shared/navS.xcdatamodeld
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o /Users/researcher/Downloads/navS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o /Users/researcher/Downloads/navS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o /Users/researcher/Downloads/navS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/researcher/Downloads/navS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o /Users/researcher/Downloads/navS/view0.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o /Users/researcher/Downloads/navS/viewSelectCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o /Users/researcher/Downloads/navS/viewLiveFeed.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o /Users/researcher/Downloads/navS/configureCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o /Users/researcher/Downloads/navS/defaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o /Users/researcher/Downloads/navS/viewSnapshots.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o /Users/researcher/Downloads/navS/enterCameraParams.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS normal i386
-cGenerateDSYMFile /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app.dSYM /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS
-cTouch /Users/researcher/Downloads/navS/build/Debug-iphonesimulator/navS.app
+cProcessInfoPlistFile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/Info.plist navS-Info.plist
+cCompileXIB /Users/researcher/Sentinel/iPad/MainWindow_iPad.xib
+cCompileXIB /Users/researcher/Sentinel/iPhone/MainWindow_iPhone.xib
+cCompileXIB /Users/researcher/Sentinel/view0.xib
+cCompileXIB /Users/researcher/Sentinel/viewSelectCamera.xib
+cCompileXIB /Users/researcher/Sentinel/viewLiveFeed.xib
+cCompileXIB /Users/researcher/Sentinel/configureCamera.xib
+cCompileXIB /Users/researcher/Sentinel/defaultCamera.xib
+cCompileXIB /Users/researcher/Sentinel/viewSnapshots.xib
+cCompileXIB /Users/researcher/Sentinel/enterCameraParams.xib
+cProcessPCH /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch.gch navS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS.momd /Users/researcher/Sentinel/Shared/navS.xcdatamodeld
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o /Users/researcher/Sentinel/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o /Users/researcher/Sentinel/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o /Users/researcher/Sentinel/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o /Users/researcher/Sentinel/view0.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o /Users/researcher/Sentinel/viewSelectCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o /Users/researcher/Sentinel/viewLiveFeed.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o /Users/researcher/Sentinel/configureCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o /Users/researcher/Sentinel/defaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o /Users/researcher/Sentinel/viewSnapshots.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o /Users/researcher/Sentinel/enterCameraParams.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS normal i386
+cGenerateDSYMFile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app.dSYM /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS
+cTouch /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004D75107D0000000000000110
@@ -983,6 +983,314 @@ c000000004EBAC218000000000000468C
 t1320862232
 s18060
 
+N/Users/researcher/Sentinel/Shared/AppDelegate_Shared.h
+c000000004EBD7DA0000000000000035F
+t1321041312
+s863
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/researcher/Sentinel/Shared/AppDelegate_Shared.m
+c000000004EBD7DA0000000000000175A
+t1321041312
+s5978
+i"AppDelegate_Shared.h"
+
+N/Users/researcher/Sentinel/Shared/main.m
+c000000004EBD7DA00000000000000164
+t1321041312
+s356
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/Shared/navS.xcdatamodeld
+c000000004EBD7DA00000000000000088
+t1321041312
+s136
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app
+t1321066192
+s578
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app.dSYM
+t1321066192
+s102
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/Info.plist
+t1321041312
+s893
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/MainWindow_iPad.nib
+t1321041312
+s982
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/MainWindow_iPhone.nib
+t1321041312
+s984
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/PkgInfo
+t1321041312
+s8
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/configureCamera.nib
+t1321041312
+s1019
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/defaultCamera.nib
+t1321041312
+s979
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/enterCameraParams.nib
+t1321051403
+s3412
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS
+t1321066192
+s66924
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS.momd
+t1321041312
+s136
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/view0.nib
+t1321041312
+s3264
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/viewLiveFeed.nib
+t1321041312
+s3731
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/viewSelectCamera.nib
+t1321041312
+s1019
+
+N/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/viewSnapshots.nib
+t1321041312
+s979
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o
+t1321041755
+s59100
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o
+t1321041755
+s47296
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o
+t1321041755
+s52280
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o
+t1321048424
+s45788
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o
+t1321041755
+s41628
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o
+t1321066192
+s57400
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o
+t1321041755
+s6292
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/navS.LinkFileList
+c000000004EBD7F5A00000000000004DF
+t1321041754
+s1247
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o
+t1321041755
+s44472
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o
+t1321046399
+s77900
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o
+t1321041755
+s45132
+
+N/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o
+t1321041755
+s41620
+
+N/Users/researcher/Sentinel/configureCamera.h
+c000000004EBD7DA0000000000000013F
+t1321041312
+s319
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/configureCamera.m
+c000000004EBD7DA000000000000014E2
+t1321041312
+s5346
+i"configureCamera.h"
+i"enterCameraParams.h"
+
+N/Users/researcher/Sentinel/configureCamera.xib
+c000000004EBD7DA0000000000000468C
+t1321041312
+s18060
+
+N/Users/researcher/Sentinel/defaultCamera.h
+c000000004EBD7DA000000000000000E2
+t1321041312
+s226
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/defaultCamera.m
+c000000004EBD7DA00000000000001120
+t1321041312
+s4384
+i"defaultCamera.h"
+
+N/Users/researcher/Sentinel/defaultCamera.xib
+c000000004EBD7DA00000000000001C72
+t1321041312
+s7282
+
+N/Users/researcher/Sentinel/enterCameraParams.h
+c000000004EBD98A5000000000000035C
+t1321048229
+s860
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/enterCameraParams.m
+c000000004EBDDECE0000000000002762
+t1321066190
+s10082
+i"enterCameraParams.h"
+
+N/Users/researcher/Sentinel/enterCameraParams.xib
+c000000004EBDA508000000000000AD57
+t1321051400
+s44375
+
+N/Users/researcher/Sentinel/iPad/AppDelegate_iPad.h
+c000000004EBD7DA00000000000000100
+t1321041312
+s256
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/researcher/Sentinel/iPad/AppDelegate_iPad.m
+c000000004EBD7DA0000000000000071D
+t1321041312
+s1821
+i"AppDelegate_iPad.h"
+
+N/Users/researcher/Sentinel/iPad/MainWindow_iPad.xib
+c000000004EBD7DA0000000000000389A
+t1321041312
+s14490
+
+N/Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.h
+c000000004EBD7DA00000000000000125
+t1321041312
+s293
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m
+c000000004EBD7DA00000000000000BBC
+t1321041312
+s3004
+i"AppDelegate_iPhone.h"
+i"view0.h"
+
+N/Users/researcher/Sentinel/iPhone/MainWindow_iPhone.xib
+c000000004EBD7DA00000000000003A88
+t1321041312
+s14984
+
+N/Users/researcher/Sentinel/navS_Prefix.pch
+c000000004EBD7DA000000000000000B1
+t1321041312
+s177
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/view0.h
+c000000004EBD7DA00000000000000218
+t1321041312
+s536
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/view0.m
+c000000004EBD7DA000000000000009E6
+t1321041312
+s2534
+i"view0.h"
+i"viewSelectCamera.h"
+i"configureCamera.h"
+i"defaultCamera.h"
+i"viewSnapshots.h"
+
+N/Users/researcher/Sentinel/view0.xib
+c000000004EBD7DA000000000000088E5
+t1321041312
+s35045
+
+N/Users/researcher/Sentinel/viewLiveFeed.h
+c000000004EBD7DA0000000000000042D
+t1321041312
+s1069
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/viewLiveFeed.m
+c000000004EBD8B300000000000002A35
+t1321044784
+s10805
+i"viewLiveFeed.h"
+i"view0.h"
+i"viewSnapshots.h"
+
+N/Users/researcher/Sentinel/viewLiveFeed.xib
+c000000004EBD7DA0000000000000AFA3
+t1321041312
+s44963
+
+N/Users/researcher/Sentinel/viewSelectCamera.h
+c000000004EBD7DA0000000000000011D
+t1321041312
+s285
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/viewSelectCamera.m
+c000000004EBD7DA000000000000012BB
+t1321041312
+s4795
+i"viewSelectCamera.h"
+i"viewLiveFeed.h"
+
+N/Users/researcher/Sentinel/viewSelectCamera.xib
+c000000004EBD7DA0000000000000468C
+t1321041312
+s18060
+
+N/Users/researcher/Sentinel/viewSnapshots.h
+c000000004EBD7DA000000000000000E2
+t1321041312
+s226
+i<UIKit/UIKit.h>
+
+N/Users/researcher/Sentinel/viewSnapshots.m
+c000000004EBD7DA0000000000000111C
+t1321041312
+s4380
+i"viewSnapshots.h"
+
+N/Users/researcher/Sentinel/viewSnapshots.xib
+c000000004EBD7DA00000000000001C72
+t1321041312
+s7282
+
+N/var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch.gch
+t1321041754
+s15453392
+
 N/var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch.gch
 t1320858882
 s15453392
@@ -996,13 +1304,13 @@ t1320955708
 s15453392
 
 NnavS-Info.plist
-c000000004EBAB4FB0000000000000569
-t1320858875
+c000000004EBD7DA00000000000000569
+t1321041312
 s1385
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies342664069#342664069#0(0"0(0#1#0"8247620834010738688#0"0#
+lSLF07#2@18"Check dependencies342758992#342758992#0(0"0(0#1#0"8613603424#0"0#
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o /Users/Guest/Downloads/navS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342648508.325015
@@ -1033,6 +1341,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/researcher/NavSentinel1/navS/Shared/AppDelegate_Shared.m342551682#342551682#0(0"0(0#0#63"/Users/researcher/NavSentinel1/navS/Shared/AppDelegate_Shared.m8607953632#1856"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/Shared/AppDelegate_Shared.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o /Users/researcher/Sentinel/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.930307
+e342734555.053927
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o
+x/Users/researcher/Sentinel/Shared/AppDelegate_Shared.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/researcher/Sentinel/Shared/AppDelegate_Shared.m342734554#342734555#0(0"0(0#0#54"/Users/researcher/Sentinel/Shared/AppDelegate_Shared.m8611010048#1757"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/Shared/AppDelegate_Shared.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_Shared.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o /Users/Guest/Downloads/navS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342648508.324442
 e342648508.424599
@@ -1062,6 +1383,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/researcher/NavSentinel1/navS/iPad/AppDelegate_iPad.m342551682#342551682#0(0"0(0#0#59"/Users/researcher/NavSentinel1/navS/iPad/AppDelegate_iPad.m8608088032#1850"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/iPad/AppDelegate_iPad.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o /Users/researcher/Sentinel/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.929727
+e342734555.035976
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o
+x/Users/researcher/Sentinel/iPad/AppDelegate_iPad.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/researcher/Sentinel/iPad/AppDelegate_iPad.m342734554#342734555#0(0"0(0#0#50"/Users/researcher/Sentinel/iPad/AppDelegate_iPad.m8611686048#1751"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/iPad/AppDelegate_iPad.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPad.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/Guest/Downloads/navS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342648508.325600
 e342648508.425085
@@ -1090,6 +1424,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/researcher/NavSentinel1/navS/iPhone/AppDelegate_iPhone.m342555848#342555848#0(0"0(0#0#63"/Users/researcher/NavSentinel1/navS/iPhone/AppDelegate_iPhone.m8616913696#1856"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/iPhone/AppDelegate_iPhone.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o0#
+
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.930898
+e342734555.034636
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o
+x/Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m342734554#342734555#0(0"0(0#0#54"/Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m8610331584#1757"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/iPhone/AppDelegate_iPhone.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/AppDelegate_iPhone.o0#
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configCamera.o /Users/researcher/NavSentinel1/navS/configCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342563178.839375
@@ -1144,6 +1491,24 @@ o/Users/researcher/NavSentinel1/navS/configureCamera.m: In function '-[configure
 o/Users/researcher/NavSentinel1/navS/configureCamera.m:31: warning: unused variable 'standardUserDefaults'
 lSLF07#2@61"Compile /Users/researcher/NavSentinel1/navS/configureCamera.m342565924#342565924#0(207"/Users/researcher/NavSentinel1/navS/configureCamera.m: In function '-[configureCamera viewDidLoad]':/Users/researcher/NavSentinel1/navS/configureCamera.m:31: warning: unused variable 'standardUserDefaults'1(22@38"Unused variable 'standardUserDefaults'342565924#101#106#0(6@53"/Users/researcher/NavSentinel1/navS/configureCamera.m342565921#31#0#31#0#19"unused variable '*'0(0#0#53"/Users/researcher/NavSentinel1/navS/configureCamera.m8614693632#1843"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/configureCamera.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o /Users/researcher/Sentinel/configureCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342741224.288384
+e342741224.340489
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o
+x/Users/researcher/Sentinel/configureCamera.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/researcher/Sentinel/configureCamera.m: In function '-[configureCamera viewDidLoad]':
+o/Users/researcher/Sentinel/configureCamera.m:34: warning: unused variable 'standardUserDefaults'
+o/Users/researcher/Sentinel/configureCamera.m: At top level:
+o/Users/researcher/Sentinel/configureCamera.m:190: warning: incomplete implementation of class 'configureCamera'
+o/Users/researcher/Sentinel/configureCamera.m:190: warning: method definition for '-saveCredentials:' not found
+lSLF07#2@52"Compile /Users/researcher/Sentinel/configureCamera.m342741224#342741224#0(472"/Users/researcher/Sentinel/configureCamera.m: In function '-[configureCamera viewDidLoad]':/Users/researcher/Sentinel/configureCamera.m:34: warning: unused variable 'standardUserDefaults'/Users/researcher/Sentinel/configureCamera.m: At top level:/Users/researcher/Sentinel/configureCamera.m:190: warning: incomplete implementation of class 'configureCamera'/Users/researcher/Sentinel/configureCamera.m:190: warning: method definition for '-saveCredentials:' not found4(22@38"Unused variable 'standardUserDefaults'342741224#92#97#0(6@44"/Users/researcher/Sentinel/configureCamera.m342734112#34#0#34#0#19"unused variable '*'0(23@13"At top level:342741224#189#60#0(6@44"/Users/researcher/Sentinel/configureCamera.m342734112#0#0#0#0#0"0(22@52"Incomplete implementation of class 'configureCamera'342741224#249#112#0(6@44"/Users/researcher/Sentinel/configureCamera.m342734112#190#0#190#0#38"incomplete implementation of class '*'0(22@51"Method definition for '-saveCredentials:' not found342741224#361#111#0(6@44"/Users/researcher/Sentinel/configureCamera.m342734112#190#0#190#0#35"method definition for '*' not found0(0#0#44"/Users/researcher/Sentinel/configureCamera.m8610039680#1744"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/configureCamera.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/configureCamera.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o /Users/Guest/Downloads/navS/defaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342654771.752612
 e342654771.846468
@@ -1159,6 +1524,19 @@ lSLF07#2@51"Compile /Users/Guest/Downloads/navS/defaultCamera.m342654771#3426547
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o /Users/researcher/Downloads/navS/defaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
+
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o /Users/researcher/Sentinel/defaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734555.012601
+e342734555.071090
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o
+x/Users/researcher/Sentinel/defaultCamera.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/researcher/Sentinel/defaultCamera.m342734555#342734555#0(0"0(0#0#42"/Users/researcher/Sentinel/defaultCamera.m8610491584#1740"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/defaultCamera.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/defaultCamera.o0#
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraPara,s.o /Users/Guest/Downloads/navS/enterCameraPara,s.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342659208.604262
@@ -1202,6 +1580,25 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@63"Compile /Users/researcher/NavSentinel1/navS/enterCameraParams.m342563739#342563739#0(0"0(0#0#55"/Users/researcher/NavSentinel1/navS/enterCameraParams.m8617947072#1847"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/enterCameraParams.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o /Users/researcher/Sentinel/enterCameraParams.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342758992.453311
+e342758992.555715
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o
+x/Users/researcher/Sentinel/enterCameraParams.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/researcher/Sentinel/enterCameraParams.m: In function '-[enterCameraParams onTouchalarmSwitch:]':
+o/Users/researcher/Sentinel/enterCameraParams.m:48: warning: 'NSData' may not respond to '-base64Encoding'
+o/Users/researcher/Sentinel/enterCameraParams.m:48: warning: (Messages without a matching method signature
+o/Users/researcher/Sentinel/enterCameraParams.m:48: warning: will be assumed to return 'id' and accept
+o/Users/researcher/Sentinel/enterCameraParams.m:48: warning: '...' as arguments.)
+o/Users/researcher/Sentinel/enterCameraParams.m:106: warning: 'NSData' may not respond to '-base64Encoding'
+lSLF07#2@54"Compile /Users/researcher/Sentinel/enterCameraParams.m342758992#342758992#0(606"/Users/researcher/Sentinel/enterCameraParams.m: In function '-[enterCameraParams onTouchalarmSwitch:]':/Users/researcher/Sentinel/enterCameraParams.m:48: warning: 'NSData' may not respond to '-base64Encoding'/Users/researcher/Sentinel/enterCameraParams.m:48: warning: (Messages without a matching method signature/Users/researcher/Sentinel/enterCameraParams.m:48: warning: will be assumed to return 'id' and accept/Users/researcher/Sentinel/enterCameraParams.m:48: warning: '...' as arguments.)/Users/researcher/Sentinel/enterCameraParams.m:106: warning: 'NSData' may not respond to '-base64Encoding'3(22@45"'NSData' may not respond to '-base64Encoding'342758992#104#106#0(6@46"/Users/researcher/Sentinel/enterCameraParams.m342758990#48#0#48#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)342758992#210#106#0(6@46"/Users/researcher/Sentinel/enterCameraParams.m342758990#48#0#48#0#0"0(22@45"'NSData' may not respond to '-base64Encoding'342758992#499#107#0(6@46"/Users/researcher/Sentinel/enterCameraParams.m342758990#106#0#106#0#26"'*' may not respond to '*'0(0#0#46"/Users/researcher/Sentinel/enterCameraParams.m8617072512#1748"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/enterCameraParams.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/enterCameraParams.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o /Users/Guest/Downloads/navS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342648508.323746
 e342648508.408573
@@ -1230,6 +1627,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@57"Compile /Users/researcher/NavSentinel1/navS/Shared/main.m342551682#342551682#0(0"0(0#0#49"/Users/researcher/NavSentinel1/navS/Shared/main.m8608208672#1828"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/Shared/main.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o0#
+
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o /Users/researcher/Sentinel/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.929033
+e342734555.012463
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o
+x/Users/researcher/Sentinel/Shared/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@48"Compile /Users/researcher/Sentinel/Shared/main.m342734554#342734555#0(0"0(0#0#40"/Users/researcher/Sentinel/Shared/main.m8603811328#1729"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/Shared/main.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/main.o0#
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o /Users/Guest/Downloads/navS/view0.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342662817.451694
@@ -1260,6 +1670,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@51"Compile /Users/researcher/NavSentinel1/navS/view0.m342565759#342565759#0(0"0(0#0#43"/Users/researcher/NavSentinel1/navS/view0.m8614166208#1823"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/view0.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o /Users/researcher/Sentinel/view0.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.931488
+e342734555.036168
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o
+x/Users/researcher/Sentinel/view0.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@42"Compile /Users/researcher/Sentinel/view0.m342734554#342734555#0(0"0(0#0#34"/Users/researcher/Sentinel/view0.m8610191168#1724"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/view0.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/view0.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o /Users/Guest/Downloads/navS/viewLiveFeed.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342663096.564814
 e342663096.672703
@@ -1288,6 +1711,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@58"Compile /Users/researcher/NavSentinel1/navS/viewLiveFeed.m342561056#342561056#0(0"0(0#0#50"/Users/researcher/NavSentinel1/navS/viewLiveFeed.m8617322624#1837"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/viewLiveFeed.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o0#
+
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o /Users/researcher/Sentinel/viewLiveFeed.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342739199.810742
+e342739199.927129
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o
+x/Users/researcher/Sentinel/viewLiveFeed.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/researcher/Sentinel/viewLiveFeed.m342739199#342739199#0(0"0(0#0#41"/Users/researcher/Sentinel/viewLiveFeed.m8616282816#1738"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/viewLiveFeed.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewLiveFeed.o0#
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o /Users/Guest/Downloads/navS/viewSelectCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342663096.564119
@@ -1322,6 +1758,21 @@ o/Users/researcher/NavSentinel1/navS/viewSelectCamera.m: In function '-[viewSele
 o/Users/researcher/NavSentinel1/navS/viewSelectCamera.m:85: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)
 lSLF07#2@62"Compile /Users/researcher/NavSentinel1/navS/viewSelectCamera.m342559355#342559355#0(387"/Users/researcher/NavSentinel1/navS/viewSelectCamera.m: In function '-[viewSelectCamera tableView:cellForRowAtIndexPath:]':/Users/researcher/NavSentinel1/navS/viewSelectCamera.m:85: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)342559355#124#263#0(6@54"/Users/researcher/NavSentinel1/navS/viewSelectCamera.m342558052#85#0#85#0#33"'*' is deprecated (declared at *)0(0#0#54"/Users/researcher/NavSentinel1/navS/viewSelectCamera.m8618832800#1845"    cd /Users/researcher/NavSentinel1/navS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -I/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/include -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch -c /Users/researcher/NavSentinel1/navS/viewSelectCamera.m -o /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o0#
 
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o /Users/researcher/Sentinel/viewSelectCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.932076
+e342734555.038444
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o
+x/Users/researcher/Sentinel/viewSelectCamera.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/researcher/Sentinel/viewSelectCamera.m: In function '-[viewSelectCamera tableView:cellForRowAtIndexPath:]':
+o/Users/researcher/Sentinel/viewSelectCamera.m:85: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)
+lSLF07#2@53"Compile /Users/researcher/Sentinel/viewSelectCamera.m342734554#342734555#0(369"/Users/researcher/Sentinel/viewSelectCamera.m: In function '-[viewSelectCamera tableView:cellForRowAtIndexPath:]':/Users/researcher/Sentinel/viewSelectCamera.m:85: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:211)342734554#115#254#0(6@45"/Users/researcher/Sentinel/viewSelectCamera.m342734112#85#0#85#0#33"'*' is deprecated (declared at *)0(0#0#45"/Users/researcher/Sentinel/viewSelectCamera.m8610166016#1746"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/viewSelectCamera.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSelectCamera.o0#
+
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o /Users/Guest/Downloads/navS/viewSnapshots.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s342654885.749849
 e342654885.830623
@@ -1337,6 +1788,19 @@ lSLF07#2@51"Compile /Users/Guest/Downloads/navS/viewSnapshots.m342654885#3426548
 
 CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o /Users/researcher/Downloads/navS/viewSnapshots.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
+
+CCompileC build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o /Users/researcher/Sentinel/viewSnapshots.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734555.034754
+e342734555.085869
+r1
+xCompileC
+xbuild/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o
+x/Users/researcher/Sentinel/viewSnapshots.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/researcher/Sentinel/viewSnapshots.m342734555#342734555#0(0"0(0#0#42"/Users/researcher/Sentinel/viewSnapshots.m8610521216#1740"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -include /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch -c /Users/researcher/Sentinel/viewSnapshots.m -o /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/viewSnapshots.o0#
 
 CCompileXIB /Users/Guest/Downloads/navS/configureCamera.xib
 r0
@@ -1488,6 +1952,38 @@ xCompileXIB
 x/Users/researcher/NavSentinel1/navS/viewSelectCamera.xib
 lSLF07#2@31"CompileXIB viewSelectCamera.xib342555467#342555467#0(0"0(0#0#56"/Users/researcher/NavSentinel1/navS/viewSelectCamera.xib8617110880#570"    cd /Users/researcher/NavSentinel1/navS    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/viewSelectCamera.nib /Users/researcher/NavSentinel1/navS/viewSelectCamera.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
 
+CCompileXIB /Users/researcher/Sentinel/configureCamera.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/defaultCamera.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/enterCameraParams.xib
+s342744203.141862
+e342744203.438008
+r1
+xCompileXIB
+x/Users/researcher/Sentinel/enterCameraParams.xib
+lSLF07#2@32"CompileXIB enterCameraParams.xib342744203#342744203#0(0"0(0#0#48"/Users/researcher/Sentinel/enterCameraParams.xib8598300512#545"    cd /Users/researcher/Sentinel    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/enterCameraParams.nib /Users/researcher/Sentinel/enterCameraParams.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/researcher/Sentinel/iPad/MainWindow_iPad.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/iPhone/MainWindow_iPhone.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/view0.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/viewLiveFeed.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/viewSelectCamera.xib
+r0
+
+CCompileXIB /Users/researcher/Sentinel/viewSnapshots.xib
+r0
+
 CDataModelVersionCompile /Users/Guest/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS.momd /Users/Guest/Downloads/navS/Shared/navS.xcdatamodeld
 r0
 
@@ -1502,6 +1998,9 @@ xDataModelVersionCompile
 x/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS.momd
 x/Users/researcher/NavSentinel1/navS/Shared/navS.xcdatamodeld
 lSLF07#2@95"DataModelVersionCompile build/Debug-iphonesimulator/navS.app/navS.momd Shared/navS.xcdatamodeld342563133#342563133#0(0"0(0#0#60"/Users/researcher/NavSentinel1/navS/Shared/navS.xcdatamodeld8619143520#375"    cd /Users/researcher/NavSentinel1/navS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/researcher/NavSentinel1/navS/Shared/navS.xcdatamodeld /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS.momd0#
+
+CDataModelVersionCompile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS.momd /Users/researcher/Sentinel/Shared/navS.xcdatamodeld
+r0
 
 CGenerateDSYMFile /Users/Guest/Downloads/navS/build/Debug-iphonesimulator/navS.app.dSYM /Users/Guest/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS
 s342663096.692587
@@ -1529,6 +2028,15 @@ xGenerateDSYMFile
 x/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app.dSYM
 x/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS
 lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/navS.app.dSYM build/Debug-iphonesimulator/navS.app/navS342565924#342565924#0(0"0(0#0#77"/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS8613559200#365"    cd /Users/researcher/NavSentinel1/navS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS -o /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app.dSYM0#
+
+CGenerateDSYMFile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app.dSYM /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS
+s342758992.576751
+e342758992.602786
+r1
+xGenerateDSYMFile
+x/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app.dSYM
+x/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS
+lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/navS.app.dSYM build/Debug-iphonesimulator/navS.app/navS342758992#342758992#0(0"0(0#0#68"/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS8617381088#338"    cd /Users/researcher/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS -o /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app.dSYM0#
 
 CLd /Users/Guest/Downloads/navS/build/Debug-iphonesimulator/navS.app/navS normal i386
 s342663096.672767
@@ -1560,6 +2068,16 @@ xnormal
 xi386
 lSLF07#2@82"Link /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS342565924#342565924#0(0"0(0#0#0"8614355680#890"    cd /Users/researcher/NavSentinel1/navS    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -F/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator -filelist /Users/researcher/NavSentinel1/navS/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/navS.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/navS0#
 
+CLd /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS normal i386
+s342758992.555790
+e342758992.576667
+r1
+xLd
+x/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS
+xnormal
+xi386
+lSLF07#2@73"Link /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS342758992#342758992#0(0"0(0#0#0"8617458208#845"    cd /Users/researcher/Sentinel    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/researcher/Sentinel/build/Debug-iphonesimulator -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -filelist /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/Objects-normal/i386/navS.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/navS0#
+
 CProcessInfoPlistFile /Users/Guest/Downloads/navS/build/Debug-iphonesimulator/navS.app/Info.plist navS-Info.plist
 r0
 
@@ -1574,6 +2092,22 @@ xProcessInfoPlistFile
 x/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/Info.plist
 xnavS-Info.plist
 lSLF07#2@23"Process navS-Info.plist342551681#342551681#0(0"0(0#0#51"/Users/researcher/NavSentinel1/navS/navS-Info.plist8609496032#461"    cd /Users/researcher/NavSentinel1/navS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility navS-Info.plist -genpkginfo /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app/Info.plist0#
+
+CProcessInfoPlistFile /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app/Info.plist navS-Info.plist
+r0
+
+CProcessPCH /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch.gch navS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s342734554.381303
+e342734554.928918
+r1
+xProcessPCH
+x/var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch.gch
+xnavS_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile navS_Prefix.pch342734554#342734554#0(0"0(0#0#42"/Users/researcher/Sentinel/navS_Prefix.pch8459008503018978304#1629"    cd /Users/researcher/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-generated-files.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-own-target-headers.hmap -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-all-target-headers.hmap -iquote /Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/navS-project-headers.hmap -F/Users/researcher/Sentinel/build/Debug-iphonesimulator -I/Users/researcher/Sentinel/build/Debug-iphonesimulator/include -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources/i386 -I/Users/researcher/Sentinel/build/navS.build/Debug-iphonesimulator/navS.build/DerivedSources -c /Users/researcher/Sentinel/navS_Prefix.pch -o /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-bsyazrqztnjodugqneldedddengc/navS_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/ti/tig7QZ51FU4W1g7YUIZ3e++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/navS_Prefix-djnlberjfhftrogtwhuuuvvsytll/navS_Prefix.pch.gch navS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s342551681.842612
@@ -1627,4 +2161,12 @@ r1
 xTouch
 x/Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app
 lSLF07#2@78"Touch /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app342565924#342565924#0(0"0(0#0#0"8612912512#269"    cd /Users/researcher/NavSentinel1/navS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/researcher/NavSentinel1/navS/build/Debug-iphonesimulator/navS.app0#
+
+CTouch /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app
+s342758992.602883
+e342758992.604480
+r1
+xTouch
+x/Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app
+lSLF07#2@69"Touch /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app342758992#342758992#0(0"0(0#0#0"8615193344#251"    cd /Users/researcher/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/researcher/Sentinel/build/Debug-iphonesimulator/navS.app0#
 

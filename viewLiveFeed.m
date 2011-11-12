@@ -49,8 +49,6 @@
                              action:@selector(mainMenu:)];
 	self.navigationItem.leftBarButtonItem = leftitem;
 	[leftitem release];
-	
-		
 }
 
 -(void) OnViewSnapshotsClick:(id) sender
@@ -62,10 +60,31 @@
 
 -(void) mainMenu:(id)sender
 {
-	view0 *viewctr = [[view0 alloc] initWithNibName:@"view0" bundle:nil];
-	[self.navigationController pushViewController:viewctr animated:YES];
-	[viewctr release];
+	/* This is placed in viewWillDisappear because it takes effect for popped view too	*/
+	/* When unpopped, the view does not load*/
+	//if([theWebView isLoading])
+	//	[theWebView stopLoading];
 	
+	/* If we get to the live feed because the default camera was set load a new view	*/
+	/* Else pop two view controllers													*/
+	int count = [self.navigationController.viewControllers count];
+	
+	if(count > 1)
+		[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+	if([theWebView isLoading])
+		[theWebView stopLoading];
+	
+}
+
+-(void)viewWillAppear :(BOOL)animated
+{
+	NSURL *url = [NSURL URLWithString:@"http://128.238.151.253/nphMotionJpeg?Resolution=320x240&Quality=Standard"];
+	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+	[theWebView loadRequest:requestObj];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
@@ -81,7 +100,7 @@
 		NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 		[theWebView loadRequest:requestObj];
 		
-		
+		NSLog(@"LOL");
 	}
 	else
 	{
