@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Panasonic BL-C210</key>
+	<dict>
+		<key>BrightnessBrighter</key>
+		<string>/nphControlCamera?Direction=Brighter</string>
+		<key>BrightnessDarker</key>
+		<string>/nphControlCamera?Direction=Darker</string>
+		<key>BrightnessReset</key>
+		<string>/nphControlCamera?Direction=DefaultBrightness</string>
+		<key>Default</key>
+		<string>/nphMotionJpeg?Resolution=320x240&amp;Quality=Standard</string>
+		<key>HomePosition</key>
+		<string>/nphControlCamera?Direction=HomePosition</string>
+		<key>NightModeOff</key>
+		<string>/nphControlCamera?Direction=BacklightOff</string>
+		<key>NightModeOn</key>
+		<string>/nphControlCamera?Direction=BacklightOn</string>
+		<key>PanLeft</key>
+		<string>/nphControlCamera?Direction=PanLeft</string>
+		<key>PanRight</key>
+		<string>/nphControlCamera?Direction=PanRight</string>
+		<key>PanScan</key>
+		<string>/nphControlCamera?Direction=PanScan&amp;PanTiltMin=1</string>
+		<key>Snapshot</key>
+		<string>/SnapshotJPEG?Resolution=320x240&amp;Quality=Motion&amp;Count=0</string>
+		<key>Sound</key>
+		<string>/nphControlCamera?Direction=Sound</string>
+		<key>TiltDown</key>
+		<string>/nphControlCamera?Direction=TiltDown</string>
+		<key>TiltScan</key>
+		<string>/nphControlCamera?Direction=TiltScan&amp;PanTiltMin=1</string>
+		<key>TiltUp</key>
+		<string>/nphControlCamera?Direction=TiltUp</string>
+	</dict>
+</dict>
+</plist>
