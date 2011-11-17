@@ -1,21 +1,139 @@
 //
-//  enterCameraParams.m
-//  navS
+//  UIEditCamDetailViewController.m
+//  Sentinel
 //
-//  Created by Guest Account on 11/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/10/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UIEditCamDetailViewController.h"
-
+#import "AppDelegate_iPhone.h"
+#import <CoreData/CoreData.h>
+#import "SentinelInfo.h"
+#import "EditInfoCameraView.h"
 
 @implementation UIEditCamDetailViewController
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+@synthesize context;
+@synthesize contextnew;
 
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 -(void)saveCamera:(id)sender
 {
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+		entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	
+	[fetchRequest release];
+	fetchRequest = nil;
+	
+	#ifdef DEBUG
+	NSLog(@"UIEditCameraViewController: saveCamera: index: %d", [index intValue]);
+	#endif
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	contextnew = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:
+				@"SentinelInfo" inManagedObjectContext:contextnew];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	if([index intValue] == -1)
+	{
+		#ifdef DEBUG 
+		NSLog(@"UIEditCameraViewController: saveCamera: newCamera");
+		#endif
+
+		SentinelInfo *mo = [NSEntityDescription 
+							insertNewObjectForEntityForName:@"SentinelInfo"
+							inManagedObjectContext:contextnew];
+		
+		[mo setValue:ipaddress.text forKey:@"ipAddress"];
+		[mo setValue:password.text forKey:@"password"];
+		[mo setValue:cameraname.text forKey:@"cameraName"];
+		[mo setValue:username.text forKey:@"userName"];
+		
+		if(![contextnew save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+	}
+	else if([index intValue] < [fetchedObjects count])
+	{
+		SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
+
+		#ifdef DEBUG
+		NSLog(@"UIEditCameraViewController: saveCamera: editing camera at index: %d",
+				[index intValue]);
+		#endif
+
+		[mo setValue:ipaddress.text forKey:@"ipAddress"];
+		[mo setValue:password.text forKey:@"password"];
+		[mo setValue:cameraname.text forKey:@"cameraName"];
+		[mo setValue:username.text forKey:@"userName"];
+
+		if(![contextnew save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+	}
+	[fetchRequest release];
+	fetchRequest = nil;
+
+	#ifdef DEBUG
+	NSLog(@"UIEditCameraViewController: saveCamera: Done Saving");
+	#endif
+	
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction) onTouchDeleteCamera:(id)sender
+{
+	if(cameraIndex != -1)
+	{
+		AppDelegate_iPhone *appDelegate =
+			(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+		context = [appDelegate managedObjectContext];
+		
+		NSError *error;
+		NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription 
+			entityForName:@"SentinelInfo" inManagedObjectContext:context];
+		
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		
+		NSManagedObject *mo = [fetchedObjects objectAtIndex:cameraIndex];
+		[context deleteObject:mo];
+		
+		if(![context save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: onTouchDeleteCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+		[fetchRequest release];
+		
+	}
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -162,6 +280,73 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"Camera Details";
+	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+		   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	EditInfoCameraView *info = [fetchedObjects objectAtIndex:0];
+	[fetchRequest release];
+	
+	NSNumber *index = [NSNumber numberWithInt:[info.cameraIndex intValue]];
+	cameraIndex = [index intValue];
+	if([index intValue] != -1)
+	{
+		#ifdef DEBUG
+		NSLog(@"UIEditCamDetailViewController viewDidLoad: loading view at index %d",
+			  [index intValue]);
+		#endif
+
+		deleteCamera.enabled = YES;
+		deleteCameraButtonStat.text = @"";
+		AppDelegate_iPhone *appDelegate =
+			(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+		contextnew = [appDelegate managedObjectContext];
+		
+		NSError *error;
+		NSFetchRequest *fetchRequestnew = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entitynew = [NSEntityDescription 
+		   entityForName:@"SentinelInfo" inManagedObjectContext:contextnew];
+		
+		[fetchRequestnew setEntity:entitynew];
+		[fetchRequestnew setReturnsObjectsAsFaults:NO];
+	
+		NSArray *fetchedObjectsnew =
+			[context executeFetchRequest:fetchRequestnew error:&error];
+	
+		SentinelInfo *infoS = [fetchedObjectsnew objectAtIndex:[index intValue]];
+		[fetchRequestnew release];
+	
+		ipaddress.text = infoS.ipAddress;
+		username.text = infoS.userName;
+		password.text = infoS.password;
+		cameraname.text = infoS.cameraName;
+	}
+	else 
+	{
+		#ifdef DEBUG
+		NSLog(@"UIEditCamDetailViewController viewDidLoad: loading new view");
+		#endif
+
+		deleteCamera.enabled = NO;
+		deleteCameraButtonStat.text = @"(Disabled)";
+		
+	}
+
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+	
 }
 
 - (IBAction) ipaddressEntry:(id)sender

@@ -1,9 +1,9 @@
 //
 //  AppDelegate_iPhone.h
-//  navS
+//  Sentinel
 //
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/9/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,8 +11,9 @@
 
 @interface AppDelegate_iPhone : AppDelegate_Shared {
 	UINavigationController *navctr;
+	NSManagedObjectContext *managedObjectContext;
 }
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
-

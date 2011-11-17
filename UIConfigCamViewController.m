@@ -1,28 +1,78 @@
 //
-//  configureCamera.m
-//  navS
+//  UIConfigCameraViewController.m
+//  Sentinel
 //
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/9/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UIConfigCamViewController.h"
 #import "UIEditCamDetailViewController.h"
+#import "AppDelegate_iPhone.h"
+#import <CoreData/CoreData.h>
+#import "SentinelInfo.h"
+#import "EditInfoCameraView.h"
 
 @implementation UIConfigCamViewController
 
+@synthesize context;
+@synthesize contextnew;
 
 - (void)addCamera:(id)sender 
+
 {
-	NSLog(@"Saving credentials");
+	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+		entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	if([fetchedObjects count] == 0)
+	{
+		EditInfoCameraView *mo = 
+			[NSEntityDescription insertNewObjectForEntityForName:@"EditInfoCameraView"
+						inManagedObjectContext:context];
+		
+		[mo setValue:[NSNumber numberWithInt:-1] forKey:@"cameraIndex"];
+		
+		if(![context save:&error])
+		{
+			NSLog(@"UIConfigCamViewController: addCamera: %@ %@", error, [error userInfo]);
+		}
+	}
+	else 
+	{
+		EditInfoCameraView *mo = [fetchedObjects objectAtIndex:0];
+		[fetchRequest release];
+		[mo setValue:[NSNumber numberWithInt:-1] forKey:@"cameraIndex"];
+		if(![context save:&error])
+		{
+			NSLog(@"UIConfigCamViewController: addCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+	}
+	
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: addCamera: setting cameraIndex to -1");
+	#endif
+
 	UIEditCamDetailViewController *viewctr = [[UIEditCamDetailViewController alloc] 
                                               initWithNibName:@"UIEditCamDetailView" 
                                               bundle:nil];
-
+	
+	
 	[self.navigationController pushViewController:viewctr animated:YES];
 	[viewctr release];
 }
-
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -32,7 +82,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.title = @"Edit Camera";
 	//NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -47,11 +97,48 @@
 }
 
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+
+	// The following section just prints the camera list
+	#ifdef DEBUG
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+			entityForName:@"SentinelInfo" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	NSLog(@"UIConfigCamViewController: viewwillappear: printing current camera details");
+	
+	if(fetchedObjects != NULL)
+	{
+		for(int i = 0; i <[fetchedObjects count]; i++)
+		{
+			SentinelInfo *info = [fetchedObjects objectAtIndex:i];
+			NSLog(@"ipAddress: %@ | userName: %@ | password: %@ | cameraName: %@", 
+				  info.ipAddress, info.userName, info.password, info.cameraName);
+		}
+		
+	}
+	else 
+	{
+		NSLog(@"fetchedObjects is null in viewwillappear of configcamera");
+	}
+
+	[fetchRequest release];
+	#endif
+
+	[super viewWillAppear:animated];
+	[camList reloadData];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -88,30 +175,86 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
 	
-	NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-	NSString *val = nil;
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
 	
-	if (standardUserDefaults) 
-		val = [standardUserDefaults objectForKey:@"numberOfCurrentCameras"];
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+	   entityForName:@"SentinelInfo" inManagedObjectContext:context];
 	
-	NSLog(@"Number of current entries = %d", [val intValue]);
-    return [val intValue];
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: numberOfRowsInSection %@", fetchedObjects);
+	#endif
+
+	if(fetchedObjects != NULL)
+	{
+		#ifdef DEBUG
+		NSLog(@"UIConfigCamViewController: numberOfRowsInSection returning: %d", 
+			  [fetchedObjects count]);
+		#endif
+
+		return [fetchedObjects count];
+	}
+	else 
+	{
+		#ifdef DEBUG
+		NSLog(@"UIConfigCamViewController: numberOfRowsInSection returning: 0");
+		#endif	
+
+		return 0;
+	}
 }
 
-
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+	static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    UITableViewCell *cell =
+		[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+	if (cell == nil) {
+        cell = [[[UITableViewCell alloc]
+				 initWithStyle:UITableViewCellStyleDefault
+				 reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+	   entityForName:@"SentinelInfo" inManagedObjectContext:context];
+
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	SentinelInfo *info = [fetchedObjects objectAtIndex: indexPath.row];
+	
+	[fetchRequest release];
+	
     // Configure the cell...
-    
-    return cell;
+	cell.textLabel.text = info.cameraName;
+	
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: cellForRowAtIndexPath name: %@ at index %d",
+		  cell.textLabel.text, indexPath.row);
+	#endif	  
+
+	return cell;
 }
 
 
@@ -164,13 +307,68 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+    
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: 	didSelectRowAtIndexPath index: %d",
+		  indexPath.row);
+	#endif
+	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+	   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: 	didSelectRowAtIndexPath Editinfocameradetals count = %d %@",
+		  [fetchedObjects count], fetchedObjects);
+	#endif
+	
+	for (NSManagedObject *managedObject in fetchedObjects) 
+	{
+		[context deleteObject:managedObject];
+	}
+	if(![context save:&error])
+	{
+		NSLog(@"UIConfigCamViewController: didSelectRowAtIndexPath: CoreDataSaveError");
+		NSLog(@"%@ and %@", error, [error userInfo]);
+	}
+
+	NSManagedObject *mo;
+
+	mo = [NSEntityDescription insertNewObjectForEntityForName:@"EditInfoCameraView"
+				inManagedObjectContext:context];
+
+	unsigned int index = indexPath.row;
+	[mo setValue:[NSNumber numberWithInteger:index] forKey:@"cameraIndex"];
+
+	if(![context save:&error])
+	{
+		NSLog(@"UIConfigCamViewController: didSelectRowAtIndexPath: CoreDataSaveError");
+		NSLog(@"%@ and %@", error, [error userInfo]);
+	}
+	
+	#ifdef DEBUG
+	NSLog(@"UIConfigCamViewController: 	didSelectRowAtIndexPath setting cameraIndex to %d", index);
+	#endif
+
+	[fetchRequest release];
+	
+	
+	UIEditCamDetailViewController *viewctr = [[UIEditCamDetailViewController alloc] 
+					initWithNibName:@"UIEditCamDetailView" 
+					bundle:nil];
+	
+	[self.navigationController pushViewController:viewctr animated:YES];
+	[viewctr release];
 }
 
 
@@ -196,4 +394,3 @@
 
 
 @end
-

@@ -1,12 +1,13 @@
 //
-//  enterCameraParams.h
-//  navS
+//  UIEditCamDetailViewController.h
+//  Sentinel
 //
-//  Created by Guest Account on 11/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/10/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 
 @interface UIEditCamDetailViewController : UIViewController {
@@ -15,7 +16,12 @@
 	IBOutlet UITextField *username;
 	IBOutlet UITextField *password;
 	IBOutlet UITextField *cameraname;
+	IBOutlet UIButton *deleteCamera;
+	IBOutlet UILabel *deleteCameraButtonStat;
 	IBOutlet UISwitch *alarmEnableSwitch;
+	NSManagedObjectContext *context;
+	NSManagedObjectContext *contextnew;
+	int cameraIndex;
 }
 
 - (IBAction) ipaddressEntry:(id)sender;
@@ -28,5 +34,9 @@
 - (IBAction) onTouchOutsideIPaddress:(id)sender;
 - (IBAction) onTouchOutsideUserName:(id)sender;
 - (IBAction) onTouchalarmSwitch:(id)sender;
+- (IBAction) onTouchDeleteCamera:(id)sender;
+
+@property (nonatomic, retain) NSManagedObjectContext *context;
+@property (nonatomic, retain) NSManagedObjectContext *contextnew;
 
 @end

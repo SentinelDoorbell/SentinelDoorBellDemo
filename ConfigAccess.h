@@ -2,7 +2,7 @@
 //  ConfigAccess.h
 //  Sentinel
 //
-//  Created by Fekri Kassem on 11/12/11.
+//  Created by SentinelTeam on 11/12/11.
 //  Copyright 2011 Self. All rights reserved.
 //
 

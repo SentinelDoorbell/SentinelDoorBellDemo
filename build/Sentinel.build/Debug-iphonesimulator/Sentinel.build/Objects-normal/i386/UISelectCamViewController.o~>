@@ -1,0 +1,2 @@
+/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m: In function '-[UISelectCamViewController tableView:cellForRowAtIndexPath:]':
+/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m:137: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)

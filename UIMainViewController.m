@@ -1,9 +1,9 @@
 //
-//  view0.m
-//  navS
+//  UIMainViewController.m
+//  Sentinel
 //
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/9/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UIMainViewController.h"

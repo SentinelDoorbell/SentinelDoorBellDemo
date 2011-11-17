@@ -1,23 +1,29 @@
 //
-//  viewLiveFeed.m
-//  navS
+//  UILiveFeedViewController.m
+//  Sentinel
 //
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/9/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UILiveFeedViewController.h"
 #import "UIMainViewController.h"
 #import "UISnapshotsViewController.h"
 #import "ConfigAccess.h"
+#import "SentinelInfo.h"
+#import "EditInfoCameraView.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate_iPhone.h"
 
 // This will be set from the core data when a user selects a camera. 
 //static NSString* CURRENT_BASE_URL = @"http://128.238.151.253/";
 //static NSString* CURRENT_BASE_URL = @"http://60.45.63.26";
-static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
-//static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
+//static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
+static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
 @implementation UILiveFeedViewController
+
+@synthesize context;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +38,53 @@ static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 	
 	self.title = @"Live Feed";	
 	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+		entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	
+	#ifdef DEBUG
+	NSLog(@"UILiveFeedViewController: viewDidLoad index: %d", [index intValue]);
+	#endif	
+	
+	[fetchRequest release];
+	fetchRequest = nil;
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	context = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:@"SentinelInfo" 
+						 inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+	fetchRequest = nil;
+	
+	SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
+	
+	if(CURRENT_BASE_URL != mo.ipAddress)
+	{
+		[CURRENT_BASE_URL release];
+		CURRENT_BASE_URL =  [[NSString alloc] 
+							 initWithString:[NSString 
+											 localizedStringWithFormat:
+											 @"http://%@", mo.ipAddress]];
+	}
+
 	theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:CURRENT_BASE_URL] 	  
 								cachePolicy:NSURLRequestUseProtocolCachePolicy						  
 							timeoutInterval:60.0];
@@ -70,9 +123,15 @@ static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 {
 	int count = [self.navigationController.viewControllers count];
 	
+	#ifdef DEBUG
+	NSLog(@"UILiveFeedViewController: mainMenu: view stack count: %d", count);
+	#endif
+	
 	if(count > 1)
     {
-		[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
+		[self.navigationController popToViewController:
+			[self.navigationController.viewControllers objectAtIndex:count-3] 
+			animated:YES];
     }
 }
 
@@ -84,30 +143,122 @@ static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 }
 
 -(void)viewWillAppear :(BOOL)animated
-{
+{	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+		entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	
+	#ifdef DEBUG
+	NSLog(@"UILiveFeedViewController: viewWillAppear index: %d", [index intValue]);
+	#endif
+	
+	[fetchRequest release];
+	fetchRequest = nil;
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	context = [appDelegate managedObjectContext];
+	
+	entity = [NSEntityDescription entityForName:
+			  @"SentinelInfo" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
+	
+	if(CURRENT_BASE_URL != mo.ipAddress)
+	{
+		[CURRENT_BASE_URL release];
+		CURRENT_BASE_URL =  [[NSString alloc] 
+							 initWithString:[NSString localizedStringWithFormat:
+											 @"http://%@", mo.ipAddress]];
+	}
+	
 	NSURL *url = [ConfigAccess urlForAction:CURRENT_BASE_URL
                                      action:@"Default"];
-                  
 	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	[theWebView loadRequest:requestObj];
-    
-    if (DEBUG)
-    {
-        NSLog(@"[Default]=%@", url);
-    }
+
+	#ifdef DEBUG
+	NSLog(@"[Default]=%@", url);
+	#endif
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
+- (void)connection:(NSURLConnection *)connection
+			didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
 {
 	if ([challenge previousFailureCount] == 0)
 	{
+		AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+		context = [appDelegate managedObjectContext];
+		
+		NSError *error;
+		NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription 
+				entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+		
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		
+		EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+		NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+		
+		#ifdef DEBUG
+		NSLog(@"UILiveFeedViewController: didReceiveAuthenticationChallenge index: %d",
+			[index intValue]);
+		#endif	
+		
+		[fetchRequest release];
+		fetchRequest = nil;
+		
+		fetchRequest = [[NSFetchRequest alloc] init];
+		context = [appDelegate managedObjectContext];
+		entity = [NSEntityDescription entityForName:@"SentinelInfo" 
+							 inManagedObjectContext:context];
+		
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		
+		SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
+		[fetchRequest release];
+		fetchRequest = nil;
+		
+		// Now authenticate the user
 		NSURLCredential *newCredential;
-		newCredential=[NSURLCredential credentialWithUser:@"kongcao7bl"
-												 password:@"Kongcao7BL"
-											  persistence:NSURLCredentialPersistenceForSession];
+		newCredential=[NSURLCredential credentialWithUser:mo.userName
+				password:mo.password
+				persistence:NSURLCredentialPersistenceForSession];
+		
 		[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
         
-		NSURL *url = [ConfigAccess urlForAction:CURRENT_BASE_URL
+		/*
+		NSString *ipINnUrl = [NSString localizedStringWithFormat:
+							  @"%@%@", @"http://", CURRENT_BASE_URL];
+		*/
+		NSString *ipINnUrl = [NSString localizedStringWithFormat:
+							  @"%@", CURRENT_BASE_URL];
+		
+		NSURL *url = [ConfigAccess urlForAction:ipINnUrl
                                          action:@"Default"];
 		
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
@@ -120,11 +271,12 @@ static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 	}
 	else
 	{
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
-														message:@"Invalid username/password."
-													   delegate:nil
-											  cancelButtonTitle:@"OK" 
-											  otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"Authentication Failure" 
+							  message:@"Invalid username/password."
+							  delegate:nil
+							  cancelButtonTitle:@"OK" 
+							  otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	}
@@ -299,5 +451,3 @@ static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 }
 
 @end
-
-

@@ -1,9 +1,9 @@
 //
-//  viewSnapshots.m
-//  navS
+//  UIViewSnapshotsViewController.m
+//  Sentinel
 //
-//  Created by Guest Account on 11/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/10/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UISnapshotsViewController.h"

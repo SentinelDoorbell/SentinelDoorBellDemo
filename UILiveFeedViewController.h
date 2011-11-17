@@ -1,12 +1,13 @@
 //
-//  viewLiveFeed.h
-//  navS
+//  UILiveFeedViewController.h
+//  Sentinel
 //
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/9/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @class SentinelTouchView;
 
@@ -17,7 +18,10 @@
 	IBOutlet UIImageView	*theImageView;
 	IBOutlet SentinelTouchView *tmpview;
 	IBOutlet UIButton *viewSnapshotsFromLiveFeed;
+	NSManagedObjectContext *context;
 }
+
+@property (nonatomic, retain) NSManagedObjectContext *context;
 
 - (IBAction) onTiltScanClick: (id) sender;
 

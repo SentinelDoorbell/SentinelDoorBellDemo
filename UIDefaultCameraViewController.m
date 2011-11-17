@@ -1,9 +1,9 @@
 //
-//  defaultCamera.m
-//  navS
+//  UIDefaultCameraViewController.m
+//  Sentinel
 //
-//  Created by Guest Account on 11/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by SentinelTeam on 11/10/11.
+//  Copyright 2011 Self. All rights reserved.
 //
 
 #import "UIDefaultCameraViewController.h"

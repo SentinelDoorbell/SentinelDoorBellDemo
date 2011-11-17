@@ -8,15 +8,59 @@
 
 #import "AppDelegate_iPhone.h"
 #import "UIMainViewController.h"
+#import <coreData/CoreData.h>
 
 @implementation AppDelegate_iPhone
 
+@synthesize managedObjectContext;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+- (NSManagedObjectContext *)managedObjectContext {
+	
+    if (managedObjectContext != nil) {
+        return managedObjectContext;
+    }
+
+	NSArray *paths = 
+		NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *basePath = ([paths count] >0) ? 
+		[paths objectAtIndex:0] : nil;
+	NSURL *storeUrl = [NSURL fileURLWithPath:
+		[basePath stringByAppendingPathComponent:@"Sentinel.sqlite"]];
+	NSError *error; 
+	
+	NSPersistentStoreCoordinator *persistentStoreCoordinator = 
+		[[NSPersistentStoreCoordinator alloc]
+		initWithManagedObjectModel:[NSManagedObjectModel mergedModelFromBundles:nil]];
+	
+	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+		[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+		[NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+	
+	if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType 
+									configuration:nil URL:storeUrl
+									options:options error:&error])
+	{
+		NSLog(@"Error loading persistent store...");
+	}
+	
+	managedObjectContext = [[NSManagedObjectContext alloc]init];
+	[managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
+
+	#ifdef DEBUG
+	{
+		NSLog(@"Context allocated in delegate %@", managedObjectContext);
+	}
+	#endif
+	
+	return managedObjectContext;
+}
+
+- (BOOL)application:(UIApplication *)application 
+	didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{    
     // Override point for customization after application launch.
 	navctr = [[UINavigationController alloc] init];
 	UIMainViewController *myview = [[UIMainViewController alloc] 

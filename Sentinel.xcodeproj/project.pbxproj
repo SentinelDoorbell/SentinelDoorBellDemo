@@ -35,6 +35,8 @@
 		AC0165C5146C7F550092251E /* UISnapshotsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0165C3146C7F550092251E /* UISnapshotsView.xib */; };
 		AC0165FC146C8F060092251E /* UIEditCamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */; };
 		AC0165FD146C8F060092251E /* UIEditCamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */; };
+		F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */; };
+		F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B11D14735F6300C4490F /* SentinelInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,10 @@
 		AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEditCamDetailViewController.h; sourceTree = "<group>"; };
 		AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEditCamDetailViewController.m; sourceTree = "<group>"; };
 		AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIEditCamDetailView.xib; sourceTree = "<group>"; };
+		F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoCameraView.h; sourceTree = "<group>"; };
+		F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoCameraView.m; sourceTree = "<group>"; };
+		F2F5B11C14735F6300C4490F /* SentinelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentinelInfo.h; sourceTree = "<group>"; };
+		F2F5B11D14735F6300C4490F /* SentinelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentinelInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +144,8 @@
 				AC0165C1146C7F550092251E /* UISnapshotsViewController.h */,
 				AC0165C2146C7F550092251E /* UISnapshotsViewController.m */,
 				AC0165C3146C7F550092251E /* UISnapshotsView.xib */,
-				AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */,
 				AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */,
+				AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */,
 				AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */,
 				2819307C112F81BE00ECF9B4 /* navS.xcdatamodeld */,
 				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
@@ -160,6 +166,10 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				F2F5B11C14735F6300C4490F /* SentinelInfo.h */,
+				F2F5B11D14735F6300C4490F /* SentinelInfo.m */,
+				F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */,
+				F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -285,6 +295,8 @@
 				AC0165C4146C7F550092251E /* UISnapshotsViewController.m in Sources */,
 				AC0165FC146C8F060092251E /* UIEditCamDetailViewController.m in Sources */,
 				A5F0010A146F301600FDE592 /* ConfigAccess.m in Sources */,
+				F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */,
+				F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
