@@ -134,6 +134,8 @@
 
 	[fetchRequest release];
 	#endif
+	
+	camList.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 
 	[super viewWillAppear:animated];
 	[camList reloadData];

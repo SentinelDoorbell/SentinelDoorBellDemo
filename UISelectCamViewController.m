@@ -31,6 +31,8 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
     [super viewWillAppear:animated];
 }
 

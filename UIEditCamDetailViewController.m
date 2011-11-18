@@ -306,8 +306,7 @@
 			  [index intValue]);
 		#endif
 
-		deleteCamera.enabled = YES;
-		deleteCameraButtonStat.text = @"";
+		deleteCamera.hidden = NO;
 		AppDelegate_iPhone *appDelegate =
 			(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
 		contextnew = [appDelegate managedObjectContext];
@@ -337,8 +336,7 @@
 		NSLog(@"UIEditCamDetailViewController viewDidLoad: loading new view");
 		#endif
 
-		deleteCamera.enabled = NO;
-		deleteCameraButtonStat.text = @"(Disabled)";
+		deleteCamera.hidden = YES;
 		
 	}
 
@@ -346,46 +344,48 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 }
 
-- (IBAction) ipaddressEntry:(id)sender
+- (IBAction) ipaddressEntryStart:(id)sender
 {
 	
 }
 
-- (IBAction) usernameEntry:(id)sender
+- (IBAction) usernameEntryStart:(id)sender
 {
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,60) animated:YES];
 }
 
 - (IBAction) passwordEntryStart:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,200) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,100) animated:YES];
 }
 
 - (IBAction) cameranameEntryStart:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,200) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,140) animated:YES];
 }
 
 - (IBAction) onTouchOutsideCameraName:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
+	NSLog(@"onTouchOutsideCameraName called");
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
 - (IBAction) onTouchOutsidePassword:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
 - (IBAction) onTouchOutsideIPaddress:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
 - (IBAction) onTouchOutsideUserName:(id)sender
 {
-	//[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
 }
 /*
 // Override to allow orientations other than the default portrait orientation.

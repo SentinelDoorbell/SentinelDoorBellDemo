@@ -35,6 +35,10 @@
 		AC0165C5146C7F550092251E /* UISnapshotsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0165C3146C7F550092251E /* UISnapshotsView.xib */; };
 		AC0165FC146C8F060092251E /* UIEditCamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */; };
 		AC0165FD146C8F060092251E /* UIEditCamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */; };
+		AC2E52191475D994003A62CD /* UISurveillanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E52171475D994003A62CD /* UISurveillanceViewController.m */; };
+		AC2E521A1475D994003A62CD /* UISurveillanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E52181475D994003A62CD /* UISurveillanceView.xib */; };
+		AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AC1475BBBB00B875B4 /* mainviewbg.png */; };
+		AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */; };
 		F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */; };
 		F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B11D14735F6300C4490F /* SentinelInfo.m */; };
 /* End PBXBuildFile section */
@@ -82,6 +86,11 @@
 		AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEditCamDetailViewController.h; sourceTree = "<group>"; };
 		AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEditCamDetailViewController.m; sourceTree = "<group>"; };
 		AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIEditCamDetailView.xib; sourceTree = "<group>"; };
+		AC2E52161475D994003A62CD /* UISurveillanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISurveillanceViewController.h; sourceTree = "<group>"; };
+		AC2E52171475D994003A62CD /* UISurveillanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISurveillanceViewController.m; sourceTree = "<group>"; };
+		AC2E52181475D994003A62CD /* UISurveillanceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UISurveillanceView.xib; sourceTree = "<group>"; };
+		AC6861AC1475BBBB00B875B4 /* mainviewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbg.png; sourceTree = "<group>"; };
+		AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbutton.png; sourceTree = "<group>"; };
 		F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoCameraView.h; sourceTree = "<group>"; };
 		F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoCameraView.m; sourceTree = "<group>"; };
 		F2F5B11C14735F6300C4490F /* SentinelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentinelInfo.h; sourceTree = "<group>"; };
@@ -124,6 +133,9 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AC2E52161475D994003A62CD /* UISurveillanceViewController.h */,
+				AC2E52171475D994003A62CD /* UISurveillanceViewController.m */,
+				AC2E52181475D994003A62CD /* UISurveillanceView.xib */,
 				67A0CEB9146AECA30061F413 /* UIMainViewController.h */,
 				67A0CEBA146AECA30061F413 /* UIMainViewController.m */,
 				67A0CEBB146AECA30061F413 /* UIMainView.xib */,
@@ -159,6 +171,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AC6861AA1475BB9400B875B4 /* Resource */,
 				2860E386111B897F00E27156 /* iPhone */,
 				29B97317FDCFA39411CA2CEA /* iPad */,
 				28EEBF621118D79A00187D67 /* Shared */,
@@ -210,6 +223,15 @@
 				A5F0010C146F66A900FDE592 /* CamModels.plist */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		AC6861AA1475BB9400B875B4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AC6861AC1475BBBB00B875B4 /* mainviewbg.png */,
+				AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +294,9 @@
 				AC0165FD146C8F060092251E /* UIEditCamDetailView.xib in Resources */,
 				A5F0010D146F66A900FDE592 /* CamModels.plist in Resources */,
 				A567A5C0146FB5D10015BCAB /* UISnapCell.xib in Resources */,
+				AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */,
+				AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */,
+				AC2E521A1475D994003A62CD /* UISurveillanceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +322,7 @@
 				A5F0010A146F301600FDE592 /* ConfigAccess.m in Sources */,
 				F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */,
 				F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */,
+				AC2E52191475D994003A62CD /* UISurveillanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

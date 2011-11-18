@@ -163,6 +163,10 @@
     // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
+}
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;

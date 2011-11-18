@@ -11,7 +11,7 @@
 
 @class SentinelTouchView;
 
-@interface UILiveFeedViewController : UIViewController {
+@interface UILiveFeedViewController : UIViewController <UIAlertViewDelegate> {
 	IBOutlet UIWebView *theWebView;
 	IBOutlet NSURLRequest *theRequest;
 	IBOutlet NSURLConnection *theConnection;

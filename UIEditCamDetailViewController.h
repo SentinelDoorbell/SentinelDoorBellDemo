@@ -24,8 +24,8 @@
 	int cameraIndex;
 }
 
-- (IBAction) ipaddressEntry:(id)sender;
-- (IBAction) usernameEntry:(id)sender;
+- (IBAction) ipaddressEntryStart:(id)sender;
+- (IBAction) usernameEntryStart:(id)sender;
 - (IBAction) passwordEntryStart:(id)sender;
 - (IBAction) cameranameEntryStart:(id)sender;
 

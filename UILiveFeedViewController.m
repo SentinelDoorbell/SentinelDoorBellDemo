@@ -89,7 +89,7 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 								cachePolicy:NSURLRequestUseProtocolCachePolicy						  
 							timeoutInterval:60.0];
 	
-	theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
 	
 	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
                              initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
@@ -194,6 +194,8 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	[theWebView loadRequest:requestObj];
 
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
+	
 	#ifdef DEBUG
 	NSLog(@"[Default]=%@", url);
 	#endif
@@ -274,12 +276,27 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 		UIAlertView *alert = [[UIAlertView alloc] 
 							  initWithTitle:@"Authentication Failure" 
 							  message:@"Invalid username/password."
-							  delegate:nil
-							  cancelButtonTitle:@"OK" 
+							  delegate:self
+							  cancelButtonTitle:@"Back to Main Menu" 
 							  otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	}
+}
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	 int count = [self.navigationController.viewControllers count];
+	 
+	 #ifdef DEBUG
+	 NSLog(@"UILiveFeedViewController: clickedButtonAtIndex: view stack count: %d", count);
+	 #endif
+	 
+	 if(count > 1)
+	 {
+		 [self.navigationController popToViewController:
+		  [self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
+	 }
 }
 
 - (IBAction) onTiltScanClick: (id) sender
@@ -350,6 +367,23 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 	
 	[data writeToFile:path atomically:YES];
 	
+	UIAlertView *alert;
+
+	alert = [[UIAlertView alloc] initWithTitle:@"Saving Snapshot"
+										message:nil
+										delegate:nil
+										cancelButtonTitle:nil
+										otherButtonTitles:nil];
+	[alert show];
+	
+	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(alert.bounds.size.width / 2, alert.bounds.size.height - 50);
+	[indicator startAnimating];
+	[alert addSubview:indicator];
+	[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[alert release];
 }
 
 /*
