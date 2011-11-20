@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// Forward declaration
+@class UISnapshotImageButton;
 
 @interface UISnapshotsViewController : UITableViewController 
 {
@@ -23,20 +25,29 @@
 
 - (void) loadSnapshotsArray;
 
+- (void) onImageClick:(id) sender;
+
 @end
 
-
 @interface UISnapshotViewCell : UITableViewCell 
-{
-    //UIImageView *imageView;
-    
-    IBOutlet UIImageView* imageView1;
-    IBOutlet UIImageView* imageView2;
-    IBOutlet UIImageView* imageView3;
+{    
+    IBOutlet UISnapshotImageButton* imageButton1;
+    IBOutlet UISnapshotImageButton* imageButton2;
+    IBOutlet UISnapshotImageButton* imageButton3;
 }
 
-@property (nonatomic, retain) UIImageView* imageView1;
-@property (nonatomic, retain) UIImageView* imageView2;
-@property (nonatomic, retain) UIImageView* imageView3;
+@property (nonatomic, retain) UISnapshotImageButton* imageButton1;
+@property (nonatomic, retain) UISnapshotImageButton* imageButton2;
+@property (nonatomic, retain) UISnapshotImageButton* imageButton3;
+
+
+@end
+
+@interface UISnapshotImageButton : UIButton
+{
+    NSString* imagePath;
+}
+
+@property (nonatomic, retain) NSString* imagePath;
 
 @end

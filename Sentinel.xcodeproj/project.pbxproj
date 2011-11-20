@@ -26,6 +26,8 @@
 		67A0CEE4146AFD300061F413 /* UILiveFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A0CEE2146AFD300061F413 /* UILiveFeedView.xib */; };
 		67A0CF89146B1BC80061F413 /* UIConfigCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A0CF87146B1BC80061F413 /* UIConfigCamViewController.m */; };
 		67A0CF8A146B1BC80061F413 /* UIConfigCamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A0CF88146B1BC80061F413 /* UIConfigCamView.xib */; };
+		A54636D414789C14005CC2B0 /* UISnapImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54636D214789C13005CC2B0 /* UISnapImageViewController.m */; };
+		A54636D514789C14005CC2B0 /* UISnapImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */; };
 		A567A5C0146FB5D10015BCAB /* UISnapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A567A5BF146FB5D10015BCAB /* UISnapCell.xib */; };
 		A5F0010A146F301600FDE592 /* ConfigAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F00109146F301600FDE592 /* ConfigAccess.m */; };
 		A5F0010D146F66A900FDE592 /* CamModels.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F0010C146F66A900FDE592 /* CamModels.plist */; };
@@ -73,6 +75,9 @@
 		67A0CF87146B1BC80061F413 /* UIConfigCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigCamViewController.m; sourceTree = "<group>"; };
 		67A0CF88146B1BC80061F413 /* UIConfigCamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIConfigCamView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Sentinel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sentinel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A54636D114789C13005CC2B0 /* UISnapImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapImageViewController.h; sourceTree = "<group>"; };
+		A54636D214789C13005CC2B0 /* UISnapImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapImageViewController.m; sourceTree = "<group>"; };
+		A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISnapImageViewController.xib; sourceTree = "<group>"; };
 		A567A5BF146FB5D10015BCAB /* UISnapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISnapCell.xib; sourceTree = "<group>"; };
 		A5F00108146F301600FDE592 /* ConfigAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigAccess.h; sourceTree = "<group>"; };
 		A5F00109146F301600FDE592 /* ConfigAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigAccess.m; sourceTree = "<group>"; };
@@ -156,6 +161,9 @@
 				AC0165C1146C7F550092251E /* UISnapshotsViewController.h */,
 				AC0165C2146C7F550092251E /* UISnapshotsViewController.m */,
 				AC0165C3146C7F550092251E /* UISnapshotsView.xib */,
+				A54636D114789C13005CC2B0 /* UISnapImageViewController.h */,
+				A54636D214789C13005CC2B0 /* UISnapImageViewController.m */,
+				A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */,
 				AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */,
 				AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */,
 				AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */,
@@ -297,6 +305,7 @@
 				AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */,
 				AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */,
 				AC2E521A1475D994003A62CD /* UISurveillanceView.xib in Resources */,
+				A54636D514789C14005CC2B0 /* UISnapImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +332,7 @@
 				F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */,
 				F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */,
 				AC2E52191475D994003A62CD /* UISurveillanceViewController.m in Sources */,
+				A54636D414789C14005CC2B0 /* UISnapImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

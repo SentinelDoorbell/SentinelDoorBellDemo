@@ -7,7 +7,7 @@
 //
 
 #import "UISnapshotsViewController.h"
-
+#import "UISnapImageViewController.h"
 
 @implementation UISnapshotsViewController
 
@@ -25,13 +25,21 @@
 	self.title = @"Snapshots";
 }
 
+- (void)viewWillAppear:(BOOL)animated 
+{
+    self.view.backgroundColor = 
+        [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
+
+    [self loadSnapshotsArray];
+    [self.tableView reloadData];
+    [super viewWillAppear:animated];
+}
+
 #pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
-    [self loadSnapshotsArray];
-
     return 1;
 }
 
@@ -70,6 +78,16 @@
             if ([ob isKindOfClass:[UISnapshotViewCell class]])
             {
                 cell = (UISnapshotViewCell *) ob;
+                
+                [cell.imageButton1 addTarget:self 
+                                      action:@selector(onImageClick:) 
+                            forControlEvents:UIControlEventTouchUpInside];
+                [cell.imageButton2 addTarget:self 
+                                      action:@selector(onImageClick:) 
+                            forControlEvents:UIControlEventTouchUpInside];
+                [cell.imageButton3 addTarget:self 
+                                      action:@selector(onImageClick:) 
+                            forControlEvents:UIControlEventTouchUpInside];
                 break;
             }
         }
@@ -85,10 +103,12 @@
                               theSnapshotsRootDir, str];
         
         UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
-        
-        [fullPath release];
 
-        cell.imageView1.image = image;
+        [cell.imageButton1 setImage:image forState:UIControlStateNormal];
+        cell.imageButton1.imagePath = fullPath;
+        
+        [image release];
+        [fullPath release];
     }
     
     index++;
@@ -101,9 +121,11 @@
         
         UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
         
-        [fullPath release];
+        [cell.imageButton2 setImage:image forState:UIControlStateNormal];
+        cell.imageButton2.imagePath = fullPath;
         
-        cell.imageView2.image = image;
+        [image release];
+        [fullPath release];
     }
     
     index ++;
@@ -115,9 +137,12 @@
                               [theSnapshotsArray objectAtIndex:index]];
         
         UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
+
+        [cell.imageButton3 setImage:image forState:UIControlStateNormal];
+        cell.imageButton3.imagePath = fullPath;
         
         [fullPath release];
-        cell.imageView3.image = image;
+        [image release];
     }
     
     return cell;
@@ -127,23 +152,47 @@
 {
     if (!theSnapshotsArray)
     {
-        self.theSnapshotsRootDir = 
-            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                 NSUserDomainMask, 
-                                                 YES)
-                          objectAtIndex:0];
-
-        NSArray *dirContents = [[NSFileManager defaultManager] 
-                                contentsOfDirectoryAtPath:theSnapshotsRootDir 
-                                error:nil];
-
-    
-        self.theSnapshotsArray = [[NSArray alloc] 
-                                  initWithArray:[dirContents 
-                                        filteredArrayUsingPredicate:[NSPredicate 
-                                   predicateWithFormat:@"self ENDSWITH '.jpg'"]] 
-                                  copyItems:YES];
+        [theSnapshotsArray release];
+        [self.theSnapshotsRootDir release];
     }
+    self.theSnapshotsRootDir = 
+        [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                             NSUserDomainMask, 
+                                             YES)
+                      objectAtIndex:0];
+
+    NSArray *dirContents = [[NSFileManager defaultManager] 
+                            contentsOfDirectoryAtPath:theSnapshotsRootDir 
+                            error:nil];
+
+
+    self.theSnapshotsArray = [[NSArray alloc] 
+                              initWithArray:[dirContents 
+                                    filteredArrayUsingPredicate:[NSPredicate 
+                               predicateWithFormat:@"self ENDSWITH '.jpg'"]] 
+                              copyItems:YES];
+    
+}
+
+
+- (void) onImageClick:(id) sender
+{
+    UISnapshotImageButton *button = (UISnapshotImageButton *)sender;
+    
+    UIImageView *imageView = [[UIImageView alloc] 
+                               initWithImage:button.imageView.image];
+	
+	[self.view addSubview:imageView];
+    
+    UISnapImageViewController *viewctr = [[UISnapImageViewController alloc] 
+                                          initWithNibName:@"UISnapImageViewController" 
+                                          bundle:nil];
+    [viewctr.view addSubview:imageView];
+    viewctr.imagePath = button.imagePath;
+    
+	[self.navigationController pushViewController:viewctr animated:YES];
+	[viewctr release];
+	[imageView release];
 }
 
 #pragma mark -
@@ -163,10 +212,6 @@
     // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
--(void) viewWillAppear:(BOOL)animated
-{
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
-}
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
@@ -184,9 +229,21 @@
 
 @implementation UISnapshotViewCell
 
-@synthesize imageView1;
-@synthesize imageView2;
-@synthesize imageView3;
+@synthesize imageButton1;
+@synthesize imageButton2;
+@synthesize imageButton3;
 
+@end
+
+@implementation UISnapshotImageButton
+
+@synthesize imagePath;
+
+
+- (void) dealloc
+{
+    [imagePath release];
+    [super dealloc];
+}
 @end
 

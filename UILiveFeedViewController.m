@@ -21,11 +21,14 @@
 //static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
+static double TIMEOUT_INTERVAL = 5.0;
+
 @implementation UILiveFeedViewController
 
 @synthesize context;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil 
+{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) 
     {
@@ -33,11 +36,12 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
+- (void)viewDidLoad 
+{
 	self.title = @"Live Feed";	
-	
+
+    [theWebView setDelegate:self];
+    
 	AppDelegate_iPhone *appDelegate =
 		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
 	context = [appDelegate managedObjectContext];
@@ -50,7 +54,8 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
 	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
@@ -87,9 +92,10 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
 	theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:CURRENT_BASE_URL] 	  
 								cachePolicy:NSURLRequestUseProtocolCachePolicy						  
-							timeoutInterval:60.0];
+							timeoutInterval:TIMEOUT_INTERVAL];
 	
-	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest 
+                                                    delegate:self];
 	
 	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
                              initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
@@ -107,6 +113,8 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
                                         action:@selector(mainMenu:)];
 	self.navigationItem.leftBarButtonItem = leftitem;
 	[leftitem release];
+    
+    [super viewDidLoad];
 }
 
 -(void) OnViewSnapshotsClick:(id) sender
@@ -191,7 +199,9 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 	
 	NSURL *url = [ConfigAccess urlForAction:CURRENT_BASE_URL
                                      action:@"Default"];
-	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url 
+                                                cachePolicy:NSURLRequestUseProtocolCachePolicy						  
+                                            timeoutInterval:TIMEOUT_INTERVAL];
 	[theWebView loadRequest:requestObj];
 
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
@@ -263,7 +273,9 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 		NSURL *url = [ConfigAccess urlForAction:ipINnUrl
                                          action:@"Default"];
 		
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url  
+                                                    cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                timeoutInterval:TIMEOUT_INTERVAL];
 		[theWebView loadRequest:requestObj];
 		
         if (DEBUG)
@@ -346,6 +358,27 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
 - (IBAction) OnSnapshot: (id) sender
 {
+    UIAlertView *alert;
+    
+	alert = [[UIAlertView alloc] initWithTitle:@"Saving Snapshot"
+                                       message:nil
+                                      delegate:nil
+                             cancelButtonTitle:nil
+                             otherButtonTitles:nil];
+	[alert show];
+	
+	UIActivityIndicatorView *indicator = 
+        [[UIActivityIndicatorView alloc] 
+        initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(alert.bounds.size.width / 2, 
+                                   alert.bounds.size.height - 50);
+	[indicator startAnimating];
+	[alert addSubview:indicator];
+	[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[alert release];
+
 	NSDateFormatter *format = [[NSDateFormatter alloc] init];
 	[format setDateFormat:@"yyyyMMMdd_HH_mm_ss"];
 	
@@ -366,24 +399,37 @@ static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 	[str release];
 	
 	[data writeToFile:path atomically:YES];
-	
-	UIAlertView *alert;
+}
 
-	alert = [[UIAlertView alloc] initWithTitle:@"Saving Snapshot"
-										message:nil
-										delegate:nil
-										cancelButtonTitle:nil
-										otherButtonTitles:nil];
-	[alert show];
-	
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	
-	indicator.center = CGPointMake(alert.bounds.size.width / 2, alert.bounds.size.height - 50);
-	[indicator startAnimating];
-	[alert addSubview:indicator];
-	[alert dismissWithClickedButtonIndex:0 animated:YES];
-	[indicator release];
-	[alert release];
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    static int STOPPED_LOAD_CODE = -999;
+    
+    if ([error code] != STOPPED_LOAD_CODE)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] 
+                              initWithTitle:@"Connection Error!" 
+                              message:@"Camera is not available" 
+                              delegate:nil 
+                              cancelButtonTitle:@"OK" 
+                              otherButtonTitles: nil];
+        [alert setDelegate:self];
+        [alert show];
+        [alert release];
+    }
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+#ifdef DEBUG
+    NSLog(@"WebView loading started.");
+#endif
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+#ifdef DEBUG
+    NSLog(@"WebView finished loading.");
+#endif
 }
 
 /*

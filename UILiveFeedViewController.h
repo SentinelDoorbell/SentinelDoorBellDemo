@@ -11,14 +11,22 @@
 
 @class SentinelTouchView;
 
-@interface UILiveFeedViewController : UIViewController <UIAlertViewDelegate> {
-	IBOutlet UIWebView *theWebView;
-	IBOutlet NSURLRequest *theRequest;
-	IBOutlet NSURLConnection *theConnection;
-	IBOutlet UIImageView	*theImageView;
-	IBOutlet SentinelTouchView *tmpview;
-	IBOutlet UIButton *viewSnapshotsFromLiveFeed;
-	NSManagedObjectContext *context;
+@interface UILiveFeedViewController : UIViewController 
+                <UIAlertViewDelegate, UIWebViewDelegate> 
+{
+	IBOutlet UIWebView         *theWebView;
+	
+    IBOutlet NSURLRequest      *theRequest;
+	
+    IBOutlet NSURLConnection   *theConnection;
+	
+    IBOutlet UIImageView       *theImageView;
+	
+    IBOutlet SentinelTouchView *tmpview;
+	
+    IBOutlet UIButton          *viewSnapshotsFromLiveFeed;
+    
+	NSManagedObjectContext     *context;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
