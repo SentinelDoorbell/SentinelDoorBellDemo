@@ -6,17 +6,23 @@
 //  Copyright 2011 Self. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "UIMainViewController.h"
 #import "UISelectCamViewController.h"
 #import "UIConfigCamViewController.h"
 #import "UIDefaultCameraViewController.h"
 #import "UISnapshotsViewController.h"
 #import "UISurveillanceViewController.h"
+#import "AppDelegate_iPhone.h"
+#import "DefaultCamera.h"
+#import "UILiveFeedViewController.h"
 
 static UILabel *toolTipGlobal;
 CGRect myFrame;
 
 @implementation UIMainViewController
+
+@synthesize contextDefaultCam;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil 
 {
@@ -80,6 +86,7 @@ CGRect myFrame;
 
 - (void)viewDidLoad 
 {
+	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 	
 	UINavigationBar *navBar = [self.navigationController navigationBar];
@@ -96,7 +103,58 @@ CGRect myFrame;
 		[imageView release];
 	}
 	*/
-    [super viewDidLoad];
+	
+	/*test: vijay - begin*/
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	/*Check for Default Camera*/	
+	
+	if([fetchedObjects count] == 0) {
+		NSLog(@"MainView DefaultCamera Empty");
+		
+		DefaultCamera *mo = 
+		[NSEntityDescription insertNewObjectForEntityForName:@"DefaultCamera"
+									  inManagedObjectContext:contextDefaultCam];
+		
+		[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		
+	}
+	
+	else {
+		
+		DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+		
+		NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		if([currentDefaultCamera intValue] == -1) {
+			NSLog(@"DefaultCamera not set: MainView: %d",[currentDefaultCamera intValue]);
+		}
+		
+		else if([currentDefaultCamera intValue] > -1) {
+			NSLog(@"DefaultCamera is set: MainView: %d",[currentDefaultCamera intValue]);
+			
+			UILiveFeedViewController *viewctr = [[UILiveFeedViewController alloc] 
+												 initWithNibName:@"UILiveFeedView" 
+												 bundle:nil];
+			[self.navigationController pushViewController:viewctr animated:YES];
+			[viewctr release];
+		}
+	}
+	
+	//DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+	/*End: Check for Default Camera*/
 }
 
 -(void)viewWillAppear :(BOOL)animated

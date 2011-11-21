@@ -212,7 +212,7 @@
 							<object class="IBUISwitch" id="170828000">
 								<reference key="NSNextResponder" ref="461419058"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{113, 208}, {94, 27}}</string>
+								<string key="NSFrame">{{33, 208}, {94, 27}}</string>
 								<reference key="NSSuperview" ref="461419058"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -223,7 +223,7 @@
 							<object class="IBUILabel" id="1002891458">
 								<reference key="NSNextResponder" ref="461419058"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{26, 243}, {258, 21}}</string>
+								<string key="NSFrame">{{33, 243}, {94, 44}}</string>
 								<reference key="NSSuperview" ref="461419058"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -231,10 +231,16 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Enable Alarm on Motion detection</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">12</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="IBUITextColor" ref="863412458"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
-								<float key="IBUIMinimumFontSize">10</float>
+								<float key="IBUIMinimumFontSize">9</float>
+								<int key="IBUINumberOfLines">2</int>
 							</object>
 							<object class="IBUILabel" id="162931921">
 								<reference key="NSNextResponder" ref="461419058"/>
@@ -261,7 +267,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<object class="NSFont" key="IBUIFont">
+								<object class="NSFont" key="IBUIFont" id="882483720">
 									<string key="NSName">Helvetica-Bold</string>
 									<double key="NSSize">15</double>
 									<int key="NSfFlags">16</int>
@@ -277,7 +283,7 @@
 									<bytes key="NSWhite">MQA</bytes>
 									<reference key="NSCustomColorSpace" ref="240228585"/>
 								</object>
-								<object class="NSColor" key="IBUINormalTitleShadowColor">
+								<object class="NSColor" key="IBUINormalTitleShadowColor" id="249315923">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
@@ -285,6 +291,25 @@
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">mainviewbutton.png</string>
 								</object>
+							</object>
+							<object class="IBUIButton" id="178228955">
+								<reference key="NSNextResponder" ref="461419058"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{156, 208}, {139, 27}}</string>
+								<reference key="NSSuperview" ref="461419058"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<reference key="IBUIFont" ref="882483720"/>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Set as Default</string>
+								<reference key="IBUIHighlightedTitleColor" ref="150170019"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="249315923"/>
 							</object>
 						</object>
 						<string key="NSFrameSize">{320, 460}</string>
@@ -479,6 +504,23 @@
 					</object>
 					<int key="connectionID">110</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onTouchDefaultCamera:</string>
+						<reference key="source" ref="178228955"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">112</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">setDefaultCamera</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="178228955"/>
+					</object>
+					<int key="connectionID">113</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -522,10 +564,11 @@
 							<reference ref="1066414347"/>
 							<reference ref="550504151"/>
 							<reference ref="459760629"/>
-							<reference ref="1002891458"/>
-							<reference ref="170828000"/>
 							<reference ref="1067969966"/>
 							<reference ref="162931921"/>
+							<reference ref="170828000"/>
+							<reference ref="1002891458"/>
+							<reference ref="178228955"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -589,6 +632,11 @@
 						<reference key="object" ref="162931921"/>
 						<reference key="parent" ref="461419058"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">111</int>
+						<reference key="object" ref="178228955"/>
+						<reference key="parent" ref="461419058"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -599,6 +647,7 @@
 					<string>-2.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
+					<string>111.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
 					<string>12.IBViewBoundsToFrameTransform</string>
 					<string>15.IBPluginDependency</string>
@@ -630,7 +679,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UIEditCamDetailViewController</string>
 					<string>UIResponder</string>
-					<string>{{1039, 485}, {320, 480}}</string>
+					<string>{{1517, 557}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -670,11 +720,11 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCwgAAw2kAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABC4gAAw2kAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">AUHQAABDcwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABB0AAAw46AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -702,7 +752,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">110</int>
+			<int key="maxID">113</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -716,6 +766,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>cameranameEntryStart:</string>
 							<string>ipaddressEntryStart:</string>
+							<string>onTouchDefaultCamera:</string>
 							<string>onTouchDeleteCamera:</string>
 							<string>onTouchOutsideCameraName:</string>
 							<string>onTouchOutsideIPaddress:</string>
@@ -727,6 +778,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -745,6 +797,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>cameranameEntryStart:</string>
 							<string>ipaddressEntryStart:</string>
+							<string>onTouchDefaultCamera:</string>
 							<string>onTouchDeleteCamera:</string>
 							<string>onTouchOutsideCameraName:</string>
 							<string>onTouchOutsideIPaddress:</string>
@@ -762,6 +815,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">ipaddressEntryStart:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">onTouchDefaultCamera:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -809,6 +866,7 @@
 							<string>deleteCameraButtonStat</string>
 							<string>ipaddress</string>
 							<string>password</string>
+							<string>setDefaultCamera</string>
 							<string>username</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -820,6 +878,7 @@
 							<string>UILabel</string>
 							<string>UITextField</string>
 							<string>UITextField</string>
+							<string>UIButton</string>
 							<string>UITextField</string>
 						</object>
 					</object>
@@ -834,6 +893,7 @@
 							<string>deleteCameraButtonStat</string>
 							<string>ipaddress</string>
 							<string>password</string>
+							<string>setDefaultCamera</string>
 							<string>username</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -865,6 +925,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">password</string>
 								<string key="candidateClassName">UITextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">setDefaultCamera</string>
+								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">username</string>

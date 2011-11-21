@@ -14,6 +14,7 @@
 #import "EditInfoCameraView.h"
 #import <CoreData/CoreData.h>
 #import "AppDelegate_iPhone.h"
+#import "DefaultCamera.h"
 
 // This will be set from the core data when a user selects a camera. 
 //static NSString* CURRENT_BASE_URL = @"http://128.238.151.253/";
@@ -26,6 +27,7 @@ static double TIMEOUT_INTERVAL = 5.0;
 @implementation UILiveFeedViewController
 
 @synthesize context;
+@synthesize contextDefaultCam;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil 
 {
@@ -38,83 +40,110 @@ static double TIMEOUT_INTERVAL = 5.0;
 
 - (void)viewDidLoad 
 {
-	self.title = @"Live Feed";	
-
-    [theWebView setDelegate:self];
-    
+	[super viewDidLoad];
+	self.title = @"Live Feed";
+	
+	[theWebView setDelegate:self];
+	
+	/*Begin: check for default camera and start live feed*/
 	AppDelegate_iPhone *appDelegate =
-		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
-	context = [appDelegate managedObjectContext];
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	contextDefaultCam = [appDelegate managedObjectContext];
 	
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-		entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
-                                                     error:&error];
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
 	
-	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
-	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	if(([fetchedObjects count] > 0) && ([index intValue] != -1)) {
+		
+		NSLog(@"DefaultCamera selected: LiveFeed: %d",[index intValue]);
+	}	
+	/*End: check for default camera and start live feed*/
 	
-	#ifdef DEBUG
-	NSLog(@"UILiveFeedViewController: viewDidLoad index: %d", [index intValue]);
-	#endif	
+	else {
+    
+		AppDelegate_iPhone *appDelegate =
+			(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+		context = [appDelegate managedObjectContext];
 	
-	[fetchRequest release];
-	fetchRequest = nil;
+		NSError *error;
+		NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription 
+						entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
 	
-	fetchRequest = [[NSFetchRequest alloc] init];
-	context = [appDelegate managedObjectContext];
-	entity = [NSEntityDescription entityForName:@"SentinelInfo" 
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+														 error:&error];
+	
+		EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+		NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	
+		#ifdef DEBUG
+		NSLog(@"UILiveFeedViewController: viewDidLoad index: %d", [index intValue]);
+		#endif	
+	
+		[fetchRequest release];
+		fetchRequest = nil;
+	
+		fetchRequest = [[NSFetchRequest alloc] init];
+		context = [appDelegate managedObjectContext];
+		entity = [NSEntityDescription entityForName:@"SentinelInfo" 
 						 inManagedObjectContext:context];
 	
-	[fetchRequest setEntity:entity];
-	[fetchRequest setReturnsObjectsAsFaults:NO];
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		[fetchRequest release];
+		fetchRequest = nil;
 	
-	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-	[fetchRequest release];
-	fetchRequest = nil;
+		SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
 	
-	SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
-	
-	if(CURRENT_BASE_URL != mo.ipAddress)
-	{
-		[CURRENT_BASE_URL release];
-		CURRENT_BASE_URL =  [[NSString alloc] 
-							 initWithString:[NSString 
-											 localizedStringWithFormat:
-											 @"http://%@", mo.ipAddress]];
-	}
+		if(CURRENT_BASE_URL != mo.ipAddress)
+		{
+			[CURRENT_BASE_URL release];
+			CURRENT_BASE_URL =  [[NSString alloc] 
+								 initWithString:[NSString 
+												 localizedStringWithFormat:
+												 @"http://%@", mo.ipAddress]];
+		}
 
-	theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:CURRENT_BASE_URL] 	  
-								cachePolicy:NSURLRequestUseProtocolCachePolicy						  
-							timeoutInterval:TIMEOUT_INTERVAL];
+		theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:CURRENT_BASE_URL] 	  
+									cachePolicy:NSURLRequestUseProtocolCachePolicy						  
+								timeoutInterval:TIMEOUT_INTERVAL];
 	
-	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest 
+		theConnection = [[NSURLConnection alloc] initWithRequest:theRequest 
                                                     delegate:self];
 	
-	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
-                             initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
-                             target:self   
-                             action:@selector(OnSnapshot:)];
-	self.navigationItem.rightBarButtonItem = item; 
-	[item release];
+		UIBarButtonItem *item = [[UIBarButtonItem alloc]   
+								 initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+								 target:self   
+								 action:@selector(OnSnapshot:)];
+		self.navigationItem.rightBarButtonItem = item; 
+		[item release];
 	
-	[theWebView addSubview:tmpview];
+		[theWebView addSubview:tmpview];
 	
-	UIBarButtonItem *leftitem = [[UIBarButtonItem alloc] 
-                                 initWithTitle:@"Main Menu" 
-                                         style:UIBarButtonItemStylePlain
-                                        target:self   
-                                        action:@selector(mainMenu:)];
-	self.navigationItem.leftBarButtonItem = leftitem;
-	[leftitem release];
-    
-    [super viewDidLoad];
+		UIBarButtonItem *leftitem = [[UIBarButtonItem alloc] 
+									 initWithTitle:@"Main Menu" 
+											style:UIBarButtonItemStylePlain
+											target:self   
+											action:@selector(mainMenu:)];
+		self.navigationItem.leftBarButtonItem = leftitem;
+		[leftitem release];
+		
+	}
+
 }
 
 -(void) OnViewSnapshotsClick:(id) sender

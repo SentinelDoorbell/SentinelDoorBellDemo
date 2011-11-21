@@ -15,11 +15,13 @@
 	NSMutableArray *camArr;
 	NSManagedObjectContext *context;
 	NSManagedObjectContext *contextnew;
+	NSManagedObjectContext *contextDefaultCam;
 }
 
 - (void)saveCredentials:(id)sender;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) NSManagedObjectContext *contextnew;
+@property (nonatomic, retain) NSManagedObjectContext *contextDefaultCam;
 
 @end

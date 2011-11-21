@@ -26,6 +26,8 @@
 	IBOutlet UIButton *infoSurveillance;
 	
 	IBOutlet UILabel *tooltip;
+	
+	NSManagedObjectContext *contextDefaultCam;
 }
 
 - (IBAction) selectCameraFromListPressed:(id)sender;
@@ -39,6 +41,8 @@
 - (IBAction) infoDefaultCamPressed:(id)sender;
 - (IBAction) infoSnapShotPressed:(id)sender;
 - (IBAction) infoSurveillancePressed:(id)sender;
+
+@property (nonatomic, retain) NSManagedObjectContext *contextDefaultCam;
 
 @end
 

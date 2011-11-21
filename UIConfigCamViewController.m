@@ -12,11 +12,13 @@
 #import <CoreData/CoreData.h>
 #import "SentinelInfo.h"
 #import "EditInfoCameraView.h"
+#import "DefaultCamera.h"
 
 @implementation UIConfigCamViewController
 
 @synthesize context;
 @synthesize contextnew;
+@synthesize contextDefaultCam;
 
 - (void)addCamera:(id)sender 
 
@@ -64,6 +66,37 @@
 	#ifdef DEBUG
 	NSLog(@"UIConfigCamViewController: addCamera: setting cameraIndex to -1");
 	#endif
+	
+	/*begin: set isDefaultCamera to -1 when user is adding a new camera*/
+	fetchRequest = [[NSFetchRequest alloc] init];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:
+			  @"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	if([fetchedObjectsDC count] == 0) {
+		NSLog(@"DefaultCamera Empty in EditCam : Save: Add Cam : Default Cam set to -1");
+		DefaultCamera *moDC = 
+		[NSEntityDescription insertNewObjectForEntityForName:@"DefaultCamera"
+									  inManagedObjectContext:contextDefaultCam];
+		
+		[moDC setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		
+		if(![contextDefaultCam save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+		
+		[fetchRequest release];
+		fetchRequest = nil;
+	}
+	
+	/*End: set isDefaultCamera to -1 when user is adding a new camera*/
 
 	UIEditCamDetailViewController *viewctr = [[UIEditCamDetailViewController alloc] 
                                               initWithNibName:@"UIEditCamDetailView" 

@@ -11,11 +11,13 @@
 #import <CoreData/CoreData.h>
 #import "SentinelInfo.h"
 #import "EditInfoCameraView.h"
+#import "DefaultCamera.h"
 
 @implementation UIEditCamDetailViewController
 
 @synthesize context;
 @synthesize contextnew;
+@synthesize contextDefaultCam;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -102,8 +104,151 @@
 	NSLog(@"UIEditCameraViewController: saveCamera: Done Saving");
 	#endif
 	
+	/*set isDefaultCamera to -1 when user adds a camera*/
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:
+			  @"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	if([fetchedObjectsDC count] == 0) {
+		NSLog(@"DefaultCamera Empty in EditCam : Save: New Cam : Default Cam set to -1");
+		DefaultCamera *moDC = 
+		[NSEntityDescription insertNewObjectForEntityForName:@"DefaultCamera"
+									  inManagedObjectContext:contextDefaultCam];
+		
+		[moDC setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		
+		if(![contextDefaultCam save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+		
+		[fetchRequest release];
+		fetchRequest = nil;
+	}
+	
+	/*End: set isDefaultCamera to -1 when user adds a camera*/
+	
 	[self.navigationController popViewControllerAnimated:YES];
 }
+
+/*set default camera*/
+- (IBAction) onTouchDefaultCamera:(id)sender
+{
+	
+	NSLog(@"onTouchDefaultCamera being called");
+	
+	AppDelegate_iPhone *appDelegate =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];	
+	
+	/*get index*/
+	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	
+	NSLog(@"UIEditCameraViewController: DefaultCamera: index: %d", [index intValue]);
+	
+	[fetchRequest release];
+	fetchRequest = nil;
+	
+#ifdef DEBUG
+	NSLog(@"UIEditCameraViewController: DefaultCamera: index: %d", [index intValue]);
+#endif
+	/*get index end*/
+	
+	/*get camera obj count*/
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	contextnew = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:
+			  @"SentinelInfo" inManagedObjectContext:contextnew];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	NSNumber *camCount = [NSNumber numberWithInteger:[fetchedObjects count]];
+	NSLog(@"UIEditCameraViewController: DefaultCamera: Camera: %d", [camCount intValue]);
+	
+	[fetchRequest release];
+	fetchRequest = nil;	
+	
+	/*get camera obj count end*/
+	
+	/*set the default camera value*/
+	
+	fetchRequest = [[NSFetchRequest alloc] init];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	entity = [NSEntityDescription entityForName:
+			  @"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	/*
+	 fetchRequest = [[NSFetchRequest alloc] init];
+	 contextDefaultCam = [appDelegate managedObjectContext];
+	 */
+	
+	if([fetchedObjects count] == 1) {
+		
+		if([index intValue] == -1) {
+			
+			NSLog(@"New default cam index %d",[camCount intValue]);
+			
+			DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+			[mo setValue:[NSNumber numberWithInt:[camCount intValue]] forKey:@"isDefaultCamera"];
+			
+			if(![contextDefaultCam save:&error])
+			{
+				NSLog(@"Error Saving contextDefaultCam");
+			}
+			
+			NSLog(@"UIEditCameraViewController: isDefaultCamera: index: %d", [camCount intValue]);
+			
+		}
+		
+		else if([index intValue] < [camCount intValue]) {
+			
+			
+			DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+			[mo setValue:[NSNumber numberWithInt:[index intValue]] forKey:@"isDefaultCamera"];
+			
+			if(![contextDefaultCam save:&error])
+			{
+				NSLog(@"Error Saving contextDefaultCam");
+			}
+			
+			NSLog(@"UIEditCameraViewController: isDefaultCamera: index: %d", [index intValue]);
+		}
+	}
+	
+	[fetchRequest release];
+	fetchRequest = nil;
+}
+
+/*set default camera end*/
 
 - (IBAction) onTouchDeleteCamera:(id)sender
 {
@@ -132,6 +277,32 @@
 			NSLog(@"%@ and %@", error, [error userInfo]);
 		}
 		[fetchRequest release];
+		
+		/*Begin: handle delete default camera*/
+		fetchRequest = [[NSFetchRequest alloc] init];
+		contextDefaultCam = [appDelegate managedObjectContext];
+		entity = [NSEntityDescription entityForName:
+				  @"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+		
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+		DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+		NSNumber *index = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		NSLog(@"Camera getting deleted: %d and Default Camera: %d",cameraIndex,[index intValue]);
+		
+		if([index intValue] == cameraIndex) {
+			DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+			[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+			
+			if(![contextDefaultCam save:&error])
+			{
+				NSLog(@"Error Saving contextDefaultCam");
+			}
+		}
+		/*End: handle delete default camera*/
 		
 	}
 	[self.navigationController popViewControllerAnimated:YES];

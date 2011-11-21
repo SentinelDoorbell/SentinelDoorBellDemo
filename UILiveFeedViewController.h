@@ -14,22 +14,25 @@
 @interface UILiveFeedViewController : UIViewController 
                 <UIAlertViewDelegate, UIWebViewDelegate> 
 {
-	IBOutlet UIWebView         *theWebView;
+	IBOutlet UIWebView *theWebView;
 	
-    IBOutlet NSURLRequest      *theRequest;
+    IBOutlet NSURLRequest *theRequest;
 	
-    IBOutlet NSURLConnection   *theConnection;
+    IBOutlet NSURLConnection *theConnection;
 	
-    IBOutlet UIImageView       *theImageView;
+    IBOutlet UIImageView *theImageView;
 	
     IBOutlet SentinelTouchView *tmpview;
 	
-    IBOutlet UIButton          *viewSnapshotsFromLiveFeed;
+    IBOutlet UIButton *viewSnapshotsFromLiveFeed;
     
-	NSManagedObjectContext     *context;
+	NSManagedObjectContext *context;
+	
+	NSManagedObjectContext *contextDefaultCam;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
+@property (nonatomic, retain) NSManagedObjectContext *contextDefaultCam;
 
 - (IBAction) onTiltScanClick: (id) sender;
 
