@@ -110,6 +110,11 @@
         [image release];
         [fullPath release];
     }
+    else
+    {
+        [cell.imageButton1 setEnabled:NO];
+        [cell.imageButton1 setUserInteractionEnabled:NO];
+    }
     
     index++;
     
@@ -127,6 +132,11 @@
         [image release];
         [fullPath release];
     }
+    else
+    {
+        [cell.imageButton2 setEnabled:NO];
+        [cell.imageButton2 setUserInteractionEnabled:NO];
+    }
     
     index ++;
 
@@ -143,6 +153,11 @@
         
         [fullPath release];
         [image release];
+    }
+    else
+    {
+        [cell.imageButton3 setEnabled:NO];
+        [cell.imageButton3 setUserInteractionEnabled:NO];
     }
     
     return cell;
