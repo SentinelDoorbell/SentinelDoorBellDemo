@@ -1,46 +1,46 @@
 TSentinel
 v7
 r0
-t343603751.911972
+t343988905.230846
 cCheck dependencies
-cProcessInfoPlistFile /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Info.plist Sentinel-Info.plist
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/iPad/MainWindow_iPad.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/iPhone/MainWindow_iPhone.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UIMainView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UISelectCamView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UILiveFeedView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UIConfigCamView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UIDefaultCameraView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapshotsView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UIEditCamDetailView.xib
-cCopyPlistFile /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist CamModels.plist
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapCell.xib
+cProcessInfoPlistFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Info.plist Sentinel-Info.plist
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/iPad/MainWindow_iPad.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/iPhone/MainWindow_iPhone.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIMainView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISelectCamView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib
+cCopyPlistFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist CamModels.plist
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapCell.xib
 cCpResource build/Debug-iphonesimulator/Sentinel.app/mainviewbg.png mainviewbg.png
 cCpResource build/Debug-iphonesimulator/Sentinel.app/mainviewbutton.png mainviewbutton.png
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UISurveillanceView.xib
-cCompileXIB /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.xib
-cProcessPCH /var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-epjyicapcyghujehgsxxcztyahaq/Sentinel_Prefix.pch.gch Sentinel_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cDataModelVersionCompile /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/navS.momd /Users/Guest/Desktop/SentinelDoorBellDemo/Shared/navS.xcdatamodeld
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o /Users/Guest/Desktop/SentinelDoorBellDemo/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o /Users/Guest/Desktop/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o /Users/Guest/Desktop/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/Guest/Desktop/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UIMainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UISelectCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UILiveFeedViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UIConfigCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UIDefaultCameraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapshotsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UIEditCamDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o /Users/Guest/Desktop/SentinelDoorBellDemo/ConfigAccess.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o /Users/Guest/Desktop/SentinelDoorBellDemo/SentinelInfo.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o /Users/Guest/Desktop/SentinelDoorBellDemo/EditInfoCameraView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UISurveillanceViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o /Users/Guest/Desktop/SentinelDoorBellDemo/DefaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel normal i386
-cGenerateDSYMFile /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
-cTouch /Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceView.xib
+cCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.xib
+cProcessPCH /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch.gch Sentinel_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/navS.momd /Users/mahmood1/SentinelDoorBellDemo/Shared/navS.xcdatamodeld
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o /Users/mahmood1/SentinelDoorBellDemo/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o /Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o /Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o /Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o /Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o /Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o /Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel normal i386
+cGenerateDSYMFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
+cTouch /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004D75107D0000000000000110
@@ -1459,8 +1459,504 @@ c000000004EC316B70000000000003A88
 t1321408183
 s14984
 
+N/Users/mahmood1/SentinelDoorBellDemo/CamModels.plist
+c000000004ED09BE400000000000005F3
+t1322294244
+s1523
+
+N/Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.h
+c000000004ED09BE4000000000000026C
+t1322294244
+s620
+i<Foundation/Foundation.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m
+c000000004ED09BE400000000000008BE
+t1322294244
+s2238
+i"ConfigAccess.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.h
+c000000004ED09BE40000000000000126
+t1322294244
+s294
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m
+c000000004ED09BE400000000000000ED
+t1322294244
+s237
+i"DefaultCamera.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.h
+c000000004ED09BE4000000000000011A
+t1322294244
+s282
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m
+c000000004ED09BE400000000000000EA
+t1322294244
+s234
+i"EditInfoCameraView.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.h
+c000000004ED09BE400000000000001AB
+t1322294244
+s427
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m
+c000000004ED09BE40000000000000111
+t1322294244
+s273
+i"SentinelInfo.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/Sentinel_Prefix.pch
+c000000004ED09BE400000000000000B1
+t1322294244
+s177
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.h
+c000000004ED09BE40000000000000358
+t1322294244
+s856
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m
+c000000004ED09BE40000000000001753
+t1322294244
+s5971
+i"AppDelegate_Shared.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/Shared/main.m
+c000000004ED09BE4000000000000017C
+t1322294244
+s380
+i<UIKit/UIKit.h>
+i"ConfigAccess.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/Shared/navS.xcdatamodeld
+c000000004ED09BE40000000000000088
+t1322294244
+s136
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIConfigCamView.xib
+c000000004ED09BE40000000000004FC1
+t1322294244
+s20417
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.h
+c000000004ED09BE400000000000002AB
+t1322294244
+s683
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m
+c000000004ED09BE400000000000030A4
+t1322294244
+s12452
+i"UIConfigCamViewController.h"
+i"UIEditCamDetailViewController.h"
+i"AppDelegate_iPhone.h"
+i<CoreData/CoreData.h>
+i"SentinelInfo.h"
+i"EditInfoCameraView.h"
+i"DefaultCamera.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraView.xib
+c000000004ED09BE40000000000004A05
+t1322294244
+s18949
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.h
+c000000004ED09BE400000000000000F8
+t1322294244
+s248
+i<UIKit/UIKit.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m
+c000000004ED09BE400000000000011A8
+t1322294244
+s4520
+i"UIDefaultCameraViewController.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib
+c000000004ED09E31000000000000F567
+t1322294833
+s62823
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.h
+c000000004ED09DBB000000000000060E
+t1322294715
+s1550
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m
+c000000004ED0A1FC0000000000005EBF
+t1322295804
+s24255
+i"UIEditCamDetailViewController.h"
+i"AppDelegate_iPhone.h"
+i<CoreData/CoreData.h>
+i"SentinelInfo.h"
+i"EditInfoCameraView.h"
+i"DefaultCamera.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UILiveFeedView.xib
+c000000004ED09BE40000000000008A6A
+t1322294244
+s35434
+
+N/Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.h
+c000000004ED09BE40000000000000563
+t1322294244
+s1379
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m
+c000000004ED09BE40000000000003F7B
+t1322294244
+s16251
+i"UILiveFeedViewController.h"
+i"UIMainViewController.h"
+i"UISnapshotsViewController.h"
+i"ConfigAccess.h"
+i"SentinelInfo.h"
+i"EditInfoCameraView.h"
+i<CoreData/CoreData.h>
+i"AppDelegate_iPhone.h"
+i"DefaultCamera.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIMainView.xib
+c000000004ED09BE4000000000000BF75
+t1322294244
+s49013
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.h
+c000000004ED09BE40000000000000552
+t1322294244
+s1362
+i<UIKit/UIKit.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m
+c000000004ED09BE40000000000001AD8
+t1322294244
+s6872
+i<CoreData/CoreData.h>
+i"UIMainViewController.h"
+i"UISelectCamViewController.h"
+i"UIConfigCamViewController.h"
+i"UIDefaultCameraViewController.h"
+i"UISnapshotsViewController.h"
+i"UISurveillanceViewController.h"
+i"AppDelegate_iPhone.h"
+i"DefaultCamera.h"
+i"UILiveFeedViewController.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISelectCamView.xib
+c000000004ED09BE40000000000004D98
+t1322294244
+s19864
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.h
+c000000004ED09BE400000000000001A7
+t1322294244
+s423
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m
+c000000004ED09BE40000000000001CA6
+t1322294244
+s7334
+i"UISelectCamViewController.h"
+i"UILiveFeedViewController.h"
+i"SentinelInfo.h"
+i"EditInfoCameraView.h"
+i"AppDelegate_iPhone.h"
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapCell.xib
+c000000004ED09BE40000000000003FD5
+t1322294244
+s16341
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.h
+c000000004ED09BE4000000000000015D
+t1322294244
+s349
+i<UIKit/UIKit.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m
+c000000004ED09BE400000000000008CC
+t1322294244
+s2252
+i"UISnapImageViewController.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.xib
+c000000004ED09BE40000000000001A59
+t1322294244
+s6745
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapshotsView.xib
+c000000004ED09BE40000000000001DBF
+t1322294244
+s7615
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.h
+c000000004ED09BE4000000000000043D
+t1322294244
+s1085
+i<UIKit/UIKit.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m
+c000000004ED09BE40000000000001A58
+t1322294244
+s6744
+i"UISnapshotsViewController.h"
+i"UISnapImageViewController.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISurveillanceView.xib
+c000000004ED09BE40000000000007B98
+t1322294244
+s31640
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.h
+c000000004ED09BE400000000000002E6
+t1322294244
+s742
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m
+c000000004ED09BE40000000000001FDA
+t1322294244
+s8154
+i"UISurveillanceViewController.h"
+i"AppDelegate_iPhone.h"
+i<CoreData/CoreData.h>
+i"SentinelInfo.h"
+i"EditInfoCameraView.h"
+i"ConfigAccess.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app
+t1322295873
+s714
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM
+t1322295873
+s102
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist
+t1322294244
+s986
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Info.plist
+t1322294244
+s909
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/MainWindow_iPad.nib
+t1322294244
+s1530
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/MainWindow_iPhone.nib
+t1322294244
+s1531
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/PkgInfo
+t1322294244
+s8
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
+t1322295873
+s142652
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UIConfigCamView.nib
+t1322294244
+s1560
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UIDefaultCameraView.nib
+t1322294244
+s1516
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UIEditCamDetailView.nib
+t1322295871
+s8321
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UILiveFeedView.nib
+t1322294244
+s3876
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UIMainView.nib
+t1322294244
+s4528
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UISelectCamView.nib
+t1322294244
+s1560
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UISnapCell.nib
+t1322294244
+s3317
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UISnapImageViewController.nib
+t1322294244
+s945
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UISnapshotsView.nib
+t1322294244
+s1463
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UISurveillanceView.nib
+t1322294244
+s2301
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/mainviewbg.png
+t1322294244
+s123171
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/mainviewbutton.png
+t1322294244
+s104974
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/navS.momd
+t1322294244
+s136
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o
+t1322294295
+s59564
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o
+t1322294294
+s47772
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o
+t1322294295
+s58620
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o
+t1322294296
+s16460
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o
+t1322294296
+s5244
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o
+t1322294296
+s5288
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/Sentinel.LinkFileList
+c000000004ED09C11000000000000092B
+t1322294289
+s2347
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o
+t1322294296
+s5332
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o
+t1322295872
+s73844
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o
+t1322294296
+s43892
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o
+t1322295872
+s103052
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o
+t1322294295
+s104328
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o
+t1322294295
+s77560
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o
+t1322294295
+s64148
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o
+t1322294296
+s46032
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o
+t1322294296
+s64268
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o
+t1322294296
+s74740
+
+N/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o
+t1322294294
+s6320
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.h
+c000000004ED09BE40000000000000100
+t1322294244
+s256
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m
+c000000004ED09BE4000000000000071D
+t1322294244
+s1821
+i"AppDelegate_iPad.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPad/MainWindow_iPad.xib
+c000000004ED09BE4000000000000389A
+t1322294244
+s14490
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.h
+c000000004ED09BE40000000000000197
+t1322294244
+s407
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m
+c000000004ED09BE40000000000000BA6
+t1322294244
+s2982
+i"AppDelegate_iPhone.h"
+i"UIMainViewController.h"
+i<coreData/CoreData.h>
+
+N/Users/mahmood1/SentinelDoorBellDemo/iPhone/MainWindow_iPhone.xib
+c000000004ED09BE40000000000003A88
+t1322294244
+s14984
+
+N/Users/mahmood1/SentinelDoorBellDemo/mainviewbg.png
+c000000004ED09BE4000000000001E123
+t1322294244
+s123171
+
+N/Users/mahmood1/SentinelDoorBellDemo/mainviewbutton.png
+c000000004ED09BE40000000000019A0E
+t1322294244
+s104974
+
 N/var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch.gch
 t1321409764
+s15814064
+
+N/var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch.gch
+t1322294294
 s15814064
 
 N/var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-dtgskhfrxviuyafrmczjuzhwlpev/Sentinel_Prefix.pch.gch
@@ -1472,13 +1968,13 @@ t1321906422
 s15453392
 
 NSentinel-Info.plist
-c000000004ECAB03F0000000000000569
-t1321906239
+c000000004ED09BE40000000000000569
+t1322294244
 s1385
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies343603751#343603751#0(0"0(0#1#0"8616712224#0"0#
+lSLF07#2@18"Check dependencies343988905#343988905#0(0"0(0#1#0"4409779520#0"0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o /Users/Guest/Desktop/Sentinel/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.346443
@@ -1519,6 +2015,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@68"Compile /Users/mahmood1/Desktop/Sentinel/Shared/AppDelegate_Shared.m343240811#343240812#0(0"0(0#0#60"/Users/mahmood1/Desktop/Sentinel/Shared/AppDelegate_Shared.m4416212624#1899"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/Shared/AppDelegate_Shared.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o /Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987094.881074
+e343987095.132158
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o
+x/Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m343987094#343987095#0(0"0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m4470341264#1943"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/Shared/AppDelegate_Shared.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_Shared.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o /Users/Guest/Desktop/Sentinel/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.345842
 e343260348.427295
@@ -1557,6 +2066,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@64"Compile /Users/mahmood1/Desktop/Sentinel/iPad/AppDelegate_iPad.m343240811#343240812#0(0"0(0#0#56"/Users/mahmood1/Desktop/Sentinel/iPad/AppDelegate_iPad.m4416212624#1893"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/iPad/AppDelegate_iPad.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o /Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987094.540867
+e343987094.934584
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o
+x/Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m343987094#343987094#0(0"0(0#0#60"/Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m4470341264#1937"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/iPad/AppDelegate_iPad.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPad.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/Guest/Desktop/Sentinel/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343278362.426846
@@ -1597,6 +2119,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@68"Compile /Users/mahmood1/Desktop/Sentinel/iPhone/AppDelegate_iPhone.m343240811#343240812#0(0"0(0#0#60"/Users/mahmood1/Desktop/Sentinel/iPhone/AppDelegate_iPhone.m4416212624#1899"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/iPhone/AppDelegate_iPhone.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987094.934710
+e343987095.194275
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o
+x/Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m343987094#343987095#0(0"0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m4470341264#1943"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/iPhone/AppDelegate_iPhone.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/AppDelegate_iPhone.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o /Users/Guest/Desktop/Sentinel/ConfigAccess.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.450661
 e343260348.517333
@@ -1636,6 +2171,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@55"Compile /Users/mahmood1/Desktop/Sentinel/ConfigAccess.m343238405#343238407#0(0"0(0#0#47"/Users/mahmood1/Desktop/Sentinel/ConfigAccess.m4476894864#1880"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/ConfigAccess.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o /Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.116051
+e343987096.298425
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o
+x/Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m343987096#343987096#0(0"0(0#0#51"/Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m4470341264#1924"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/ConfigAccess.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/ConfigAccess.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o /Users/Guest/Desktop/SentinelDoorBellDemo/DefaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343600795.736084
 e343600795.772055
@@ -1648,6 +2196,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@65"Compile /Users/Guest/Desktop/SentinelDoorBellDemo/DefaultCamera.m343600795#343600795#0(0"0(0#0#57"/Users/Guest/Desktop/SentinelDoorBellDemo/DefaultCamera.m8616044416#1985"    cd /Users/Guest/Desktop/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-epjyicapcyghujehgsxxcztyahaq/Sentinel_Prefix.pch -c /Users/Guest/Desktop/SentinelDoorBellDemo/DefaultCamera.m -o /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o /Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.800551
+e343987096.974333
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o
+x/Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m343987096#343987096#0(0"0(0#0#52"/Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m4470341264#1926"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/DefaultCamera.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/DefaultCamera.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o /Users/Guest/Desktop/Sentinel/EditInfoCameraView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.462371
@@ -1688,6 +2249,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@61"Compile /Users/mahmood1/Desktop/Sentinel/EditInfoCameraView.m343240894#343240895#0(0"0(0#0#53"/Users/mahmood1/Desktop/Sentinel/EditInfoCameraView.m4397727376#1892"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/EditInfoCameraView.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o /Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.440487
+e343987096.650313
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o
+x/Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m343987096#343987096#0(0"0(0#0#57"/Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m4470341264#1936"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/EditInfoCameraView.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/EditInfoCameraView.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o /Users/Guest/Desktop/Sentinel/SentinelInfo.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.455505
 e343260348.517774
@@ -1726,6 +2300,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@55"Compile /Users/mahmood1/Desktop/Sentinel/SentinelInfo.m343240815#343240816#0(0"0(0#0#47"/Users/mahmood1/Desktop/Sentinel/SentinelInfo.m4416212624#1880"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/SentinelInfo.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o /Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.298532
+e343987096.507567
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o
+x/Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m343987096#343987096#0(0"0(0#0#51"/Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m4470341264#1924"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/SentinelInfo.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/SentinelInfo.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o /Users/Guest/Desktop/Sentinel/UIConfigCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343265179.386898
@@ -1766,6 +2353,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@68"Compile /Users/mahmood1/Desktop/Sentinel/UIConfigCamViewController.m343240813#343240814#0(0"0(0#0#60"/Users/mahmood1/Desktop/Sentinel/UIConfigCamViewController.m4416212624#1906"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UIConfigCamViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343988672.121559
+e343988672.862438
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m343988672#343988672#0(0"0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m4409777808#1950"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIConfigCamViewController.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o /Users/Guest/Desktop/Sentinel/UIDefaultCameraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343261506.670647
 e343261506.800304
@@ -1804,6 +2404,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@72"Compile /Users/mahmood1/Desktop/Sentinel/UIDefaultCameraViewController.m343240813#343240814#0(0"0(0#0#64"/Users/mahmood1/Desktop/Sentinel/UIDefaultCameraViewController.m4416212624#1914"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UIDefaultCameraViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987095.776119
+e343987096.037225
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m343987095#343987096#0(0"0(0#0#68"/Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m4470341264#1958"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIDefaultCameraViewController.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o /Users/Guest/Desktop/Sentinel/UIEditCamDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343265770.598699
@@ -1862,6 +2475,25 @@ o/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: 
 o/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:224: warning: 'NSData' may not respond to '-base64Encoding'
 lSLF07#2@72"Compile /Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m343240814#343240815#0(730"/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m: In function '-[UIEditCamDetailViewController onTouchalarmSwitch:]':/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: 'NSData' may not respond to '-base64Encoding'/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: (Messages without a matching method signature/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: will be assumed to return 'id' and accept/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: '...' as arguments.)/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:224: warning: 'NSData' may not respond to '-base64Encoding'3(22@45"'NSData' may not respond to '-base64Encoding'343240814#134#125#0(6@64"/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m343240710#166#0#166#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)343240814#259#125#0(6@64"/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m343240710#166#0#166#0#0"0(22@45"'NSData' may not respond to '-base64Encoding'343240814#605#125#0(6@64"/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m343240710#224#0#224#0#26"'*' may not respond to '*'0(0#0#64"/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m4416212624#1914"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343988672.123518
+e343988673.010976
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m: In function '-[UIEditCamDetailViewController onTouchalarmSwitch:]':
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: 'NSData' may not respond to '-base64Encoding'
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: (Messages without a matching method signature
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: will be assumed to return 'id' and accept
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: '...' as arguments.)
+o/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:450: warning: 'NSData' may not respond to '-base64Encoding'
+lSLF07#2@76"Compile /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m343988672#343988673#0(754"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m: In function '-[UIEditCamDetailViewController onTouchalarmSwitch:]':/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: 'NSData' may not respond to '-base64Encoding'/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: (Messages without a matching method signature/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: will be assumed to return 'id' and accept/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:392: warning: '...' as arguments.)/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:450: warning: 'NSData' may not respond to '-base64Encoding'3(22@45"'NSData' may not respond to '-base64Encoding'343988672#138#129#0(6@68"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m343988604#392#0#392#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)343988672#267#129#0(6@68"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m343988604#392#0#392#0#0"0(22@45"'NSData' may not respond to '-base64Encoding'343988672#625#129#0(6@68"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m343988604#450#0#450#0#26"'*' may not respond to '*'0(0#0#68"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m4409777808#1958"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIEditCamDetailViewController.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o /Users/Guest/Desktop/Sentinel/UILiveFeedViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343278362.428190
 e343278362.521578
@@ -1901,6 +2533,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/mahmood1/Desktop/Sentinel/UILiveFeedViewController.m343241579#343241579#0(0"0(0#0#59"/Users/mahmood1/Desktop/Sentinel/UILiveFeedViewController.m4416212624#1904"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UILiveFeedViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987095.420051
+e343987095.824366
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m343987095#343987095#0(0"0(0#0#63"/Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m17202256384#1948"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UILiveFeedViewController.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o /Users/Guest/Desktop/Sentinel/UIMainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343280091.991893
 e343280092.097982
@@ -1939,6 +2584,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@63"Compile /Users/mahmood1/Desktop/Sentinel/UIMainViewController.m343240812#343240813#0(0"0(0#0#55"/Users/mahmood1/Desktop/Sentinel/UIMainViewController.m4416212624#1896"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UIMainViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o /Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987095.132273
+e343987095.419944
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m343987095#343987095#0(0"0(0#0#59"/Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m4470341264#1940"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UIMainViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UIMainViewController.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o /Users/Guest/Desktop/Sentinel/UISelectCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343266722.173991
@@ -1985,6 +2643,21 @@ o/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m: In function '-[UI
 o/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m:137: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)
 lSLF07#2@68"Compile /Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m343240812#343240813#0(409"/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m: In function '-[UISelectCamViewController tableView:cellForRowAtIndexPath:]':/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m:137: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)343240812#139#270#0(6@60"/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m343237718#137#0#137#0#33"'*' is deprecated (declared at *)0(0#0#60"/Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m4416212624#1906"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UISelectCamViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987095.194427
+e343987095.475961
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m: In function '-[UISelectCamViewController tableView:cellForRowAtIndexPath:]':
+o/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m:139: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m343987095#343987095#0(417"/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m: In function '-[UISelectCamViewController tableView:cellForRowAtIndexPath:]':/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m:139: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)343987095#143#274#0(6@64"/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m343987044#139#0#139#0#33"'*' is deprecated (declared at *)0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m4470341264#1950"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UISelectCamViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISelectCamViewController.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343599222.804100
 e343599222.865444
@@ -1997,6 +2670,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@77"Compile /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.m343599222#343599222#0(0"0(0#0#69"/Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.m8604100864#2009"    cd /Users/Guest/Desktop/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-epjyicapcyghujehgsxxcztyahaq/Sentinel_Prefix.pch -c /Users/Guest/Desktop/SentinelDoorBellDemo/UISnapImageViewController.m -o /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.650451
+e343987096.874645
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m343987096#343987096#0(0"0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m4470341264#1950"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapImageViewController.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o /Users/Guest/Desktop/Sentinel/UISnapshotsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343261506.710780
@@ -2037,6 +2723,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@68"Compile /Users/mahmood1/Desktop/Sentinel/UISnapshotsViewController.m343240814#343240815#0(0"0(0#0#60"/Users/mahmood1/Desktop/Sentinel/UISnapshotsViewController.m4416212624#1906"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/UISnapshotsViewController.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o0#
 
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987095.824487
+e343987096.115870
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m343987095#343987096#0(0"0(0#0#64"/Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m4470341264#1950"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISnapshotsViewController.o0#
+
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o /Users/Guest/Desktop/Sentinel/UISurveillanceViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343272506.017719
 e343272506.134585
@@ -2062,6 +2761,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@80"Compile /Users/Guest/Desktop/SentinelDoorBellDemo/UISurveillanceViewController.m343599222#343599222#0(0"0(0#0#72"/Users/Guest/Desktop/SentinelDoorBellDemo/UISurveillanceViewController.m8604010080#2015"    cd /Users/Guest/Desktop/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-epjyicapcyghujehgsxxcztyahaq/Sentinel_Prefix.pch -c /Users/Guest/Desktop/SentinelDoorBellDemo/UISurveillanceViewController.m -o /Users/Guest/Desktop/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987096.507833
+e343987096.799579
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o
+x/Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@75"Compile /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m343987096#343987096#0(0"0(0#0#67"/Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m4470341264#1956"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceViewController.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/UISurveillanceViewController.o0#
 
 CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o /Users/Guest/Desktop/Sentinel/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260348.345144
@@ -2101,6 +2813,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@54"Compile /Users/mahmood1/Desktop/Sentinel/Shared/main.m343238402#343238403#0(0"0(0#0#46"/Users/mahmood1/Desktop/Sentinel/Shared/main.m4476894864#1871"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch -c /Users/mahmood1/Desktop/Sentinel/Shared/main.m -o /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o0#
+
+CCompileC build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o /Users/mahmood1/SentinelDoorBellDemo/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987094.539010
+e343987094.880965
+r1
+xCompileC
+xbuild/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o
+x/Users/mahmood1/SentinelDoorBellDemo/Shared/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/mahmood1/SentinelDoorBellDemo/Shared/main.m343987094#343987094#0(0"0(0#0#50"/Users/mahmood1/SentinelDoorBellDemo/Shared/main.m4470341264#1915"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -include /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch -c /Users/mahmood1/SentinelDoorBellDemo/Shared/main.m -o /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/main.o0#
 
 CCompileXIB /Users/Guest/Desktop/Sentinel/UIConfigCamView.xib
 r0
@@ -2287,6 +3012,48 @@ xCompileXIB
 x/Users/mahmood1/Desktop/Sentinel/iPhone/MainWindow_iPhone.xib
 lSLF07#2@39"CompileXIB iPhone/MainWindow_iPhone.xib343102542#343102545#0(0"0(0#0#61"/Users/mahmood1/Desktop/Sentinel/iPhone/MainWindow_iPhone.xib4478582416#574"    cd /Users/mahmood1/Desktop/Sentinel    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/MainWindow_iPhone.nib /Users/mahmood1/Desktop/Sentinel/iPhone/MainWindow_iPhone.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIConfigCamView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIDefaultCameraView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib
+s343988669.263646
+e343988672.120055
+r1
+xCompileXIB
+x/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib
+o2011-11-26 09:24:29.920 ibtool[710:a0b] -[__NSCFSet unionSet:]: This app appears to be calling this method with a non-set parameter.  Please wait while the system corrects this....  
+lSLF07#2@34"CompileXIB UIEditCamDetailView.xib343988669#343988672#0(183"2011-11-26 09:24:29.920 ibtool[710:a0b] -[__NSCFSet unionSet:]: This app appears to be calling this method with a non-set parameter.  Please wait while the system corrects this....  0(0#0#60"/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib4409777808#583"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/UIEditCamDetailView.nib /Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UILiveFeedView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UIMainView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISelectCamView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapCell.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapImageViewController.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISnapshotsView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/UISurveillanceView.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/iPad/MainWindow_iPad.xib
+r0
+
+CCompileXIB /Users/mahmood1/SentinelDoorBellDemo/iPhone/MainWindow_iPhone.xib
+r0
+
 CCopyPlistFile /Users/Guest/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist CamModels.plist
 r0
 
@@ -2301,6 +3068,9 @@ xCopyPlistFile
 x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist
 xCamModels.plist
 lSLF07#2@20"Copy CamModels.plist343102550#343102550#0(0"0(0#0#48"/Users/mahmood1/Desktop/Sentinel/CamModels.plist4478582416#379"    cd /Users/mahmood1/Desktop/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 CamModels.plist --outdir /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app0#
+
+CCopyPlistFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/CamModels.plist CamModels.plist
+r0
 
 CCpResource build/Debug-iphonesimulator/Sentinel.app/mainviewbg.png mainviewbg.png
 s343260347.509100
@@ -2341,6 +3111,9 @@ x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/navS.
 x/Users/mahmood1/Desktop/Sentinel/Shared/navS.xcdatamodeld
 lSLF07#2@99"DataModelVersionCompile build/Debug-iphonesimulator/Sentinel.app/navS.momd Shared/navS.xcdatamodeld343193574#343193574#0(0"0(0#0#57"/Users/mahmood1/Desktop/Sentinel/Shared/navS.xcdatamodeld4480577168#370"    cd /Users/mahmood1/Desktop/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/mahmood1/Desktop/Sentinel/Shared/navS.xcdatamodeld /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/navS.momd0#
 
+CDataModelVersionCompile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/navS.momd /Users/mahmood1/SentinelDoorBellDemo/Shared/navS.xcdatamodeld
+r0
+
 CGenerateDSYMFile /Users/Guest/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app.dSYM /Users/Guest/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel
 s343280092.123400
 e343280092.154452
@@ -2367,6 +3140,15 @@ xGenerateDSYMFile
 x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app.dSYM
 x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel
 lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/Sentinel.app.dSYM build/Debug-iphonesimulator/Sentinel.app/Sentinel343241579#343241580#0(0"0(0#0#82"/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel4416212624#368"    cd /Users/mahmood1/Desktop/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel -o /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app.dSYM0#
+
+CGenerateDSYMFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
+s343988673.543764
+e343988673.628863
+r1
+xGenerateDSYMFile
+x/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM
+x/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
+lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/Sentinel.app.dSYM build/Debug-iphonesimulator/Sentinel.app/Sentinel343988673#343988673#0(0"0(0#0#86"/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel4409777808#380"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel -o /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app.dSYM0#
 
 CLd /Users/Guest/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel normal i386
 s343280092.098053
@@ -2398,6 +3180,16 @@ xnormal
 xi386
 lSLF07#2@87"Link /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel343241579#343241579#0(0"0(0#0#0"4416212624#895"    cd /Users/mahmood1/Desktop/Sentinel    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -filelist /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/Sentinel.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Sentinel0#
 
+CLd /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel normal i386
+s343988673.011352
+e343988673.543544
+r1
+xLd
+x/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel
+xnormal
+xi386
+lSLF07#2@91"Link /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel343988673#343988673#0(0"0(0#0#0"4409777808#915"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -filelist /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Objects-normal/i386/Sentinel.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Sentinel0#
+
 CProcessInfoPlistFile /Users/Guest/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Info.plist Sentinel-Info.plist
 r0
 
@@ -2413,6 +3205,9 @@ x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Info.
 xSentinel-Info.plist
 lSLF07#2@27"Process Sentinel-Info.plist343102542#343102542#0(0"0(0#0#52"/Users/mahmood1/Desktop/Sentinel/Sentinel-Info.plist17211073536#464"    cd /Users/mahmood1/Desktop/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Sentinel-Info.plist -genpkginfo /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app/Info.plist0#
 
+CProcessInfoPlistFile /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app/Info.plist Sentinel-Info.plist
+r0
+
 CProcessPCH /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch.gch Sentinel_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s343102551.745969
 e343102564.828645
@@ -2425,6 +3220,19 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@30"Precompile Sentinel_Prefix.pch343102551#343102564#0(0"0(0#0#52"/Users/mahmood1/Desktop/Sentinel/Sentinel_Prefix.pch4478582416#1761"    cd /Users/mahmood1/Desktop/Sentinel    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator -I/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/include -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/Desktop/Sentinel/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -c /Users/mahmood1/Desktop/Sentinel/Sentinel_Prefix.pch -o /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-amtakusxcnttkghbhphzrpdslbjq/Sentinel_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch.gch Sentinel_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s343987089.429185
+e343987094.538737
+r1
+xProcessPCH
+x/var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch.gch
+xSentinel_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@30"Precompile Sentinel_Prefix.pch343987089#343987094#0(0"0(0#0#56"/Users/mahmood1/SentinelDoorBellDemo/Sentinel_Prefix.pch17204222464#1801"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-generated-files.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-own-target-headers.hmap -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-all-target-headers.hmap -iquote /Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/Sentinel-project-headers.hmap -F/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator -I/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/include -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources/i386 -I/Users/mahmood1/SentinelDoorBellDemo/build/Sentinel.build/Debug-iphonesimulator/Sentinel.build/DerivedSources -c /Users/mahmood1/SentinelDoorBellDemo/Sentinel_Prefix.pch -o /var/folders/2n/ql7wkht57cg8wfgzz0cr9trm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sentinel_Prefix-bnnwafjsmmzposcqndhifnjyvfso/Sentinel_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/zz/zzzivhrRnAmviuee++++mE+++AY/-Caches-/com.apple.Xcode.201/SharedPrecompiledHeaders/Sentinel_Prefix-dtgskhfrxviuyafrmczjuzhwlpev/Sentinel_Prefix.pch.gch Sentinel_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s343260347.810109
@@ -2475,4 +3283,12 @@ r1
 xTouch
 x/Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app
 lSLF07#2@79"Touch /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app343241580#343241580#0(0"0(0#0#0"4416212624#267"    cd /Users/mahmood1/Desktop/Sentinel    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/mahmood1/Desktop/Sentinel/build/Debug-iphonesimulator/Sentinel.app0#
+
+CTouch /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app
+s343988673.629538
+e343988673.670980
+r1
+xTouch
+x/Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app
+lSLF07#2@83"Touch /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app343988673#343988673#0(0"0(0#0#0"4409777808#275"    cd /Users/mahmood1/SentinelDoorBellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/mahmood1/SentinelDoorBellDemo/build/Debug-iphonesimulator/Sentinel.app0#
 

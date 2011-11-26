@@ -145,6 +145,8 @@
 	
 	NSLog(@"onTouchDefaultCamera being called");
 	
+	removeDefaultCamera.hidden = YES;
+	
 	AppDelegate_iPhone *appDelegate =
 	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];	
 	
@@ -213,6 +215,16 @@
 	
 	if([fetchedObjects count] == 1) {
 		
+		DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+		NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		/*reset previous default camera*/
+		if([currentDefaultCamera intValue] == [index intValue]) {
+			DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+			[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		}
+		
+		/*for the new camera*/
 		if([index intValue] == -1) {
 			
 			NSLog(@"New default cam index %d",[camCount intValue]);
@@ -229,6 +241,7 @@
 			
 		}
 		
+		/*for the existing camera*/
 		else if([index intValue] < [camCount intValue]) {
 			
 			
@@ -244,11 +257,53 @@
 		}
 	}
 	
+	setDefaultCamera.hidden = YES;
+	removeDefaultCamera.hidden = NO;
+	
 	[fetchRequest release];
 	fetchRequest = nil;
 }
 
 /*set default camera end*/
+
+/*Begin: Remove Default Camera*/
+- (IBAction) onTouchRemoveDefaultCamera:(id)sender
+{
+	NSLog(@"onTouchzRemoveDefaultCamera being called");
+	
+	AppDelegate_iPhone *appDelegate =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];	
+	
+	/*get index*/
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	if([fetchedObjects count] > 0) {
+		
+		DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+		//NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[mo.isDefaultCamera intValue]];
+		//if([currentDefaultCamera intValue] != -1) {
+		[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		
+		if(![contextDefaultCam save:&error])
+		{
+			NSLog(@"Error Saving contextDefaultCam");
+		}
+	}
+	
+	removeDefaultCamera.hidden = YES;
+	setDefaultCamera.hidden = NO;
+}
+/*End: Remove Default Camera*/
 
 - (IBAction) onTouchDeleteCamera:(id)sender
 {
@@ -452,6 +507,8 @@
     [super viewDidLoad];
 	self.title = @"Camera Details";
 	
+	removeDefaultCamera.hidden = YES;
+	
 	AppDelegate_iPhone *appDelegate =
 		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
 	context = [appDelegate managedObjectContext];
@@ -508,8 +565,39 @@
 		#endif
 
 		deleteCamera.hidden = YES;
-		
 	}
+	
+	/*hide setDefaultCamera button if selected camera is already a default camera*/
+	
+	AppDelegate_iPhone *appDelegateDC =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	
+	contextDefaultCam = [appDelegateDC managedObjectContext];
+	
+	NSFetchRequest *fetchRequestDC = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entityDC = [NSEntityDescription 
+									 entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequestDC setEntity:entityDC];
+	[fetchRequestDC setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC error:&error];
+	
+	if([fetchedObjectsDC count] > 0) {
+		
+		DefaultCamera *defaultCameraObj = [fetchedObjectsDC objectAtIndex:0];
+		NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		if([currentDefaultCamera intValue] == [index intValue]) {
+			
+			setDefaultCamera.hidden = YES;
+			removeDefaultCamera.hidden = NO;
+		}
+	}
+	
+	[fetchRequestDC release];
+	fetchRequestDC = nil;
+	/*vijay test end*/
 
 }
 

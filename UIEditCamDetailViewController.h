@@ -20,6 +20,7 @@
 	IBOutlet UILabel *deleteCameraButtonStat;
 	IBOutlet UISwitch *alarmEnableSwitch;
 	IBOutlet UIButton *setDefaultCamera;
+	IBOutlet UIButton *removeDefaultCamera;
 	NSManagedObjectContext *context;
 	NSManagedObjectContext *contextnew;
 	NSManagedObjectContext *contextDefaultCam;
@@ -39,6 +40,7 @@
 - (IBAction) onTouchDeleteCamera:(id)sender;
 
 - (IBAction) onTouchDefaultCamera:(id)sender;
+- (IBAction) onTouchRemoveDefaultCamera:(id)sender;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) NSManagedObjectContext *contextnew;

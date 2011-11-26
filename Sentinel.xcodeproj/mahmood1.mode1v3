@@ -272,13 +272,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
-									<integer>6</integer>
+									<integer>36</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {262, 534}}</string>
+							<string>{{0, 292}, {262, 534}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -315,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UILiveFeedViewController.m</string>
+								<string>UIEditCamDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UILiveFeedViewController.m</string>
+										<string>UIEditCamDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>F286FDC11475736C00E50D77</string>
+										<string>F28D021C1480DACD00E088FB</string>
 										<key>history</key>
 										<array>
 											<string>F29D37AD1474B8300086AA20</string>
@@ -346,15 +346,15 @@
 											<string>F286FDA4147570C000E50D77</string>
 											<string>F286FDA5147570C000E50D77</string>
 											<string>F286FDA6147570C000E50D77</string>
-											<string>F286FDA7147570C000E50D77</string>
-											<string>F286FDA8147570C000E50D77</string>
 											<string>F286FDA9147570C000E50D77</string>
 											<string>F286FDAA147570C000E50D77</string>
 											<string>F286FDAB147570C000E50D77</string>
 											<string>F286FDAC147570C000E50D77</string>
 											<string>F286FDAD147570C000E50D77</string>
 											<string>F286FDB4147571A600E50D77</string>
-											<string>F286FD8C1475670800E50D77</string>
+											<string>F28D02191480DACD00E088FB</string>
+											<string>F28D021A1480DACD00E088FB</string>
+											<string>F28D021B1480DACD00E088FB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -366,14 +366,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1082, 509}}</string>
+								<string>{{0, 0}, {1082, 508}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 153 1366 593 0 0 1366 746 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>509pt</string>
+							<string>508pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -386,14 +386,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 514}, {1082, 38}}</string>
+								<string>{{0, 513}, {1082, 39}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 153 1366 593 0 0 1366 746 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>38pt</string>
+							<string>39pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -412,9 +412,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F286FD5A147553F800E50D77</string>
+				<string>F28D01FA1480D39A00E088FB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>F286FD5B147553F800E50D77</string>
+				<string>F28D01FB1480D39A00E088FB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -552,10 +552,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>F280D46214734E6A00DE5C36</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/mahmood1/Desktop/Sentinel/Sentinel.xcodeproj</string>
+		<string>/Users/mahmood1/SentinelDoorBellDemo/Sentinel.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 153 1366 593 0 0 1366 746 </string>
@@ -635,7 +635,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>F280D46214734E6A00DE5C36</string>
-				<string>F286FD5C147553F800E50D77</string>
+				<string>F28D01FC1480D39A00E088FB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -757,13 +757,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>F286FD5D147553F800E50D77</string>
+				<string>F28D01FD1480D39A00E088FB</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>F286FD5E147553F800E50D77</string>
-				<string>F286FD5F147553F800E50D77</string>
-				<string>F286FD60147553F800E50D77</string>
-				<string>F286FD61147553F800E50D77</string>
-				<string>F286FD62147553F800E50D77</string>
+				<string>F28D01FE1480D39A00E088FB</string>
+				<string>F28D01FF1480D39A00E088FB</string>
+				<string>F28D02001480D39A00E088FB</string>
+				<string>F28D02011480D39A00E088FB</string>
+				<string>F28D02021480D39A00E088FB</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -890,8 +890,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -927,7 +925,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>F286FD63147553F800E50D77</string>
+				<string>F28D02031480D39A00E088FB</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -937,7 +935,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
