@@ -40,29 +40,36 @@ static double TIMEOUT_INTERVAL = 5.0;
 
 - (void)viewDidLoad 
 {
-	[super viewDidLoad];
+	
 	self.title = @"Live Feed";
 	
 	[theWebView setDelegate:self];
 	
 	/*Begin: check for default camera and start live feed*/
-	AppDelegate_iPhone *appDelegate =
+	AppDelegate_iPhone *appDelegateDC =
 	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
-	contextDefaultCam = [appDelegate managedObjectContext];
+	contextDefaultCam = [appDelegateDC managedObjectContext];
 	
 	NSError *error;
-	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription 
+	NSFetchRequest *fetchRequestDC = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entityDC = [NSEntityDescription 
 								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
 	
-	[fetchRequest setEntity:entity];
-	[fetchRequest setReturnsObjectsAsFaults:NO];
+	[fetchRequestDC setEntity:entityDC];
+	[fetchRequestDC setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
-	DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC error:&error];
+	DefaultCamera *defaultCameraObj = [fetchedObjectsDC objectAtIndex:0];
 	NSNumber *index = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
 	
-	if(([fetchedObjects count] > 0) && ([index intValue] != -1)) {
+	if(([fetchedObjectsDC count] > 0) && ([index intValue] != -1)) {
+		
+		UIBarButtonItem *item = [[UIBarButtonItem alloc]   
+								 initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+								 target:self   
+								 action:@selector(OnSnapshot:)];
+		self.navigationItem.rightBarButtonItem = item; 
+		[item release];
 		
 		NSLog(@"DefaultCamera selected: LiveFeed: %d",[index intValue]);
 	}	
@@ -142,8 +149,8 @@ static double TIMEOUT_INTERVAL = 5.0;
 		self.navigationItem.leftBarButtonItem = leftitem;
 		[leftitem release];
 		
-	}
-
+	}//else
+	[super viewDidLoad];
 }
 
 -(void) OnViewSnapshotsClick:(id) sender
