@@ -185,7 +185,7 @@
 	[self.view addSubview:imageView];
     
     UISnapImageViewController *viewctr = [[UISnapImageViewController alloc] 
-                                          initWithNibName:@"UISnapImageViewController" 
+                                          initWithNibName:@"UISnapImageView" 
                                           bundle:nil];
     [viewctr.view addSubview:imageView];
     viewctr.imagePath = button.imagePath;

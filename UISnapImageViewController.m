@@ -2,7 +2,7 @@
 //  UISnapImageViewController.m
 //  Sentinel
 //
-//  Created by Fekri Kassem on 11/19/11.
+//  Created by SentinelTeam on 11/19/11.
 //  Copyright 2011 Self. All rights reserved.
 //
 
@@ -12,6 +12,11 @@
 @implementation UISnapImageViewController
 
 @synthesize imagePath;
+@synthesize snapDate;
+@synthesize snapTime;
+@synthesize snapCamera;
+@synthesize imageInfo;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +33,7 @@
 - (void)dealloc
 {
     [imagePath release];
+	[imageInfo release];
     [super dealloc];
 }
 
@@ -40,13 +46,12 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
-    
+{	
     self.title = @"Image";
     [super viewDidLoad];
     self.view.backgroundColor = 
         [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
-    
+
     // create a standard delete button with the trash icon
     UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
                                      initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
@@ -55,6 +60,23 @@
     deleteButton.style = UIBarButtonItemStyleBordered;
     self.navigationItem.rightBarButtonItem = deleteButton;
     [deleteButton release];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	int index = 0;
+	for (NSUInteger x = 0; x < [imagePath length]; ++x)
+	{
+		if([imagePath characterAtIndex:x] == '/')			
+			index = x;
+	}
+	imageInfo = [[NSMutableString alloc] initWithString:[imagePath substringWithRange:NSMakeRange(index+1, 9)]];
+	snapDate.text = [NSString stringWithFormat:@"%@",imageInfo];
+	NSMutableString *str = [NSString stringWithFormat:@"%@:%@:%@ (HH:MM:SS)",
+							[imagePath substringWithRange:NSMakeRange(index+11, 2)],
+							[imagePath substringWithRange:NSMakeRange(index+14, 2)],
+							[imagePath substringWithRange:NSMakeRange(index+17, 2)]];
+	snapTime.text = [NSString stringWithFormat:@"%@",str];
 }
 
 - (void)viewDidUnload
@@ -75,7 +97,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError       *error;
     BOOL           fileExists  = [fileManager fileExistsAtPath:imagePath];
-    
+    NSLog(@"%@", imagePath);
     if (fileExists) 
     {
         BOOL success = [fileManager removeItemAtPath:imagePath error:&error];

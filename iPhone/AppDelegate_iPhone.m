@@ -10,6 +10,10 @@
 #import "UIMainViewController.h"
 #import <coreData/CoreData.h>
 
+//set to 0 to remove existing persistent stores
+//can be used to enable a clean start of application
+static int removePersistentStore = 1;
+
 @implementation AppDelegate_iPhone
 
 @synthesize managedObjectContext;
@@ -23,6 +27,41 @@
         return managedObjectContext;
     }
 
+	if (removePersistentStore == 0) 
+	{
+		removePersistentStore = 1;
+		NSError *error;
+		NSArray *paths = 
+		NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+						NSString *basePath = ([paths count] >0) ? 
+						[paths objectAtIndex:0] : nil;
+		NSURL *storeUrl = [NSURL fileURLWithPath:
+						   [basePath stringByAppendingPathComponent:@"Sentinel.sqlite"]];
+		
+		NSPersistentStoreCoordinator *persistentStoreCoordinator = 
+						[[NSPersistentStoreCoordinator alloc]
+							initWithManagedObjectModel:[NSManagedObjectModel mergedModelFromBundles:nil]];
+		
+		NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+								 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+								 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+		
+		if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType 
+													 configuration:nil URL:storeUrl
+														   options:options error:&error])
+		{
+			NSLog(@"Error loading persistent store...");
+		}
+		
+		NSPersistentStore *store = [[persistentStoreCoordinator persistentStores] objectAtIndex:0];
+		
+		if(![[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:&error]) {
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			abort();
+		}
+		[persistentStoreCoordinator release];
+		
+	}
 	NSArray *paths = 
 		NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *basePath = ([paths count] >0) ? 

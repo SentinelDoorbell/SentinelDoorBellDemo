@@ -27,7 +27,7 @@
 		67A0CF89146B1BC80061F413 /* UIConfigCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A0CF87146B1BC80061F413 /* UIConfigCamViewController.m */; };
 		67A0CF8A146B1BC80061F413 /* UIConfigCamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A0CF88146B1BC80061F413 /* UIConfigCamView.xib */; };
 		A54636D414789C14005CC2B0 /* UISnapImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54636D214789C13005CC2B0 /* UISnapImageViewController.m */; };
-		A54636D514789C14005CC2B0 /* UISnapImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */; };
+		A54636D514789C14005CC2B0 /* UISnapImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54636D314789C14005CC2B0 /* UISnapImageView.xib */; };
 		A567A5C0146FB5D10015BCAB /* UISnapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A567A5BF146FB5D10015BCAB /* UISnapCell.xib */; };
 		A5F0010A146F301600FDE592 /* ConfigAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F00109146F301600FDE592 /* ConfigAccess.m */; };
 		A5F0010D146F66A900FDE592 /* CamModels.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F0010C146F66A900FDE592 /* CamModels.plist */; };
@@ -42,6 +42,11 @@
 		AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AC1475BBBB00B875B4 /* mainviewbg.png */; };
 		AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */; };
 		AC8603C1147AED9C002C4AA1 /* DefaultCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */; };
+		F27D625D1484A86F00AD3E99 /* checkbox1.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625A1484A86F00AD3E99 /* checkbox1.png */; };
+		F27D625E1484A86F00AD3E99 /* checkbox2.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625B1484A86F00AD3E99 /* checkbox2.png */; };
+		F27D625F1484A86F00AD3E99 /* checkbox3.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625C1484A86F00AD3E99 /* checkbox3.png */; };
+		F28111A11485AF1B00A7D4CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F28111A01485AF1A00A7D4CB /* Icon.png */; };
+		F28112A21485F25100A7D4CB /* push-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F28112A11485F25100A7D4CB /* push-pin.png */; };
 		F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */; };
 		F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B11D14735F6300C4490F /* SentinelInfo.m */; };
 /* End PBXBuildFile section */
@@ -78,7 +83,7 @@
 		8D1107310486CEB800E47090 /* Sentinel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sentinel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A54636D114789C13005CC2B0 /* UISnapImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapImageViewController.h; sourceTree = "<group>"; };
 		A54636D214789C13005CC2B0 /* UISnapImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapImageViewController.m; sourceTree = "<group>"; };
-		A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISnapImageViewController.xib; sourceTree = "<group>"; };
+		A54636D314789C14005CC2B0 /* UISnapImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISnapImageView.xib; sourceTree = "<group>"; };
 		A567A5BF146FB5D10015BCAB /* UISnapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISnapCell.xib; sourceTree = "<group>"; };
 		A5F00108146F301600FDE592 /* ConfigAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigAccess.h; sourceTree = "<group>"; };
 		A5F00109146F301600FDE592 /* ConfigAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigAccess.m; sourceTree = "<group>"; };
@@ -99,6 +104,11 @@
 		AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbutton.png; sourceTree = "<group>"; };
 		AC8603BF147AED9C002C4AA1 /* DefaultCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCamera.h; sourceTree = "<group>"; };
 		AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCamera.m; sourceTree = "<group>"; };
+		F27D625A1484A86F00AD3E99 /* checkbox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox1.png; path = ../checkbox1.png; sourceTree = SOURCE_ROOT; };
+		F27D625B1484A86F00AD3E99 /* checkbox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox2.png; path = ../checkbox2.png; sourceTree = SOURCE_ROOT; };
+		F27D625C1484A86F00AD3E99 /* checkbox3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox3.png; path = ../checkbox3.png; sourceTree = SOURCE_ROOT; };
+		F28111A01485AF1A00A7D4CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F28112A11485F25100A7D4CB /* push-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push-pin.png"; sourceTree = "<group>"; };
 		F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoCameraView.h; sourceTree = "<group>"; };
 		F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoCameraView.m; sourceTree = "<group>"; };
 		F2F5B11C14735F6300C4490F /* SentinelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentinelInfo.h; sourceTree = "<group>"; };
@@ -166,7 +176,7 @@
 				AC0165C3146C7F550092251E /* UISnapshotsView.xib */,
 				A54636D114789C13005CC2B0 /* UISnapImageViewController.h */,
 				A54636D214789C13005CC2B0 /* UISnapImageViewController.m */,
-				A54636D314789C14005CC2B0 /* UISnapImageViewController.xib */,
+				A54636D314789C14005CC2B0 /* UISnapImageView.xib */,
 				AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */,
 				AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */,
 				AC0165FB146C8F060092251E /* UIEditCamDetailView.xib */,
@@ -241,6 +251,11 @@
 		AC6861AA1475BB9400B875B4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F28112A11485F25100A7D4CB /* push-pin.png */,
+				F28111A01485AF1A00A7D4CB /* Icon.png */,
+				F27D625A1484A86F00AD3E99 /* checkbox1.png */,
+				F27D625B1484A86F00AD3E99 /* checkbox2.png */,
+				F27D625C1484A86F00AD3E99 /* checkbox3.png */,
 				AC6861AC1475BBBB00B875B4 /* mainviewbg.png */,
 				AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */,
 			);
@@ -310,7 +325,12 @@
 				AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */,
 				AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */,
 				AC2E521A1475D994003A62CD /* UISurveillanceView.xib in Resources */,
-				A54636D514789C14005CC2B0 /* UISnapImageViewController.xib in Resources */,
+				A54636D514789C14005CC2B0 /* UISnapImageView.xib in Resources */,
+				F27D625D1484A86F00AD3E99 /* checkbox1.png in Resources */,
+				F27D625E1484A86F00AD3E99 /* checkbox2.png in Resources */,
+				F27D625F1484A86F00AD3E99 /* checkbox3.png in Resources */,
+				F28111A11485AF1B00A7D4CB /* Icon.png in Resources */,
+				F28112A21485F25100A7D4CB /* push-pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,12 +396,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PREBINDING = NO;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -390,13 +414,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface UIEditCamDetailViewController : UIViewController {
+@interface UIEditCamDetailViewController : UIViewController{
 	IBOutlet UIScrollView *cameraParamsScrollView;
 	IBOutlet UITextField *ipaddress;
 	IBOutlet UITextField *username;
@@ -20,11 +20,16 @@
 	IBOutlet UILabel *deleteCameraButtonStat;
 	IBOutlet UISwitch *alarmEnableSwitch;
 	IBOutlet UIButton *setDefaultCamera;
-	IBOutlet UIButton *removeDefaultCamera;
+	IBOutlet UIButton *viewPassword;
 	NSManagedObjectContext *context;
 	NSManagedObjectContext *contextnew;
 	NSManagedObjectContext *contextDefaultCam;
+	int checkboxSelected;
 	int cameraIndex;
+	int defCameraFlag;
+	int userInputValid[2]; //Only the IP address and Camera name need to be validated
+	IBOutlet UILabel *ipaddressHint;
+	IBOutlet UILabel *cameranameHint;
 }
 
 - (IBAction) ipaddressEntryStart:(id)sender;
@@ -41,6 +46,11 @@
 
 - (IBAction) onTouchDefaultCamera:(id)sender;
 - (IBAction) onTouchRemoveDefaultCamera:(id)sender;
+- (IBAction) checkboxButton:(id)sender;
+- (IBAction) setDefaultCameraToggle:(id)sender;
+
+- (IBAction)textFieldReturn:(id)sender;
+- (IBAction)backgroundTouched:(id)sender;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) NSManagedObjectContext *contextnew;

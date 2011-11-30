@@ -39,6 +39,35 @@ CGRect myFrame;
 
 - (IBAction) selectCameraFromListPressed:(id)sender
 {
+	//validate camera name
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"SentinelInfo" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+	
+	if([fetchedObjects count] == 0)
+	{
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"No Cameras found" 
+							  message:@"Hit the 'Configure Camera' button"
+							  delegate:self
+							  cancelButtonTitle:@"Ok" 
+							  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
 	UISelectCamViewController *viewctr = [[UISelectCamViewController alloc] 
                                           initWithNibName:@"UISelectCamView" 
                                           bundle:nil];
