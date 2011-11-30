@@ -14,11 +14,11 @@
 		</data>
 		<key>MainWindow_iPad.nib</key>
 		<data>
-		q1ArBwaGkwA8b6tqQTCGbBMoJ2E=
+		FpSx3f2VTtZD2ymqPR8iBeUFkI8=
 		</data>
 		<key>MainWindow_iPhone.nib</key>
 		<data>
-		r2EPiMzmGT+brao+oI3w2twzscI=
+		AV6V2WdIJVmVf0DqFTxV6HlY2aA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -26,35 +26,35 @@
 		</data>
 		<key>UIConfigCamView.nib</key>
 		<data>
-		cz8Ni+Yq7D/Sq91hcH8VGm00IsQ=
+		66tIKv8yLy5wJNlRb1hUl1jAP3o=
 		</data>
 		<key>UIDefaultCameraView.nib</key>
 		<data>
-		HRDKNguLilGKTMO+FsbvtyYxs04=
+		Dcpfean7gi/MmFIXO4s0QLRsMJA=
 		</data>
 		<key>UIEditCamDetailView.nib</key>
 		<data>
-		vMN2gpB5MwoJBYu9x9q4ZcBarI8=
+		rOKt1z8qb3Mhi+dkkFn3JLE9uyE=
 		</data>
 		<key>UILiveFeedView.nib</key>
 		<data>
-		mcZO/cuYuodE4dxiPbxKl+SeHzQ=
+		xcTW16NuTzo3Fmdzhre++uc49zo=
 		</data>
 		<key>UIMainView.nib</key>
 		<data>
-		GXYQH3USL728L3SLYo9QBplS0zM=
+		NsIu8EBg08o1ZHZ2DnF1jAqdkwk=
 		</data>
 		<key>UISelectCamView.nib</key>
 		<data>
-		VcStYSOxdN1fSH4Q14bQ4U6oFIE=
+		0pky13+NPzgWJbi2K/qTlvLwIfU=
 		</data>
 		<key>UISnapCell.nib</key>
 		<data>
-		Xezrrjj1viLOt8QTFFfBK/1iePs=
+		EQMibAK+CWCWdhZxdsxxl4Vfpms=
 		</data>
 		<key>UISnapImageView.nib</key>
 		<data>
-		jniwQjXzLFPeR743P5WWi5ToCB8=
+		RZpFhRBd7G64Xhrw7OgzjIk29/w=
 		</data>
 		<key>UISnapImageViewController.nib</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>UISnapshotsView.nib</key>
 		<data>
-		E7ND5WTshVkqxLurq59Y7JqmUdA=
+		GyZ+FHzEHyn6nGwLzPp1vCdeDz8=
 		</data>
 		<key>UISurveillanceView.nib</key>
 		<data>
-		7F/J31q7TSpuUZcUdJawNRydjdM=
+		c9aeBt4uW91+CFJ3DhXV1U6GhwI=
 		</data>
 		<key>checkbox1.png</key>
 		<data>
@@ -88,6 +88,10 @@
 		<data>
 		OhEYNezr4SV4WakR9yVI7qvSP38=
 		</data>
+		<key>mainviewbg1.png</key>
+		<data>
+		RTn6V5mrLMcUlMyS53JyUoyOBkQ=
+		</data>
 		<key>mainviewbutton.png</key>
 		<data>
 		46kal09Z668U0/y6ffWR9mQtRBA=
@@ -95,6 +99,10 @@
 		<key>navS.momd/navS.mom</key>
 		<data>
 		tTCVkqiT+RNGPgXEwPTPbf56ndY=
+		</data>
+		<key>push-pin.png</key>
+		<data>
+		lPONTpJf0yqsJKab3twRjLxVKrg=
 		</data>
 	</dict>
 	<key>rules</key>

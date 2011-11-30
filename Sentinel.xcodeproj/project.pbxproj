@@ -42,11 +42,12 @@
 		AC6861AE1475BBBB00B875B4 /* mainviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AC1475BBBB00B875B4 /* mainviewbg.png */; };
 		AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */; };
 		AC8603C1147AED9C002C4AA1 /* DefaultCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */; };
-		F27D625D1484A86F00AD3E99 /* checkbox1.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625A1484A86F00AD3E99 /* checkbox1.png */; };
-		F27D625E1484A86F00AD3E99 /* checkbox2.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625B1484A86F00AD3E99 /* checkbox2.png */; };
-		F27D625F1484A86F00AD3E99 /* checkbox3.png in Resources */ = {isa = PBXBuildFile; fileRef = F27D625C1484A86F00AD3E99 /* checkbox3.png */; };
 		F28111A11485AF1B00A7D4CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F28111A01485AF1A00A7D4CB /* Icon.png */; };
 		F28112A21485F25100A7D4CB /* push-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F28112A11485F25100A7D4CB /* push-pin.png */; };
+		F2854A7D148605120034C2B9 /* checkbox1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7A148605120034C2B9 /* checkbox1.png */; };
+		F2854A7E148605120034C2B9 /* checkbox2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7B148605120034C2B9 /* checkbox2.png */; };
+		F2854A7F148605120034C2B9 /* checkbox3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7C148605120034C2B9 /* checkbox3.png */; };
+		F2854A81148605630034C2B9 /* mainviewbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A80148605630034C2B9 /* mainviewbg1.png */; };
 		F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */; };
 		F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B11D14735F6300C4490F /* SentinelInfo.m */; };
 /* End PBXBuildFile section */
@@ -104,11 +105,12 @@
 		AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbutton.png; sourceTree = "<group>"; };
 		AC8603BF147AED9C002C4AA1 /* DefaultCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCamera.h; sourceTree = "<group>"; };
 		AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCamera.m; sourceTree = "<group>"; };
-		F27D625A1484A86F00AD3E99 /* checkbox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox1.png; path = ../checkbox1.png; sourceTree = SOURCE_ROOT; };
-		F27D625B1484A86F00AD3E99 /* checkbox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox2.png; path = ../checkbox2.png; sourceTree = SOURCE_ROOT; };
-		F27D625C1484A86F00AD3E99 /* checkbox3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox3.png; path = ../checkbox3.png; sourceTree = SOURCE_ROOT; };
 		F28111A01485AF1A00A7D4CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F28112A11485F25100A7D4CB /* push-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push-pin.png"; sourceTree = "<group>"; };
+		F2854A7A148605120034C2B9 /* checkbox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox1.png; sourceTree = "<group>"; };
+		F2854A7B148605120034C2B9 /* checkbox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox2.png; sourceTree = "<group>"; };
+		F2854A7C148605120034C2B9 /* checkbox3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox3.png; sourceTree = "<group>"; };
+		F2854A80148605630034C2B9 /* mainviewbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbg1.png; sourceTree = "<group>"; };
 		F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoCameraView.h; sourceTree = "<group>"; };
 		F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoCameraView.m; sourceTree = "<group>"; };
 		F2F5B11C14735F6300C4490F /* SentinelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentinelInfo.h; sourceTree = "<group>"; };
@@ -251,11 +253,12 @@
 		AC6861AA1475BB9400B875B4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F2854A80148605630034C2B9 /* mainviewbg1.png */,
+				F2854A7A148605120034C2B9 /* checkbox1.png */,
+				F2854A7B148605120034C2B9 /* checkbox2.png */,
+				F2854A7C148605120034C2B9 /* checkbox3.png */,
 				F28112A11485F25100A7D4CB /* push-pin.png */,
 				F28111A01485AF1A00A7D4CB /* Icon.png */,
-				F27D625A1484A86F00AD3E99 /* checkbox1.png */,
-				F27D625B1484A86F00AD3E99 /* checkbox2.png */,
-				F27D625C1484A86F00AD3E99 /* checkbox3.png */,
 				AC6861AC1475BBBB00B875B4 /* mainviewbg.png */,
 				AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */,
 			);
@@ -326,11 +329,12 @@
 				AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */,
 				AC2E521A1475D994003A62CD /* UISurveillanceView.xib in Resources */,
 				A54636D514789C14005CC2B0 /* UISnapImageView.xib in Resources */,
-				F27D625D1484A86F00AD3E99 /* checkbox1.png in Resources */,
-				F27D625E1484A86F00AD3E99 /* checkbox2.png in Resources */,
-				F27D625F1484A86F00AD3E99 /* checkbox3.png in Resources */,
 				F28111A11485AF1B00A7D4CB /* Icon.png in Resources */,
 				F28112A21485F25100A7D4CB /* push-pin.png in Resources */,
+				F2854A7D148605120034C2B9 /* checkbox1.png in Resources */,
+				F2854A7E148605120034C2B9 /* checkbox2.png in Resources */,
+				F2854A7F148605120034C2B9 /* checkbox3.png in Resources */,
+				F2854A81148605630034C2B9 /* mainviewbg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,7 +59,7 @@ CGRect myFrame;
 	{
 		UIAlertView *alert = [[UIAlertView alloc] 
 							  initWithTitle:@"No Cameras found" 
-							  message:@"Hit the 'Configure Camera' button"
+							  message:@"Hit the 'Configure' button"
 							  delegate:self
 							  cancelButtonTitle:@"Ok" 
 							  otherButtonTitles:nil];
@@ -116,7 +116,7 @@ CGRect myFrame;
 - (void)viewDidLoad 
 {
 	[super viewDidLoad];
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg1.png"]];
 	
 	UINavigationBar *navBar = [self.navigationController navigationBar];
     [navBar setTintColor:kSCNavBarColor];

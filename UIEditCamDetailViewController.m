@@ -40,7 +40,6 @@
 		else if(state == 3 && ch == '.') state = 4;
 		
 		else if(state == 4 && ch >= '0' && ch <= '9') state = 5;
-		else if(state == 4 && ch == '.') state = 8;
 		else if(state == 5 && ch >= '0' && ch <= '9') state = 6;
 		else if(state == 5 && ch == '.') state = 8;
 		else if(state == 6 && ch >= '0' && ch <= '9') state = 7;
@@ -48,7 +47,6 @@
 		else if(state == 7 && ch == '.') state = 8;
 		
 		else if(state == 8 && ch >= '0' && ch <= '9') state = 9;
-		else if(state == 8 && ch == '.') state = 12;
 		else if(state == 9 && ch >= '0' && ch <= '9') state = 10;
 		else if(state == 9 && ch == '.') state = 12;
 		else if(state == 10 && ch >= '0' && ch <= '9') state = 11;
@@ -57,7 +55,17 @@
 		
 		else if(state == 12 && ch >= '0' && ch <= '9') state = 13;
 		else if(state == 13 && ch >= '0' && ch <= '9') state = 14;
+		else if(state == 13 && ch == ':') state = 16;
 		else if(state == 14 && ch >= '0' && ch <= '9') state = 15;
+		else if(state == 14 && ch == ':') state = 16;
+		else if(state == 15 && ch == ':') state = 16;
+		
+		else if(state == 16 && ch >= '0' && ch <= '9') state = 17;
+		else if(state == 17 && ch >= '0' && ch <= '9') state = 18;
+		else if(state == 18 && ch >= '0' && ch <= '9') state = 19;
+		else if(state == 19 && ch >= '0' && ch <= '9') state = 20;
+		else if(state == 20 && ch >= '0' && ch <= '9') state = 21;
+		
 		else{
 			NSLog(@"ch = %c and state = %d and index = %d", ch, state, index);
 			state = -1;
@@ -66,7 +74,7 @@
 
 	}
 	NSLog(@"State = %d", state);
-	if(state < 13)
+	if(state == -1 || state < 13 || state == 16)
 		userInputValid[0] = 1;
 	
 	//validate camera name
@@ -193,7 +201,19 @@
 	totalCameraCnt = [fetchedObjects count]-1;
 	
 	if([self validateUserInput:[index intValue]] == FALSE)
+	{
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"Incorrect Parameters" 
+							  message:@"Please fix the errors (in red)"
+							  delegate:self
+							  cancelButtonTitle:@"Ok" 
+							  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
 		return;
+		
+		return;
+	}
 	
 	if([index intValue] == -1)
 	{
