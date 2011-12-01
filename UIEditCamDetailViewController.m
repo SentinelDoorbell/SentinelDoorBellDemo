@@ -334,7 +334,13 @@
 	/*End: set isDefaultCamera to -1 when user adds a camera*/
 	[fetchRequest release];
 	fetchRequest = nil;
+	
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
 }
 
 /*set default camera*/
@@ -584,7 +590,13 @@
 		/*End: handle delete default camera*/
 		
 	}
+	
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -598,10 +610,11 @@
                              action:@selector(saveCamera:)];
 	self.navigationItem.rightBarButtonItem = item; 
 	[item release];
+
 	
 	item = [[UIBarButtonItem alloc]   
-							 initWithTitle:@"Back" 
-							 style:UIBarButtonItemStyleBordered target:self action:@selector(backPressed:)];
+			initWithTitle:@"Back" 
+			style:UIBarButtonItemStyleBordered target:self action:@selector(backPressed:)];
 	self.navigationItem.leftBarButtonItem = item; 
 	[item release];
 	
@@ -610,7 +623,12 @@
 
 - (IBAction) backPressed:(id)sender
 {
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
 }
 
 - (IBAction) onTouchalarmSwitch:(id)sender

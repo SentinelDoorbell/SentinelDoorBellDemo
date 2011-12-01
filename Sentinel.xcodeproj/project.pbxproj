@@ -43,6 +43,22 @@
 		AC6861AF1475BBBB00B875B4 /* mainviewbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6861AD1475BBBB00B875B4 /* mainviewbutton.png */; };
 		AC8603C1147AED9C002C4AA1 /* DefaultCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */; };
 		AC877891148702E6001E494E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877890148702E6001E494E /* Default.png */; };
+		AC8778B8148704E7001E494E /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8778B6148704E7001E494E /* TutorialViewController.m */; };
+		AC8778B9148704E7001E494E /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8778B7148704E7001E494E /* TutorialViewController.xib */; };
+		AC8778C01487069A001E494E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8778BE1487069A001E494E /* AboutViewController.m */; };
+		AC8778C11487069A001E494E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8778BF1487069A001E494E /* AboutViewController.xib */; };
+		AC877940148724D7001E494E /* Config1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877934148724D7001E494E /* Config1.png */; };
+		AC877941148724D7001E494E /* Config2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877935148724D7001E494E /* Config2.png */; };
+		AC877942148724D7001E494E /* Config3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877936148724D7001E494E /* Config3.png */; };
+		AC877943148724D7001E494E /* Config4.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877937148724D7001E494E /* Config4.png */; };
+		AC877944148724D7001E494E /* Select1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877938148724D7001E494E /* Select1.png */; };
+		AC877945148724D7001E494E /* Select2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877939148724D7001E494E /* Select2.png */; };
+		AC877946148724D7001E494E /* Select3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793A148724D7001E494E /* Select3.png */; };
+		AC877947148724D7001E494E /* SS1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793B148724D7001E494E /* SS1.png */; };
+		AC877948148724D7001E494E /* SS2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793C148724D7001E494E /* SS2.png */; };
+		AC877949148724D7001E494E /* SS3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793D148724D7001E494E /* SS3.png */; };
+		AC87794A148724D7001E494E /* Sur1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793E148724D7001E494E /* Sur1.png */; };
+		AC87794B148724D7001E494E /* Sur2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC87793F148724D7001E494E /* Sur2.png */; };
 		F28111A11485AF1B00A7D4CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F28111A01485AF1A00A7D4CB /* Icon.png */; };
 		F28112A21485F25100A7D4CB /* push-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F28112A11485F25100A7D4CB /* push-pin.png */; };
 		F2854A7D148605120034C2B9 /* checkbox1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7A148605120034C2B9 /* checkbox1.png */; };
@@ -107,6 +123,24 @@
 		AC8603BF147AED9C002C4AA1 /* DefaultCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCamera.h; sourceTree = "<group>"; };
 		AC8603C0147AED9C002C4AA1 /* DefaultCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCamera.m; sourceTree = "<group>"; };
 		AC877890148702E6001E494E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC8778B5148704E7001E494E /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		AC8778B6148704E7001E494E /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		AC8778B7148704E7001E494E /* TutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
+		AC8778BD1487069A001E494E /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		AC8778BE1487069A001E494E /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		AC8778BF1487069A001E494E /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		AC877934148724D7001E494E /* Config1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config1.png; sourceTree = "<group>"; };
+		AC877935148724D7001E494E /* Config2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config2.png; sourceTree = "<group>"; };
+		AC877936148724D7001E494E /* Config3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config3.png; sourceTree = "<group>"; };
+		AC877937148724D7001E494E /* Config4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config4.png; sourceTree = "<group>"; };
+		AC877938148724D7001E494E /* Select1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Select1.png; sourceTree = "<group>"; };
+		AC877939148724D7001E494E /* Select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Select2.png; sourceTree = "<group>"; };
+		AC87793A148724D7001E494E /* Select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Select3.png; sourceTree = "<group>"; };
+		AC87793B148724D7001E494E /* SS1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS1.png; sourceTree = "<group>"; };
+		AC87793C148724D7001E494E /* SS2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS2.png; sourceTree = "<group>"; };
+		AC87793D148724D7001E494E /* SS3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS3.png; sourceTree = "<group>"; };
+		AC87793E148724D7001E494E /* Sur1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sur1.png; sourceTree = "<group>"; };
+		AC87793F148724D7001E494E /* Sur2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sur2.png; sourceTree = "<group>"; };
 		F28111A01485AF1A00A7D4CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F28112A11485F25100A7D4CB /* push-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push-pin.png"; sourceTree = "<group>"; };
 		F2854A7A148605120034C2B9 /* checkbox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox1.png; sourceTree = "<group>"; };
@@ -189,6 +223,12 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				8D1107310486CEB800E47090 /* Sentinel-Info.plist */,
 				A567A5BF146FB5D10015BCAB /* UISnapCell.xib */,
+				AC8778B5148704E7001E494E /* TutorialViewController.h */,
+				AC8778B6148704E7001E494E /* TutorialViewController.m */,
+				AC8778B7148704E7001E494E /* TutorialViewController.xib */,
+				AC8778BD1487069A001E494E /* AboutViewController.h */,
+				AC8778BE1487069A001E494E /* AboutViewController.m */,
+				AC8778BF1487069A001E494E /* AboutViewController.xib */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -255,6 +295,18 @@
 		AC6861AA1475BB9400B875B4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AC877934148724D7001E494E /* Config1.png */,
+				AC877935148724D7001E494E /* Config2.png */,
+				AC877936148724D7001E494E /* Config3.png */,
+				AC877937148724D7001E494E /* Config4.png */,
+				AC877938148724D7001E494E /* Select1.png */,
+				AC877939148724D7001E494E /* Select2.png */,
+				AC87793A148724D7001E494E /* Select3.png */,
+				AC87793B148724D7001E494E /* SS1.png */,
+				AC87793C148724D7001E494E /* SS2.png */,
+				AC87793D148724D7001E494E /* SS3.png */,
+				AC87793E148724D7001E494E /* Sur1.png */,
+				AC87793F148724D7001E494E /* Sur2.png */,
 				AC877890148702E6001E494E /* Default.png */,
 				F2854A80148605630034C2B9 /* mainviewbg1.png */,
 				F2854A7A148605120034C2B9 /* checkbox1.png */,
@@ -339,6 +391,20 @@
 				F2854A7F148605120034C2B9 /* checkbox3.png in Resources */,
 				F2854A81148605630034C2B9 /* mainviewbg1.png in Resources */,
 				AC877891148702E6001E494E /* Default.png in Resources */,
+				AC8778B9148704E7001E494E /* TutorialViewController.xib in Resources */,
+				AC8778C11487069A001E494E /* AboutViewController.xib in Resources */,
+				AC877940148724D7001E494E /* Config1.png in Resources */,
+				AC877941148724D7001E494E /* Config2.png in Resources */,
+				AC877942148724D7001E494E /* Config3.png in Resources */,
+				AC877943148724D7001E494E /* Config4.png in Resources */,
+				AC877944148724D7001E494E /* Select1.png in Resources */,
+				AC877945148724D7001E494E /* Select2.png in Resources */,
+				AC877946148724D7001E494E /* Select3.png in Resources */,
+				AC877947148724D7001E494E /* SS1.png in Resources */,
+				AC877948148724D7001E494E /* SS2.png in Resources */,
+				AC877949148724D7001E494E /* SS3.png in Resources */,
+				AC87794A148724D7001E494E /* Sur1.png in Resources */,
+				AC87794B148724D7001E494E /* Sur2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +433,8 @@
 				AC2E52191475D994003A62CD /* UISurveillanceViewController.m in Sources */,
 				A54636D414789C14005CC2B0 /* UISnapImageViewController.m in Sources */,
 				AC8603C1147AED9C002C4AA1 /* DefaultCamera.m in Sources */,
+				AC8778B8148704E7001E494E /* TutorialViewController.m in Sources */,
+				AC8778C01487069A001E494E /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

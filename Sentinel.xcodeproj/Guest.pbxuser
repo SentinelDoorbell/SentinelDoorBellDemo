@@ -171,6 +171,20 @@
 			};
 		};
 	};
+	28EEC0491118E28000187D67 /* AppDelegate_Shared.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 976}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 856}";
+		};
+	};
+	28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2418}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2231}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = AC0164BF146C66B50092251E /* navS */;
@@ -218,8 +232,8 @@
 					PBXFindDataSource_LocationID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 344391552;
-			PBXWorkspaceStateSaveDate = 344391552;
+			PBXPerProjectTemplateStateSaveDate = 344392771;
+			PBXWorkspaceStateSaveDate = 344392771;
 		};
 		perUserProjectItems = {
 			AC0165BC146C7F340092251E = AC0165BC146C7F340092251E /* PBXTextBookmark */;
@@ -243,6 +257,7 @@
 			AC8778591486F95F001E494E = AC8778591486F95F001E494E /* PBXTextBookmark */;
 			AC8778721486FF49001E494E = AC8778721486FF49001E494E /* PBXTextBookmark */;
 			AC8778731486FF49001E494E = AC8778731486FF49001E494E /* PBXTextBookmark */;
+			AC8778A814870447001E494E /* PBXTextBookmark */ = AC8778A814870447001E494E /* PBXTextBookmark */;
 		};
 		sourceControlManager = AC0164D9146C66BD0092251E /* Source Control */;
 		userBuildSettings = {
@@ -250,16 +265,16 @@
 	};
 	67A0CEB9146AECA30061F413 /* UIMainViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1050, 898}}";
-			sepNavSelRange = "{1311, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 976}}";
+			sepNavSelRange = "{1237, 0}";
 			sepNavVisRange = "{0, 1362}";
 		};
 	};
 	67A0CEBA146AECA30061F413 /* UIMainViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1093, 3653}}";
-			sepNavSelRange = "{823, 241}";
-			sepNavVisRange = "{135, 2031}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 4199}}";
+			sepNavSelRange = "{5187, 0}";
+			sepNavVisRange = "{2851, 2669}";
 		};
 	};
 	67A0CED3146AF3DE0061F413 /* UISelectCamViewController.h */ = {
@@ -286,7 +301,7 @@
 	67A0CEE1146AFD300061F413 /* UILiveFeedViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1093, 8515}}";
-			sepNavSelRange = "{416, 0}";
+			sepNavSelRange = "{992, 0}";
 			sepNavVisRange = "{0, 2285}";
 			sepNavWindowFrame = "{{15, 855}, {750, 558}}";
 		};
@@ -300,16 +315,16 @@
 	};
 	67A0CF87146B1BC80061F413 /* UIConfigCamViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1050, 5655}}";
-			sepNavSelRange = "{2905, 0}";
-			sepNavVisRange = "{1744, 2245}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 5629}}";
+			sepNavSelRange = "{11916, 0}";
+			sepNavVisRange = "{10471, 2008}";
 		};
 	};
 	A54636D214789C13005CC2B0 /* UISnapImageViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1093, 1781}}";
 			sepNavSelRange = "{3060, 0}";
-			sepNavVisRange = "{1500, 2293}";
+			sepNavVisRange = "{48, 1994}";
 		};
 	};
 	A5F00108146F301600FDE592 /* ConfigAccess.h */ = {
@@ -371,9 +386,9 @@
 	AC0165B5146C7EBA0092251E /* UIDefaultCameraViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3718, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3769, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3819, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4520}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {2203, 2314}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 2262}}";
 			sepNavSelRange = "{670, 0}";
-			sepNavVisRange = "{145, 1993}";
+			sepNavVisRange = "{0, 1777}";
 			sepNavWindowFrame = "{{38, 834}, {750, 558}}";
 		};
 	};
@@ -389,16 +404,16 @@
 	};
 	AC0165C1146C7F550092251E /* UISnapshotsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2203, 1103}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 953}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 226}";
+			sepNavVisRange = "{0, 1085}";
 		};
 	};
 	AC0165C2146C7F550092251E /* UISnapshotsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2203, 2509}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 3029}}";
 			sepNavSelRange = "{4324, 0}";
-			sepNavVisRange = "{2623, 2190}";
+			sepNavVisRange = "{0, 1698}";
 		};
 	};
 	AC0165C8146C7FA50092251E /* PBXTextBookmark */ = {
@@ -413,16 +428,16 @@
 	};
 	AC0165F9146C8F060092251E /* UIEditCamDetailViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1093, 956}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 953}}";
 			sepNavSelRange = "{715, 0}";
 			sepNavVisRange = "{0, 1908}";
 		};
 	};
 	AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 12116}}";
-			sepNavSelRange = "{18864, 0}";
-			sepNavVisRange = "{17352, 3306}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 12181}}";
+			sepNavSelRange = "{18900, 0}";
+			sepNavVisRange = "{17421, 2999}";
 		};
 	};
 	AC2E52161475D994003A62CD /* UISurveillanceViewController.h */ = {
@@ -603,7 +618,7 @@
 		fRef = 67A0CEBA146AECA30061F413 /* UIMainViewController.m */;
 		name = "UIMainViewController.m: 37";
 		rLen = 241;
-		rLoc = 823;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 2031;
 		vrLoc = 135;
@@ -623,7 +638,7 @@
 		fRef = AC0165FA146C8F060092251E /* UIEditCamDetailViewController.m */;
 		name = "UIEditCamDetailViewController.m: 604";
 		rLen = 0;
-		rLoc = 18864;
+		rLoc = 18966;
 		rType = 0;
 		vrLen = 3306;
 		vrLoc = 17352;
@@ -637,5 +652,43 @@
 		rType = 0;
 		vrLen = 2407;
 		vrLoc = 0;
+	};
+	AC8778A814870447001E494E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 67A0CEE1146AFD300061F413 /* UILiveFeedViewController.m */;
+		name = "UILiveFeedViewController.m: 10";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 2351;
+		vrLoc = 0;
+	};
+	AC8778B5148704E7001E494E /* TutorialViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 976}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 243}";
+		};
+	};
+	AC8778B6148704E7001E494E /* TutorialViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 2327}}";
+			sepNavSelRange = "{2890, 0}";
+			sepNavVisRange = "{0, 1953}";
+		};
+	};
+	AC8778BD1487069A001E494E /* AboutViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 976}}";
+			sepNavSelRange = "{332, 0}";
+			sepNavVisRange = "{0, 332}";
+		};
+	};
+	AC8778BE1487069A001E494E /* AboutViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 953}}";
+			sepNavSelRange = "{622, 0}";
+			sepNavVisRange = "{0, 1585}";
+		};
 	};
 }

@@ -237,7 +237,14 @@
 		[[UILiveFeedViewController alloc] initWithNibName:@"UILiveFeedView" 
                                                        bundle:nil];
 
-	[self.navigationController pushViewController:viewctr animated:YES];
+	[UIView  beginAnimations:@"Showinfo" context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[self.navigationController pushViewController:viewctr animated:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+	[UIView commitAnimations];
+	
+	//[self.navigationController pushViewController:viewctr animated:YES];
 	[viewctr release];
 }
 
