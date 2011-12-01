@@ -72,7 +72,7 @@
 	}
 	imageInfo = [[NSMutableString alloc] initWithString:[imagePath substringWithRange:NSMakeRange(index+1, 9)]];
 	snapDate.text = [NSString stringWithFormat:@"%@",imageInfo];
-	NSMutableString *str = [NSString stringWithFormat:@"%@:%@:%@ (HH:MM:SS)",
+	NSMutableString *str = [NSString stringWithFormat:@"%@:%@:%@",
 							[imagePath substringWithRange:NSMakeRange(index+11, 2)],
 							[imagePath substringWithRange:NSMakeRange(index+14, 2)],
 							[imagePath substringWithRange:NSMakeRange(index+17, 2)]];
@@ -108,6 +108,28 @@
         }
     }
     
+	UIAlertView *alert;
+    
+	alert = [[UIAlertView alloc] initWithTitle:@"Deleting Image"
+                                       message:nil
+                                      delegate:nil
+                             cancelButtonTitle:nil
+                             otherButtonTitles:nil];
+	[alert show];
+	
+	
+	UIActivityIndicatorView *indicator = 
+	[[UIActivityIndicatorView alloc] 
+	 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(alert.bounds.size.width / 2, 
+                                   alert.bounds.size.height - 50);
+	[indicator startAnimating];
+	[alert addSubview:indicator];
+	[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[alert release];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 

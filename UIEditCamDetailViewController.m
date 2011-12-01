@@ -202,16 +202,26 @@
 	
 	if([self validateUserInput:[index intValue]] == FALSE)
 	{
+		NSString *str;
+		if(userInputValid[0] == 1 && userInputValid[1] == 1)
+			str = [NSString stringWithString:@"1. Incorrect IP address\n2. Conflicting camera name"];
+		else if(userInputValid[0] == 1 && userInputValid[1] == 2)
+			str = [NSString stringWithString:@"1. Incorrect IP address\n2. Camera name empty"];
+		else if(userInputValid[0] == 1)
+			str = [NSString stringWithString:@"Incorrect IP address"];
+		else if(userInputValid[1] == 1)
+			str = [NSString stringWithString:@"Conflicting camera name"];
+		else if(userInputValid[1] == 2)
+			str = [NSString stringWithString:@"Camera name empty"];
+
 		UIAlertView *alert = [[UIAlertView alloc] 
-							  initWithTitle:@"Incorrect Parameters" 
-							  message:@"Please fix the errors (in red)"
+							  initWithTitle:@"Invalid Parameters" 
+							  message:str
 							  delegate:self
 							  cancelButtonTitle:@"Ok" 
 							  otherButtonTitles:nil];
 		[alert show];
 		[alert release];
-		return;
-		
 		return;
 	}
 	
@@ -589,7 +599,18 @@
 	self.navigationItem.rightBarButtonItem = item; 
 	[item release];
 	
+	item = [[UIBarButtonItem alloc]   
+							 initWithTitle:@"Back" 
+							 style:UIBarButtonItemStyleBordered target:self action:@selector(backPressed:)];
+	self.navigationItem.leftBarButtonItem = item; 
+	[item release];
+	
     return self;
+}
+
+- (IBAction) backPressed:(id)sender
+{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction) onTouchalarmSwitch:(id)sender

@@ -481,6 +481,7 @@ static double TIMEOUT_INTERVAL = 5.0;
                              otherButtonTitles:nil];
 	[alert show];
 	
+	
 	UIActivityIndicatorView *indicator = 
         [[UIActivityIndicatorView alloc] 
         initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];

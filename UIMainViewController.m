@@ -33,8 +33,30 @@ CGRect myFrame;
 		self.title = @"Sentinel";
     }
 
-	self.navigationItem.leftBarButtonItem = nil;
+
+	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
+							 initWithTitle:@"Tutorial" 
+							 style:UIBarButtonSystemItemDone target:self action:@selector(tutorialPressed:)];
+	self.navigationItem.rightBarButtonItem = item; 
+	[item release];
+	
+	item = [[UIBarButtonItem alloc]   
+							 initWithTitle:@"About" 
+			style:UIBarButtonSystemItemDone target:self action:@selector(aboutPressed:)];
+	self.navigationItem.leftBarButtonItem = item; 
+	[item release];
+	
     return self;
+}
+
+- (void) tutorialPressed:(id)sender
+{
+	NSLog(@"Tutorial");
+}
+
+- (void) aboutPressed:(id)sender
+{
+	NSLog(@"About");
 }
 
 - (IBAction) selectCameraFromListPressed:(id)sender
@@ -116,7 +138,7 @@ CGRect myFrame;
 - (void)viewDidLoad 
 {
 	[super viewDidLoad];
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg1.png"]];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 	
 	UINavigationBar *navBar = [self.navigationController navigationBar];
     [navBar setTintColor:kSCNavBarColor];
