@@ -57,3 +57,4 @@
 @property (nonatomic, retain) NSManagedObjectContext *contextDefaultCam;
 
 @end
+

@@ -317,6 +317,29 @@ static double TIMEOUT_INTERVAL = 5.0;
                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy						  
                                             timeoutInterval:TIMEOUT_INTERVAL];
 	[theWebView loadRequest:requestObj];
+	theWebView.delegate = self;
+	
+	/* Display Activity indicator */
+	
+	connectionStat = [[UIAlertView alloc] initWithTitle:@"Connecting"
+                                       message:nil
+                                      delegate:nil
+                             cancelButtonTitle:nil
+                             otherButtonTitles:nil];
+	[connectionStat show];
+	
+	
+	UIActivityIndicatorView *indicator = 
+	[[UIActivityIndicatorView alloc] 
+	 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(connectionStat.bounds.size.width / 2, 
+                                   connectionStat.bounds.size.height - 50);
+	[indicator startAnimating];
+	[connectionStat addSubview:indicator];
+	//[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	//[connectionStat release];
 
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 	
@@ -391,6 +414,25 @@ static double TIMEOUT_INTERVAL = 5.0;
                                                     cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                 timeoutInterval:TIMEOUT_INTERVAL];
 		[theWebView loadRequest:requestObj];
+		theWebView.delegate = self;
+		
+		connectionStat = [[UIAlertView alloc] initWithTitle:@"Connecting"
+													message:nil
+												   delegate:nil
+										  cancelButtonTitle:nil
+										  otherButtonTitles:nil];
+		[connectionStat show];
+		
+		
+		UIActivityIndicatorView *indicator = 
+		[[UIActivityIndicatorView alloc] 
+		 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+		
+		indicator.center = CGPointMake(connectionStat.bounds.size.width / 2, 
+									   connectionStat.bounds.size.height - 50);
+		[indicator startAnimating];
+		[connectionStat addSubview:indicator];
+		[indicator release];
 		
         if (DEBUG)
         {
@@ -399,6 +441,13 @@ static double TIMEOUT_INTERVAL = 5.0;
 	}
 	else
 	{
+		if(connectionStat != NULL)
+		{
+			[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+			[connectionStat release];
+			connectionStat = NULL;
+		}
+		
 		UIAlertView *alert = [[UIAlertView alloc] 
 							  initWithTitle:@"Authentication Failure" 
 							  message:@"Invalid username/password."
@@ -516,8 +565,28 @@ static double TIMEOUT_INTERVAL = 5.0;
 	[data writeToFile:path atomically:YES];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView 
+{
+	/*
+	NSLog(@"webViewDidFinishLoad called");
+	//if(connectionStat == NULL)
+	//return;
+
+	[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+	[connectionStat release];
+	connectionStat = NULL;
+	 */
+}
+
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+	if(connectionStat != NULL)
+	{
+		[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+		[connectionStat release];
+		connectionStat = NULL;
+	}
+
     static int STOPPED_LOAD_CODE = -999;
     
     if ([error code] != STOPPED_LOAD_CODE)
@@ -536,15 +605,12 @@ static double TIMEOUT_INTERVAL = 5.0;
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-#ifdef DEBUG
-    NSLog(@"WebView loading started.");
-#endif
-}
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-#ifdef DEBUG
-    NSLog(@"WebView finished loading.");
-#endif
+	if(connectionStat == NULL)
+		return;
+	
+	[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+	[connectionStat release];
+	connectionStat = NULL;
 }
 
 /*

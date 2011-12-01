@@ -4,9 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AboutViewController.nib</key>
+		<data>
+		asg28tICscFRN8L/Lin24ZykFmI=
+		</data>
 		<key>CamModels.plist</key>
 		<data>
 		+udyTFcwEIbeD4NeCZK9Kx80/hw=
+		</data>
+		<key>Config1.png</key>
+		<data>
+		Lbx6M6i25GHr+QF17jAtt+sPSbA=
+		</data>
+		<key>Config2.png</key>
+		<data>
+		HDDMwRzHE1CydyB7UmCpus3Oh28=
+		</data>
+		<key>Config3.png</key>
+		<data>
+		K4BepIZ2urbr6bktfCAbEa9mOUc=
+		</data>
+		<key>Config4.png</key>
+		<data>
+		lIdDtp44qZ1GS3RLqiqkc6r3LKE=
+		</data>
+		<key>Default.png</key>
+		<data>
+		o27ZpoLNBgs3Kk02cWbDry7q2WM=
 		</data>
 		<key>Icon.png</key>
 		<data>
@@ -14,15 +38,51 @@
 		</data>
 		<key>MainWindow_iPad.nib</key>
 		<data>
-		FpSx3f2VTtZD2ymqPR8iBeUFkI8=
+		daXgAMlD7cpxssjCJpoEdoMHWsY=
 		</data>
 		<key>MainWindow_iPhone.nib</key>
 		<data>
-		AV6V2WdIJVmVf0DqFTxV6HlY2aA=
+		Zq7ibivzHN3oO+3eHaoCildh7fQ=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>SS1.png</key>
+		<data>
+		G4KBl0zoOcVpowzcZlqwMX1HB8E=
+		</data>
+		<key>SS2.png</key>
+		<data>
+		x+Q0GCrkORRYUk39GQEnXHbIWsA=
+		</data>
+		<key>SS3.png</key>
+		<data>
+		7CA7z2zJfaQw7UtUAhF5tEu0MpA=
+		</data>
+		<key>Select1.png</key>
+		<data>
+		8vwOBl2Mkft4LOazHM13Xv1ZxoA=
+		</data>
+		<key>Select2.png</key>
+		<data>
+		vmsL/2ZqqMr7WO97kg+e/+TQHbg=
+		</data>
+		<key>Select3.png</key>
+		<data>
+		PHyTUurGFRihHA8uam1KquobKoQ=
+		</data>
+		<key>Sur1.png</key>
+		<data>
+		zD1/cC28YOZtZcMzOxQWeYc4E3Y=
+		</data>
+		<key>Sur2.png</key>
+		<data>
+		k8/uExiSA81NgY9yS1kzPQJtC6I=
+		</data>
+		<key>TutorialViewController.nib</key>
+		<data>
+		jtkhzj6N4qMjVJy9Gy5kMgvPk9Q=
 		</data>
 		<key>UIConfigCamView.nib</key>
 		<data>
@@ -34,15 +94,15 @@
 		</data>
 		<key>UIEditCamDetailView.nib</key>
 		<data>
-		rOKt1z8qb3Mhi+dkkFn3JLE9uyE=
+		QqbrfG88RVA4tfVeXgLEI+hn8jw=
 		</data>
 		<key>UILiveFeedView.nib</key>
 		<data>
-		xcTW16NuTzo3Fmdzhre++uc49zo=
+		xdsUSQPztzq/Wt2oDMAAVt2WdCg=
 		</data>
 		<key>UIMainView.nib</key>
 		<data>
-		NsIu8EBg08o1ZHZ2DnF1jAqdkwk=
+		i/paJ5U3mHC5B3lRsyAGyWvJH7o=
 		</data>
 		<key>UISelectCamView.nib</key>
 		<data>

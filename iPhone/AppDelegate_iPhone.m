@@ -110,8 +110,9 @@ static int removePersistentStore = 1;
 	[myview release];
 	[self.window addSubview:navctr.view];
     
+	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
     [self.window makeKeyAndVisible];
-    
+	
     return YES;
 }
 

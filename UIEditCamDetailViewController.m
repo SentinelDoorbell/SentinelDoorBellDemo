@@ -761,6 +761,8 @@
     [super viewDidLoad];
 	self.title = @"Camera Details";
 	
+	cameraParamsScrollView.contentSize = CGSizeMake(0, 650);
+	
 	//removeDefaultCamera.hidden = YES;
 	
 	AppDelegate_iPhone *appDelegate =
@@ -933,10 +935,23 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+	NSLog(@"touchesBegan called");
+}
 
 - (void)dealloc {
     [super dealloc];
 }
 
-
 @end
+
