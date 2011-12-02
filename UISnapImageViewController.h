@@ -26,4 +26,6 @@
 
 - (void) onDeleteImage:(id) sender;
 
+- (void) onDoneSlideShow:(id) sender;
+
 @end

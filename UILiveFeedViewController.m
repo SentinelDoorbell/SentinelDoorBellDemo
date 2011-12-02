@@ -22,7 +22,7 @@
 //static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
-static double TIMEOUT_INTERVAL = 5.0;
+static double TIMEOUT_INTERVAL = 10.0;
 
 @implementation UILiveFeedViewController
 

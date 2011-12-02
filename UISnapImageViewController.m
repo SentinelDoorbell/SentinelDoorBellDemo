@@ -32,8 +32,16 @@
 
 - (void)dealloc
 {
-    [imagePath release];
-	[imageInfo release];
+    if (imagePath)
+    {
+        [imagePath release];
+    }
+    
+    if (imageInfo)
+    {
+        [imageInfo release];
+    }
+    
     [super dealloc];
 }
 
@@ -52,31 +60,53 @@
     self.view.backgroundColor = 
         [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 
-    // create a standard delete button with the trash icon
-    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
-                                     initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-                                     target:self
-                                     action:@selector(onDeleteImage:)];
-    deleteButton.style = UIBarButtonItemStyleBordered;
-    self.navigationItem.rightBarButtonItem = deleteButton;
-    [deleteButton release];
+    if (imagePath)
+    {
+        // Single image view
+        // create a standard delete button with the trash icon
+        UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                         target:self
+                                         action:@selector(onDeleteImage:)];
+        deleteButton.style = UIBarButtonItemStyleBordered;
+        self.navigationItem.rightBarButtonItem = deleteButton;
+        [deleteButton release];
+    }
+    else
+    {
+        // Slide show
+        // create a standard delete button with the trash icon
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                       target:self
+                                       action:@selector(onDoneSlideShow:)];
+        doneButton.style = UIBarButtonItemStyleBordered;
+        self.navigationItem.rightBarButtonItem = doneButton;
+        [doneButton release];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-	int index = 0;
-	for (NSUInteger x = 0; x < [imagePath length]; ++x)
-	{
-		if([imagePath characterAtIndex:x] == '/')			
-			index = x;
-	}
-	imageInfo = [[NSMutableString alloc] initWithString:[imagePath substringWithRange:NSMakeRange(index+1, 9)]];
-	snapDate.text = [NSString stringWithFormat:@"%@",imageInfo];
-	NSMutableString *str = [NSString stringWithFormat:@"%@:%@:%@",
-							[imagePath substringWithRange:NSMakeRange(index+11, 2)],
-							[imagePath substringWithRange:NSMakeRange(index+14, 2)],
-							[imagePath substringWithRange:NSMakeRange(index+17, 2)]];
-	snapTime.text = [NSString stringWithFormat:@"%@",str];
+    // Not slide show
+    if (imagePath)
+    {
+        int index = 0;
+        for (NSUInteger x = 0; x < [imagePath length]; ++x)
+        {
+            if([imagePath characterAtIndex:x] == '/')			
+                index = x;
+        }
+        imageInfo = [[NSMutableString alloc] 
+                     initWithString:[imagePath 
+                 substringWithRange:NSMakeRange(index+1, 9)]];
+        snapDate.text = [NSString stringWithFormat:@"%@",imageInfo];
+        NSMutableString *str = [NSString stringWithFormat:@"%@:%@:%@",
+                                [imagePath substringWithRange:NSMakeRange(index+11, 2)],
+                                [imagePath substringWithRange:NSMakeRange(index+14, 2)],
+                                [imagePath substringWithRange:NSMakeRange(index+17, 2)]];
+        snapTime.text = [NSString stringWithFormat:@"%@",str];
+    }
 }
 
 - (void)viewDidUnload
@@ -130,6 +160,11 @@
 	[indicator release];
 	[alert release];
 
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) onDoneSlideShow:(id) sender
+{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
