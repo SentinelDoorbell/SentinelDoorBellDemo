@@ -12,6 +12,10 @@
 #import "SentinelInfo.h"
 #import "EditInfoCameraView.h"
 #import "DefaultCamera.h"
+#import "ConfigAccess.h"
+
+//static double TIMEOUT_INTERVAL = 20.0;
+static NSString* CURRENT_BASE_URL = @"";
 
 @implementation UIEditCamDetailViewController
 
@@ -597,6 +601,84 @@
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 	[UIView commitAnimations];
+}
+
+
+- (IBAction) onTouchAuthenticateCamera:(id)sender
+{
+	NSLog(@"onTouchAuthenticateCamera called");
+	NSLog(@"User: %@", [username text]);
+	NSLog(@"Pasword: %@", [password text]);
+	
+	CURRENT_BASE_URL =  [[NSString alloc] 
+						 initWithString:[NSString 
+										 localizedStringWithFormat:
+										 @"http://%@", [ipaddress text]]];
+	NSLog(@"IP: %@", CURRENT_BASE_URL);
+	
+	NSString* user = [username text];
+	NSString* pass = [password text];
+	
+	//NSString* encodedUsername = [[user dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
+	//NSString* encodedPassword = [[pass dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
+	
+	NSURL* url = [NSURL URLWithString:CURRENT_BASE_URL];
+	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url 
+														cachePolicy: NSURLRequestReloadIgnoringCacheData    
+													   timeoutInterval: 3];
+	NSString* headerValue = [NSString stringWithFormat:@"Basic %@:%@", user, pass];
+	[request addValue:@"Authorization" forHTTPHeaderField:headerValue];
+	
+	//[NSURLConnection connectionWithRequest:request delegate:self];
+	
+	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest: request delegate:self];
+	
+	[theConnection release];
+
+}
+	
+- (void)connection:(NSURLConnection *)connection
+didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
+{
+	
+	if ([challenge previousFailureCount] == 0)
+	{
+		NSLog(@"received authentication challenge");
+	
+		NSURLCredential *newCredential;
+		newCredential=[NSURLCredential credentialWithUser:[username text]
+												 password:[password text]
+												persistence:NSURLCredentialPersistenceNone];
+	
+		[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+
+	}
+	else
+	{
+		NSLog(@"authentication failure");
+		
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
+														message:@"Invalid Username/Password"
+													   delegate:self
+											  cancelButtonTitle:@"Camera Details" 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		
+		[connection release];
+	}
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+	NSLog(@"didReceiveResponse called");
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Successful"
+												message:nil
+											   delegate:self
+									  cancelButtonTitle:@"OK"
+									  otherButtonTitles:nil];
+	[alert show];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

@@ -1,6 +1,9 @@
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m: In function '-[UIEditCamDetailViewController onTouchalarmSwitch:]':
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: 'NSData' may not respond to '-base64Encoding'
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: (Messages without a matching method signature
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: will be assumed to return 'id' and accept
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:166: warning: '...' as arguments.)
-/Users/mahmood1/Desktop/Sentinel/UIEditCamDetailViewController.m:224: warning: 'NSData' may not respond to '-base64Encoding'
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m: In function '-[UIEditCamDetailViewController onTouchalarmSwitch:]':
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:727: warning: 'NSData' may not respond to '-base64Encoding'
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:727: warning: (Messages without a matching method signature
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:727: warning: will be assumed to return 'id' and accept
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:727: warning: '...' as arguments.)
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:785: warning: 'NSData' may not respond to '-base64Encoding'
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m: At top level:
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:1038: warning: incomplete implementation of class 'UIEditCamDetailViewController'
+/Users/mahmood1/SentinelDoorBellDemo/UIEditCamDetailViewController.m:1038: warning: method definition for '-textFieldReturn:' not found

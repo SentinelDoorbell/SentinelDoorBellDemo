@@ -229,9 +229,11 @@ static double TIMEOUT_INTERVAL = 10.0;
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-	if([theWebView isLoading])
+	NSLog(@"viewWillDisappear getting called");
+	if([theWebView isLoading]) {
+		NSLog(@"viewWillDisappear getting called");
 		[theWebView stopLoading];
-	
+	}
 }
 
 -(void)viewWillAppear :(BOOL)animated

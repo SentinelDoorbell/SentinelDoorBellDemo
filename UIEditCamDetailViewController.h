@@ -21,6 +21,7 @@
 	IBOutlet UISwitch *alarmEnableSwitch;
 	IBOutlet UIButton *setDefaultCamera;
 	IBOutlet UIButton *viewPassword;
+	IBOutlet UIButton *authenticate;
 	NSManagedObjectContext *context;
 	NSManagedObjectContext *contextnew;
 	NSManagedObjectContext *contextDefaultCam;
@@ -30,6 +31,8 @@
 	int userInputValid[2]; //Only the IP address and Camera name need to be validated
 	IBOutlet UILabel *ipaddressHint;
 	IBOutlet UILabel *cameranameHint;
+	
+	UIAlertView *connectionStat;
 }
 
 - (IBAction) ipaddressEntryStart:(id)sender;
@@ -43,6 +46,7 @@
 - (IBAction) onTouchOutsideUserName:(id)sender;
 - (IBAction) onTouchalarmSwitch:(id)sender;
 - (IBAction) onTouchDeleteCamera:(id)sender;
+- (IBAction) onTouchAuthenticateCamera:(id)sender;
 
 - (IBAction) onTouchDefaultCamera:(id)sender;
 - (IBAction) onTouchRemoveDefaultCamera:(id)sender;
