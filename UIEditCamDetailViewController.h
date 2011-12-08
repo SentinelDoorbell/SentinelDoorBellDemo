@@ -33,6 +33,8 @@
 	IBOutlet UILabel *cameranameHint;
 	
 	UIAlertView *connectionStat;
+	UIAlertView *authenticationStat;
+	UIActivityIndicatorView *indicator;
 }
 
 - (IBAction) ipaddressEntryStart:(id)sender;

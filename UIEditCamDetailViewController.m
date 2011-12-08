@@ -605,7 +605,7 @@ static NSString* CURRENT_BASE_URL = @"";
 
 
 - (IBAction) onTouchAuthenticateCamera:(id)sender
-{
+{	
 	NSLog(@"onTouchAuthenticateCamera called");
 	NSLog(@"User: %@", [username text]);
 	NSLog(@"Pasword: %@", [password text]);
@@ -625,26 +625,38 @@ static NSString* CURRENT_BASE_URL = @"";
 	NSURL* url = [NSURL URLWithString:CURRENT_BASE_URL];
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url 
 														cachePolicy: NSURLRequestReloadIgnoringCacheData    
-													   timeoutInterval: 3];
+													   timeoutInterval: 10];
 	NSString* headerValue = [NSString stringWithFormat:@"Basic %@:%@", user, pass];
 	[request addValue:@"Authorization" forHTTPHeaderField:headerValue];
 	
 	//[NSURLConnection connectionWithRequest:request delegate:self];
-	
+		
 	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest: request delegate:self];
 	
 	[theConnection release];
-
+	authenticationStat = [[UIAlertView alloc] initWithTitle:@"Authenticating..."
+													message:nil
+												   delegate:self
+										  cancelButtonTitle:nil
+										  otherButtonTitles:nil];
+	[authenticationStat show];
+	indicator = [[UIActivityIndicatorView alloc] 
+				 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(authenticationStat.bounds.size.width / 2, 
+                                   authenticationStat.bounds.size.height - 50);
+	[indicator startAnimating];
+	[authenticationStat addSubview:indicator];
 }
 	
 - (void)connection:(NSURLConnection *)connection
 didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
-{
+{	NSLog(@"DidrecvAuth");
+	//[authenticationStat release];
 	
 	if ([challenge previousFailureCount] == 0)
 	{
 		NSLog(@"received authentication challenge");
-	
 		NSURLCredential *newCredential;
 		newCredential=[NSURLCredential credentialWithUser:[username text]
 												 password:[password text]
@@ -655,11 +667,14 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 	}
 	else
 	{
+		[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+		[indicator release];
+		[authenticationStat release];
 		NSLog(@"authentication failure");
-		
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
+
+		UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
 														message:@"Invalid Username/Password"
-													   delegate:self
+													   delegate:nil
 											  cancelButtonTitle:@"Camera Details" 
 											  otherButtonTitles:nil];
 		[alert show];
@@ -672,13 +687,41 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
 	NSLog(@"didReceiveResponse called");
+
+	[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[authenticationStat release];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Successful"
+	//[authenticationStat release];
+	UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Authentication Successful"
 												message:nil
-											   delegate:self
+											   delegate:nil
 									  cancelButtonTitle:@"OK"
 									  otherButtonTitles:nil];
 	[alert show];
+	[alert release];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"didFailWithError called");
+	[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[authenticationStat release];
+	
+	UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Camera Unreachable / Invalid IP Address"
+													message:nil
+												   delegate:nil
+										  cancelButtonTitle:@"OK"
+										  otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	NSLog(@"connectionDidFinishLoading called");
+	
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

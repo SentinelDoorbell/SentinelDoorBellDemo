@@ -49,7 +49,6 @@
 		AC8778C11487069A001E494E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8778BF1487069A001E494E /* AboutViewController.xib */; };
 		AC877940148724D7001E494E /* Config1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877934148724D7001E494E /* Config1.png */; };
 		AC877941148724D7001E494E /* Config2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877935148724D7001E494E /* Config2.png */; };
-		AC877942148724D7001E494E /* Config3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877936148724D7001E494E /* Config3.png */; };
 		AC877943148724D7001E494E /* Config4.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877937148724D7001E494E /* Config4.png */; };
 		AC877944148724D7001E494E /* Select1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877938148724D7001E494E /* Select1.png */; };
 		AC877945148724D7001E494E /* Select2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC877939148724D7001E494E /* Select2.png */; };
@@ -65,6 +64,7 @@
 		F2854A7E148605120034C2B9 /* checkbox2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7B148605120034C2B9 /* checkbox2.png */; };
 		F2854A7F148605120034C2B9 /* checkbox3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A7C148605120034C2B9 /* checkbox3.png */; };
 		F2854A81148605630034C2B9 /* mainviewbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2854A80148605630034C2B9 /* mainviewbg1.png */; };
+		F2A4F34114903E6D00155A58 /* Config3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A4F34014903E6D00155A58 /* Config3.png */; };
 		F2E03CF01473814300C3C8E0 /* EditInfoCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */; };
 		F2F5B11E14735F6300C4490F /* SentinelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B11D14735F6300C4490F /* SentinelInfo.m */; };
 /* End PBXBuildFile section */
@@ -131,7 +131,6 @@
 		AC8778BF1487069A001E494E /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		AC877934148724D7001E494E /* Config1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config1.png; sourceTree = "<group>"; };
 		AC877935148724D7001E494E /* Config2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config2.png; sourceTree = "<group>"; };
-		AC877936148724D7001E494E /* Config3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config3.png; sourceTree = "<group>"; };
 		AC877937148724D7001E494E /* Config4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config4.png; sourceTree = "<group>"; };
 		AC877938148724D7001E494E /* Select1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Select1.png; sourceTree = "<group>"; };
 		AC877939148724D7001E494E /* Select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Select2.png; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		F2854A7B148605120034C2B9 /* checkbox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox2.png; sourceTree = "<group>"; };
 		F2854A7C148605120034C2B9 /* checkbox3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox3.png; sourceTree = "<group>"; };
 		F2854A80148605630034C2B9 /* mainviewbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainviewbg1.png; sourceTree = "<group>"; };
+		F2A4F34014903E6D00155A58 /* Config3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Config3.png; sourceTree = "<group>"; };
 		F2E03CEE1473814300C3C8E0 /* EditInfoCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoCameraView.h; sourceTree = "<group>"; };
 		F2E03CEF1473814300C3C8E0 /* EditInfoCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoCameraView.m; sourceTree = "<group>"; };
 		F2F5B11C14735F6300C4490F /* SentinelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentinelInfo.h; sourceTree = "<group>"; };
@@ -295,9 +295,9 @@
 		AC6861AA1475BB9400B875B4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F2A4F34014903E6D00155A58 /* Config3.png */,
 				AC877934148724D7001E494E /* Config1.png */,
 				AC877935148724D7001E494E /* Config2.png */,
-				AC877936148724D7001E494E /* Config3.png */,
 				AC877937148724D7001E494E /* Config4.png */,
 				AC877938148724D7001E494E /* Select1.png */,
 				AC877939148724D7001E494E /* Select2.png */,
@@ -395,7 +395,6 @@
 				AC8778C11487069A001E494E /* AboutViewController.xib in Resources */,
 				AC877940148724D7001E494E /* Config1.png in Resources */,
 				AC877941148724D7001E494E /* Config2.png in Resources */,
-				AC877942148724D7001E494E /* Config3.png in Resources */,
 				AC877943148724D7001E494E /* Config4.png in Resources */,
 				AC877944148724D7001E494E /* Select1.png in Resources */,
 				AC877945148724D7001E494E /* Select2.png in Resources */,
@@ -405,6 +404,7 @@
 				AC877949148724D7001E494E /* SS3.png in Resources */,
 				AC87794A148724D7001E494E /* Sur1.png in Resources */,
 				AC87794B148724D7001E494E /* Sur2.png in Resources */,
+				F2A4F34114903E6D00155A58 /* Config3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
