@@ -12,6 +12,10 @@
 #import "SentinelInfo.h"
 #import "EditInfoCameraView.h"
 #import "DefaultCamera.h"
+#import "ConfigAccess.h"
+
+//static double TIMEOUT_INTERVAL = 20.0;
+static NSString* CURRENT_BASE_URL = @"";
 
 @implementation UIEditCamDetailViewController
 
@@ -21,11 +25,152 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
--(void)saveCamera:(id)sender
+-(BOOL)validateUserInput:(int)camIdx
 {
+	// validate IP address
+	int state = 0;
+	int index = 0;
+	userInputValid[0] = 0;
+	userInputValid[1] = 0;
+	while (index < [ipaddress.text length]) {
+		char ch = [ipaddress.text characterAtIndex:index];
+		index++;
+		
+		if(state == 0 && ch >= '0' && ch <= '9') state = 1;
+		else if(state == 1 && ch >= '0' && ch <= '9') state = 2;
+		else if(state == 1 && ch == '.') state = 4;
+		else if(state == 2 && ch >= '0' && ch <= '9') state = 3;
+		else if(state == 2 && ch == '.') state = 4;
+		else if(state == 3 && ch == '.') state = 4;
+		
+		else if(state == 4 && ch >= '0' && ch <= '9') state = 5;
+		else if(state == 5 && ch >= '0' && ch <= '9') state = 6;
+		else if(state == 5 && ch == '.') state = 8;
+		else if(state == 6 && ch >= '0' && ch <= '9') state = 7;
+		else if(state == 6 && ch == '.') state = 8;
+		else if(state == 7 && ch == '.') state = 8;
+		
+		else if(state == 8 && ch >= '0' && ch <= '9') state = 9;
+		else if(state == 9 && ch >= '0' && ch <= '9') state = 10;
+		else if(state == 9 && ch == '.') state = 12;
+		else if(state == 10 && ch >= '0' && ch <= '9') state = 11;
+		else if(state == 10 && ch == '.') state = 12;
+		else if(state == 11 && ch == '.') state = 12;
+		
+		else if(state == 12 && ch >= '0' && ch <= '9') state = 13;
+		else if(state == 13 && ch >= '0' && ch <= '9') state = 14;
+		else if(state == 13 && ch == ':') state = 16;
+		else if(state == 14 && ch >= '0' && ch <= '9') state = 15;
+		else if(state == 14 && ch == ':') state = 16;
+		else if(state == 15 && ch == ':') state = 16;
+		
+		else if(state == 16 && ch >= '0' && ch <= '9') state = 17;
+		else if(state == 17 && ch >= '0' && ch <= '9') state = 18;
+		else if(state == 18 && ch >= '0' && ch <= '9') state = 19;
+		else if(state == 19 && ch >= '0' && ch <= '9') state = 20;
+		else if(state == 20 && ch >= '0' && ch <= '9') state = 21;
+		
+		else{
+			NSLog(@"ch = %c and state = %d and index = %d", ch, state, index);
+			state = -1;
+			break;
+		}
+
+	}
+	NSLog(@"State = %d", state);
+	if(state == -1 || state < 13 || state == 16)
+		userInputValid[0] = 1;
+	
+	//validate camera name
 	AppDelegate_iPhone *appDelegate =
 		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
 	context = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+							   entityForName:@"SentinelInfo" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+
+	index = 0;
+	
+	while (index < [fetchedObjects count]) 
+	{
+		SentinelInfo *sinfo = [fetchedObjects objectAtIndex:index];
+		NSLog(@"sinfo.cameraName = %@ and cameraname.text = %@", sinfo.cameraName, cameraname.text);
+		
+		if([cameraname.text isEqualToString:@""])
+		{
+			userInputValid[1] = 2;
+			break;
+		}
+		
+		if(camIdx != -1 && camIdx == index)
+		{
+			index++;
+			continue;
+		}
+		
+		if([sinfo.cameraName isEqualToString:cameraname.text])
+		{
+			userInputValid[1] = 1;
+			break;
+		}
+		index++;
+	}
+	if([fetchedObjects count] == 0 && [cameraname.text isEqualToString:@""])
+		userInputValid[1] = 2;
+		
+	if(userInputValid[0] == 1)
+	{
+		ipaddressHint.text = @"(Invalid IP! ex: 192.168.3.4)";
+		ipaddressHint.textColor = [UIColor redColor];
+	}
+	else 
+	{
+		ipaddressHint.text = @"(ex: 192.168.55.3)";
+		ipaddressHint.textColor = [UIColor blackColor];
+	}
+	
+	if(userInputValid[1] == 1)
+	{
+		cameranameHint.text = @"(Conflicting camera name)";
+		cameranameHint.textColor = [UIColor redColor];
+	}
+	else if(userInputValid[1] == 2)
+	{
+		cameranameHint.text = @"(Camera name empty!!)";
+		cameranameHint.textColor = [UIColor redColor];
+	}
+	else 
+	{
+		cameranameHint.text = @"(Should be Unique)";
+		cameranameHint.textColor = [UIColor blackColor];
+	}
+	if(userInputValid[0] != 0 || userInputValid[1] != 0)
+		return FALSE;
+	else
+		return TRUE;
+}
+
+-(void)saveCamera:(id)sender
+{
+	//BOOL
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
+	[ipaddress resignFirstResponder];
+	[username resignFirstResponder];
+	[password resignFirstResponder];
+	[cameraname resignFirstResponder];
+	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
+	int totalCameraCnt = -1;
 	
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -43,9 +188,9 @@
 	[fetchRequest release];
 	fetchRequest = nil;
 	
-	#ifdef DEBUG
+	//#ifdef DEBUG
 	NSLog(@"UIEditCameraViewController: saveCamera: index: %d", [index intValue]);
-	#endif
+	//#endif
 	
 	fetchRequest = [[NSFetchRequest alloc] init];
 	contextnew = [appDelegate managedObjectContext];
@@ -56,11 +201,39 @@
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
 	fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	
+	totalCameraCnt = [fetchedObjects count]-1;
+	
+	if([self validateUserInput:[index intValue]] == FALSE)
+	{
+		NSString *str;
+		if(userInputValid[0] == 1 && userInputValid[1] == 1)
+			str = [NSString stringWithString:@"1. Incorrect IP address\n2. Conflicting camera name"];
+		else if(userInputValid[0] == 1 && userInputValid[1] == 2)
+			str = [NSString stringWithString:@"1. Incorrect IP address\n2. Camera name empty"];
+		else if(userInputValid[0] == 1)
+			str = [NSString stringWithString:@"Incorrect IP address"];
+		else if(userInputValid[1] == 1)
+			str = [NSString stringWithString:@"Conflicting camera name"];
+		else if(userInputValid[1] == 2)
+			str = [NSString stringWithString:@"Camera name empty"];
+
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"Invalid Parameters" 
+							  message:str
+							  delegate:self
+							  cancelButtonTitle:@"Ok" 
+							  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
 	if([index intValue] == -1)
 	{
-		#ifdef DEBUG 
+		//#ifdef DEBUG 
 		NSLog(@"UIEditCameraViewController: saveCamera: newCamera");
-		#endif
+		//#endif
 
 		SentinelInfo *mo = [NSEntityDescription 
 							insertNewObjectForEntityForName:@"SentinelInfo"
@@ -76,15 +249,16 @@
 			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
 			NSLog(@"%@ and %@", error, [error userInfo]);
 		}
+		totalCameraCnt++;
 	}
 	else if([index intValue] < [fetchedObjects count])
 	{
 		SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
 
-		#ifdef DEBUG
+		//#ifdef DEBUG
 		NSLog(@"UIEditCameraViewController: saveCamera: editing camera at index: %d",
 				[index intValue]);
-		#endif
+		//#endif
 
 		[mo setValue:ipaddress.text forKey:@"ipAddress"];
 		[mo setValue:password.text forKey:@"password"];
@@ -96,13 +270,14 @@
 			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
 			NSLog(@"%@ and %@", error, [error userInfo]);
 		}
+		totalCameraCnt = [index intValue];
 	}
 	[fetchRequest release];
 	fetchRequest = nil;
 
-	#ifdef DEBUG
+	//#ifdef DEBUG
 	NSLog(@"UIEditCameraViewController: saveCamera: Done Saving");
-	#endif
+	//#endif
 	
 	/*set isDefaultCamera to -1 when user adds a camera*/
 	
@@ -117,26 +292,59 @@
 	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
 	
 	if([fetchedObjectsDC count] == 0) {
-		NSLog(@"DefaultCamera Empty in EditCam : Save: New Cam : Default Cam set to -1");
+		
 		DefaultCamera *moDC = 
 		[NSEntityDescription insertNewObjectForEntityForName:@"DefaultCamera"
 									  inManagedObjectContext:contextDefaultCam];
 		
-		[moDC setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
-		
+		if(defCameraFlag == 0)
+		{
+			//[moDC setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+			//NSLog(@"DefaultCamera Empty in EditCam : Save: New Cam : Default Cam set to -1");
+		}
+		else
+		{
+			[moDC setValue:[NSNumber numberWithInt:totalCameraCnt] forKey:@"isDefaultCamera"];
+			NSLog(@"DefaultCamera Empty in EditCam : Save: New Cam : Default Cam set to %d", totalCameraCnt);
+		}
 		if(![contextDefaultCam save:&error])
 		{
 			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
 			NSLog(@"%@ and %@", error, [error userInfo]);
 		}
-		
-		[fetchRequest release];
-		fetchRequest = nil;
 	}
-	
+	else
+	{
+		fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+		DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+		
+		if(defCameraFlag == 0 && totalCameraCnt == [mo.isDefaultCamera intValue])
+		{
+			[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+			NSLog(@"DefaultCamera Not Empty in EditCam : Save: New Cam : Default Cam set to -1");
+		}
+		else if(defCameraFlag == 1) 
+		{
+			[mo setValue:[NSNumber numberWithInt:totalCameraCnt] forKey:@"isDefaultCamera"];
+			NSLog(@"DefaultCamera Not Empty in EditCam : Save: New Cam : Default Cam set to %d", totalCameraCnt);
+		}
+			 
+		 if(![contextDefaultCam save:&error])
+		{
+			NSLog(@"UIEditCamDetailViewController: saveCamera: CoreDataSaveError");
+			NSLog(@"%@ and %@", error, [error userInfo]);
+		}
+	}
 	/*End: set isDefaultCamera to -1 when user adds a camera*/
+	[fetchRequest release];
+	fetchRequest = nil;
 	
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
 }
 
 /*set default camera*/
@@ -144,6 +352,8 @@
 {
 	
 	NSLog(@"onTouchDefaultCamera being called");
+	
+	//removeDefaultCamera.hidden = YES;
 	
 	AppDelegate_iPhone *appDelegate =
 	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];	
@@ -213,6 +423,16 @@
 	
 	if([fetchedObjects count] == 1) {
 		
+		DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
+		NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		/*reset previous default camera*/
+		if([currentDefaultCamera intValue] == [index intValue]) {
+			DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+			[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		}
+		
+		/*for the new camera*/
 		if([index intValue] == -1) {
 			
 			NSLog(@"New default cam index %d",[camCount intValue]);
@@ -229,6 +449,7 @@
 			
 		}
 		
+		/*for the existing camera*/
 		else if([index intValue] < [camCount intValue]) {
 			
 			
@@ -244,11 +465,79 @@
 		}
 	}
 	
+	//setDefaultCamera.hidden = YES;
+	//removeDefaultCamera.hidden = NO;
+	
 	[fetchRequest release];
 	fetchRequest = nil;
 }
 
+-(void)checkboxButton:(id)sender
+{
+	if (checkboxSelected == 0){
+		[viewPassword setSelected:YES];
+		checkboxSelected = 1;
+		password.secureTextEntry = NO;
+	} else {
+		[viewPassword setSelected:NO];
+		checkboxSelected = 0;
+		password.enabled = NO;
+		password.secureTextEntry = YES;
+		password.enabled = YES;
+		[password becomeFirstResponder];
+	}
+}
+
+-(void)setDefaultCameraToggle:(id)sender
+{
+	if (defCameraFlag == 0){
+		[setDefaultCamera setSelected:YES];
+		defCameraFlag = 1;
+	} else {
+		[setDefaultCamera setSelected:NO];
+		defCameraFlag = 0;
+	}
+}
 /*set default camera end*/
+
+/*Begin: Remove Default Camera*/
+- (IBAction) onTouchRemoveDefaultCamera:(id)sender
+{
+	NSLog(@"onTouchzRemoveDefaultCamera being called");
+	
+	AppDelegate_iPhone *appDelegate =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];	
+	
+	/*get index*/
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	
+	if([fetchedObjects count] > 0) {
+		
+		DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
+		//NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[mo.isDefaultCamera intValue]];
+		//if([currentDefaultCamera intValue] != -1) {
+		[mo setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
+		
+		if(![contextDefaultCam save:&error])
+		{
+			NSLog(@"Error Saving contextDefaultCam");
+		}
+	}
+	
+	//removeDefaultCamera.hidden = YES;
+	//setDefaultCamera.hidden = NO;
+}
+/*End: Remove Default Camera*/
 
 - (IBAction) onTouchDeleteCamera:(id)sender
 {
@@ -305,7 +594,134 @@
 		/*End: handle delete default camera*/
 		
 	}
+	
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
+}
+
+
+- (IBAction) onTouchAuthenticateCamera:(id)sender
+{	
+	NSLog(@"onTouchAuthenticateCamera called");
+	NSLog(@"User: %@", [username text]);
+	NSLog(@"Pasword: %@", [password text]);
+	
+	CURRENT_BASE_URL =  [[NSString alloc] 
+						 initWithString:[NSString 
+										 localizedStringWithFormat:
+										 @"http://%@", [ipaddress text]]];
+	NSLog(@"IP: %@", CURRENT_BASE_URL);
+	
+	NSString* user = [username text];
+	NSString* pass = [password text];
+	
+	//NSString* encodedUsername = [[user dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
+	//NSString* encodedPassword = [[pass dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
+	
+	NSURL* url = [NSURL URLWithString:CURRENT_BASE_URL];
+	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url 
+														cachePolicy: NSURLRequestReloadIgnoringCacheData    
+													   timeoutInterval: 10];
+	NSString* headerValue = [NSString stringWithFormat:@"Basic %@:%@", user, pass];
+	[request addValue:@"Authorization" forHTTPHeaderField:headerValue];
+	
+	//[NSURLConnection connectionWithRequest:request delegate:self];
+		
+	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest: request delegate:self];
+	
+	[theConnection release];
+	authenticationStat = [[UIAlertView alloc] initWithTitle:@"Authenticating..."
+													message:nil
+												   delegate:self
+										  cancelButtonTitle:nil
+										  otherButtonTitles:nil];
+	[authenticationStat show];
+	indicator = [[UIActivityIndicatorView alloc] 
+				 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(authenticationStat.bounds.size.width / 2, 
+                                   authenticationStat.bounds.size.height - 50);
+	[indicator startAnimating];
+	[authenticationStat addSubview:indicator];
+}
+	
+- (void)connection:(NSURLConnection *)connection
+didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge 
+{	NSLog(@"DidrecvAuth");
+	//[authenticationStat release];
+	
+	if ([challenge previousFailureCount] == 0)
+	{
+		NSLog(@"received authentication challenge");
+		NSURLCredential *newCredential;
+		newCredential=[NSURLCredential credentialWithUser:[username text]
+												 password:[password text]
+												persistence:NSURLCredentialPersistenceNone];
+	
+		[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+
+	}
+	else
+	{
+		[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+		[indicator release];
+		[authenticationStat release];
+		NSLog(@"authentication failure");
+
+		UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
+														message:@"Invalid Username/Password"
+													   delegate:nil
+											  cancelButtonTitle:@"Camera Details" 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		
+		[connection release];
+	}
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+	NSLog(@"didReceiveResponse called");
+
+	[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[authenticationStat release];
+	
+	//[authenticationStat release];
+	UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Authentication Successful"
+												message:nil
+											   delegate:nil
+									  cancelButtonTitle:@"OK"
+									  otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"didFailWithError called");
+	[authenticationStat dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	[authenticationStat release];
+	
+	UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Camera Unreachable / Invalid IP Address"
+													message:nil
+												   delegate:nil
+										  cancelButtonTitle:@"OK"
+										  otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	NSLog(@"connectionDidFinishLoading called");
+	
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -319,8 +735,25 @@
                              action:@selector(saveCamera:)];
 	self.navigationItem.rightBarButtonItem = item; 
 	[item release];
+
+	
+	item = [[UIBarButtonItem alloc]   
+			initWithTitle:@"Back" 
+			style:UIBarButtonItemStyleBordered target:self action:@selector(backPressed:)];
+	self.navigationItem.leftBarButtonItem = item; 
+	[item release];
 	
     return self;
+}
+
+- (IBAction) backPressed:(id)sender
+{
+	[UIView  beginAnimations: @"Showinfo"context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+	[self.navigationController popViewControllerAnimated:YES];
+	[UIView commitAnimations];
 }
 
 - (IBAction) onTouchalarmSwitch:(id)sender
@@ -449,8 +882,13 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	checkboxSelected = 0;
     [super viewDidLoad];
 	self.title = @"Camera Details";
+	
+	cameraParamsScrollView.contentSize = CGSizeMake(0, 650);
+	
+	//removeDefaultCamera.hidden = YES;
 	
 	AppDelegate_iPhone *appDelegate =
 		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
@@ -508,9 +946,51 @@
 		#endif
 
 		deleteCamera.hidden = YES;
+	}
+	
+	/*hide setDefaultCamera button if selected camera is already a default camera*/
+	
+	AppDelegate_iPhone *appDelegateDC =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	
+	contextDefaultCam = [appDelegateDC managedObjectContext];
+	
+	NSFetchRequest *fetchRequestDC = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entityDC = [NSEntityDescription 
+									 entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequestDC setEntity:entityDC];
+	[fetchRequestDC setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC error:&error];
+	
+	if([fetchedObjectsDC count] > 0) {
 		
+		DefaultCamera *defaultCameraObj = [fetchedObjectsDC objectAtIndex:0];
+		NSNumber *currentDefaultCamera = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		
+		if([currentDefaultCamera intValue] == [index intValue] && [index intValue] != -1) {
+				[setDefaultCamera setSelected:YES];
+				defCameraFlag = 1;
+		}
+	}
+	else {
+		[setDefaultCamera setSelected:NO];
+		defCameraFlag = 0;
 	}
 
+	
+	[fetchRequestDC release];
+	fetchRequestDC = nil;
+
+}
+
+-(IBAction)backgroundTouched:(id)sender
+{
+	[ipaddress resignFirstResponder];
+	[username resignFirstResponder];
+	[password resignFirstResponder];
+	[cameraname resignFirstResponder];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -535,7 +1015,7 @@
 
 - (IBAction) cameranameEntryStart:(id)sender
 {
-	[cameraParamsScrollView setContentOffset:CGPointMake(0,140) animated:YES];
+	[cameraParamsScrollView setContentOffset:CGPointMake(0,180) animated:YES];
 }
 
 - (IBAction) onTouchOutsideCameraName:(id)sender
@@ -551,6 +1031,7 @@
 
 - (IBAction) onTouchOutsideIPaddress:(id)sender
 {
+	NSLog(@"onTouchOutsideIPaddress called");
 	[cameraParamsScrollView setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
@@ -579,10 +1060,23 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+	NSLog(@"touchesBegan called");
+}
 
 - (void)dealloc {
     [super dealloc];
 }
 
-
 @end
+

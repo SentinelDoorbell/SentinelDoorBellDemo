@@ -29,6 +29,8 @@
 	NSManagedObjectContext *context;
 	
 	NSManagedObjectContext *contextDefaultCam;
+	
+	UIAlertView *connectionStat;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *context;

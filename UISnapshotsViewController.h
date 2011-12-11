@@ -27,6 +27,8 @@
 
 - (void) onImageClick:(id) sender;
 
+- (void) onSlideShowClick:(id) sender;
+
 @end
 
 @interface UISnapshotViewCell : UITableViewCell 

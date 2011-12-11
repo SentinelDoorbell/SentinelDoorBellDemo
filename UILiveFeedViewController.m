@@ -22,7 +22,7 @@
 //static NSString* CURRENT_BASE_URL = @"http://62.131.113.213:81";
 static NSString* CURRENT_BASE_URL = @"http://96.242.83.3";
 
-static double TIMEOUT_INTERVAL = 5.0;
+static double TIMEOUT_INTERVAL = 10.0;
 
 @implementation UILiveFeedViewController
 
@@ -40,60 +40,113 @@ static double TIMEOUT_INTERVAL = 5.0;
 
 - (void)viewDidLoad 
 {
-	[super viewDidLoad];
-	self.title = @"Live Feed";
 	
 	[theWebView setDelegate:self];
 	
-	/*Begin: check for default camera and start live feed*/
-	AppDelegate_iPhone *appDelegate =
-	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
-	contextDefaultCam = [appDelegate managedObjectContext];
 	
+	//check if the user navigated here from the tableview
+	
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	context = [appDelegate managedObjectContext];
 	NSError *error;
+	
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+								   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
-	DefaultCamera *defaultCameraObj = [fetchedObjects objectAtIndex:0];
-	NSNumber *index = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
 	
-	if(([fetchedObjects count] > 0) && ([index intValue] != -1)) {
-		
-		NSLog(@"DefaultCamera selected: LiveFeed: %d",[index intValue]);
-	}	
-	/*End: check for default camera and start live feed*/
+	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+	NSLog(@"UILiveFeedViewController viewDidLoad EditInfoCameraView.cameraIndex = %d", [index intValue]);
+	[fetchRequest release];
 	
-	else {
-    
-		AppDelegate_iPhone *appDelegate =
+	
+	if([index intValue] == -1)
+	{
+		//The user may have selected a default camera. Find its index
+		AppDelegate_iPhone *appDelegateDC =
 			(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
-		context = [appDelegate managedObjectContext];
+		contextDefaultCam = [appDelegateDC managedObjectContext];
 	
 		NSError *error;
-		NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-		NSEntityDescription *entity = [NSEntityDescription 
+		NSFetchRequest *fetchRequestDC = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entityDC = [NSEntityDescription 
+								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+	
+		[fetchRequestDC setEntity:entityDC];
+		[fetchRequestDC setReturnsObjectsAsFaults:NO];
+	
+		NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC error:&error];
+		
+		if([fetchedObjects count] == 0)
+		{
+			//There is no default camera to!! Something fishy!! Go back to main view
+			UIAlertView *alert = [[UIAlertView alloc] 
+								  initWithTitle:@"Error!" 
+								  message:@"Could not find any cameras[1]"
+								  delegate:self
+								  cancelButtonTitle:@"Back to Main Menu" 
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+			return;
+		}
+		
+		DefaultCamera *defaultCameraObj = [fetchedObjectsDC objectAtIndex:0];
+		index = [NSNumber numberWithInteger:[defaultCameraObj.isDefaultCamera intValue]];
+		[fetchRequestDC release];
+	}
+	/*
+	if(([fetchedObjectsDC count] > 0) && ([index intValue] != -1)) {
+		
+		UIBarButtonItem *item = [[UIBarButtonItem alloc]   
+								 initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+								 target:self   
+								 action:@selector(OnSnapshot:)];
+		self.navigationItem.rightBarButtonItem = item; 
+		[item release];
+		
+		NSLog(@"DefaultCamera selected: LiveFeed: %d",[index intValue]);
+	}
+	 */
+	/*End: check for default camera and start live feed*/
+	
+	//else 
+	{
+		/*
+		if([index intValue] == -1)
+		{
+			AppDelegate_iPhone *appDelegate =
+				(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+			context = [appDelegate managedObjectContext];
+	
+			NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+			NSEntityDescription *entity = [NSEntityDescription 
 						entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
 	
-		[fetchRequest setEntity:entity];
-		[fetchRequest setReturnsObjectsAsFaults:NO];
+			[fetchRequest setEntity:entity];
+			[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
-														 error:&error];
+			NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
 	
-		EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
-		NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
-	
+			EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
+			index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
+			NSLog(@"UILiveFeedViewController viewDidLoad No Default Camera, index = %d", [index intValue]);
+			[fetchRequest release];
+		}
+		else {
+			NSLog(@"UILiveFeedViewController viewDidLoad Using default camera, index = %d", [index intValue]);
+		}
+
+		*/
 		#ifdef DEBUG
 		NSLog(@"UILiveFeedViewController: viewDidLoad index: %d", [index intValue]);
 		#endif	
-	
-		[fetchRequest release];
-		fetchRequest = nil;
 	
 		fetchRequest = [[NSFetchRequest alloc] init];
 		context = [appDelegate managedObjectContext];
@@ -108,6 +161,8 @@ static double TIMEOUT_INTERVAL = 5.0;
 		fetchRequest = nil;
 	
 		SentinelInfo *mo = [fetchedObjects objectAtIndex:[index intValue]];
+		
+		self.title = mo.cameraName;
 	
 		if(CURRENT_BASE_URL != mo.ipAddress)
 		{
@@ -142,8 +197,8 @@ static double TIMEOUT_INTERVAL = 5.0;
 		self.navigationItem.leftBarButtonItem = leftitem;
 		[leftitem release];
 		
-	}
-
+	}//else
+	[super viewDidLoad];
 }
 
 -(void) OnViewSnapshotsClick:(id) sender
@@ -167,16 +222,18 @@ static double TIMEOUT_INTERVAL = 5.0;
 	if(count > 1)
     {
 		[self.navigationController popToViewController:
-			[self.navigationController.viewControllers objectAtIndex:count-3] 
+			[self.navigationController.viewControllers objectAtIndex:0] 
 			animated:YES];
     }
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-	if([theWebView isLoading])
+	NSLog(@"viewWillDisappear getting called");
+	if([theWebView isLoading]) {
+		NSLog(@"viewWillDisappear getting called");
 		[theWebView stopLoading];
-	
+	}
 }
 
 -(void)viewWillAppear :(BOOL)animated
@@ -205,6 +262,36 @@ static double TIMEOUT_INTERVAL = 5.0;
 	[fetchRequest release];
 	fetchRequest = nil;
 	
+	//If the index = -1, the live view was navigated to because a default camera
+	//was selected. Work with the default camera instead
+	if([index intValue] == -1)
+	{
+		context = [appDelegate managedObjectContext];
+		fetchRequest = [[NSFetchRequest alloc] init];
+		entity = [NSEntityDescription 
+				  entityForName:@"DefaultCamera" inManagedObjectContext:context];
+		[fetchRequest setEntity:entity];
+		[fetchRequest setReturnsObjectsAsFaults:NO];
+		
+		fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		[fetchRequest release];
+		if([fetchedObjects count] == 0)
+		{
+			//something terribly wrong has happened.
+			UIAlertView *alert = [[UIAlertView alloc] 
+								  initWithTitle:@"Error!" 
+								  message:@"Could not find any cameras"
+								  delegate:self
+								  cancelButtonTitle:@"Back to Main Menu" 
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+			return;
+		}
+		DefaultCamera *dc = [fetchedObjects objectAtIndex:0];
+		index = [NSNumber numberWithInteger:[dc.isDefaultCamera intValue]];
+	}
+	
 	fetchRequest = [[NSFetchRequest alloc] init];
 	context = [appDelegate managedObjectContext];
 	
@@ -232,6 +319,29 @@ static double TIMEOUT_INTERVAL = 5.0;
                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy						  
                                             timeoutInterval:TIMEOUT_INTERVAL];
 	[theWebView loadRequest:requestObj];
+	theWebView.delegate = self;
+	
+	/* Display Activity indicator */
+	
+	connectionStat = [[UIAlertView alloc] initWithTitle:@"Connecting"
+                                       message:nil
+                                      delegate:nil
+                             cancelButtonTitle:nil
+                             otherButtonTitles:nil];
+	[connectionStat show];
+	
+	
+	UIActivityIndicatorView *indicator = 
+	[[UIActivityIndicatorView alloc] 
+	 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	
+	indicator.center = CGPointMake(connectionStat.bounds.size.width / 2, 
+                                   connectionStat.bounds.size.height - 50);
+	[indicator startAnimating];
+	[connectionStat addSubview:indicator];
+	//[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[indicator release];
+	//[connectionStat release];
 
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainviewbg.png"]];
 	
@@ -306,6 +416,25 @@ static double TIMEOUT_INTERVAL = 5.0;
                                                     cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                 timeoutInterval:TIMEOUT_INTERVAL];
 		[theWebView loadRequest:requestObj];
+		theWebView.delegate = self;
+		
+		connectionStat = [[UIAlertView alloc] initWithTitle:@"Connecting"
+													message:nil
+												   delegate:nil
+										  cancelButtonTitle:nil
+										  otherButtonTitles:nil];
+		[connectionStat show];
+		
+		
+		UIActivityIndicatorView *indicator = 
+		[[UIActivityIndicatorView alloc] 
+		 initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+		
+		indicator.center = CGPointMake(connectionStat.bounds.size.width / 2, 
+									   connectionStat.bounds.size.height - 50);
+		[indicator startAnimating];
+		[connectionStat addSubview:indicator];
+		[indicator release];
 		
         if (DEBUG)
         {
@@ -314,6 +443,13 @@ static double TIMEOUT_INTERVAL = 5.0;
 	}
 	else
 	{
+		if(connectionStat != NULL)
+		{
+			[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+			[connectionStat release];
+			connectionStat = NULL;
+		}
+		
 		UIAlertView *alert = [[UIAlertView alloc] 
 							  initWithTitle:@"Authentication Failure" 
 							  message:@"Invalid username/password."
@@ -336,7 +472,7 @@ static double TIMEOUT_INTERVAL = 5.0;
 	 if(count > 1)
 	 {
 		 [self.navigationController popToViewController:
-		  [self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
+		  [self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 	 }
 }
 
@@ -396,6 +532,7 @@ static double TIMEOUT_INTERVAL = 5.0;
                              otherButtonTitles:nil];
 	[alert show];
 	
+	
 	UIActivityIndicatorView *indicator = 
         [[UIActivityIndicatorView alloc] 
         initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -430,8 +567,28 @@ static double TIMEOUT_INTERVAL = 5.0;
 	[data writeToFile:path atomically:YES];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView 
+{
+	/*
+	NSLog(@"webViewDidFinishLoad called");
+	//if(connectionStat == NULL)
+	//return;
+
+	[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+	[connectionStat release];
+	connectionStat = NULL;
+	 */
+}
+
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+	if(connectionStat != NULL)
+	{
+		[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+		[connectionStat release];
+		connectionStat = NULL;
+	}
+
     static int STOPPED_LOAD_CODE = -999;
     
     if ([error code] != STOPPED_LOAD_CODE)
@@ -439,7 +596,7 @@ static double TIMEOUT_INTERVAL = 5.0;
         UIAlertView *alert = [[UIAlertView alloc] 
                               initWithTitle:@"Connection Error!" 
                               message:@"Camera is not available" 
-                              delegate:nil 
+                              delegate:self 
                               cancelButtonTitle:@"OK" 
                               otherButtonTitles: nil];
         [alert setDelegate:self];
@@ -450,15 +607,12 @@ static double TIMEOUT_INTERVAL = 5.0;
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-#ifdef DEBUG
-    NSLog(@"WebView loading started.");
-#endif
-}
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-#ifdef DEBUG
-    NSLog(@"WebView finished loading.");
-#endif
+	if(connectionStat == NULL)
+		return;
+	
+	[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
+	[connectionStat release];
+	connectionStat = NULL;
 }
 
 /*

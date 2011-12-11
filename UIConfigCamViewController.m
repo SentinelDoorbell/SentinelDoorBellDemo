@@ -103,7 +103,14 @@
                                               bundle:nil];
 	
 	
-	[self.navigationController pushViewController:viewctr animated:YES];
+	[UIView  beginAnimations:@"Showinfo" context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[self.navigationController pushViewController:viewctr animated:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+	[UIView commitAnimations];
+	
+	//[self.navigationController pushViewController:viewctr animated:YES];
 	[viewctr release];
 }
 
@@ -130,9 +137,9 @@
 }
 
 
-
 - (void)viewWillAppear:(BOOL)animated {
 
+	self.title = @"Edit Camera";
 	// The following section just prints the camera list
 	#ifdef DEBUG
 	AppDelegate_iPhone *appDelegate =
@@ -402,7 +409,14 @@
 					initWithNibName:@"UIEditCamDetailView" 
 					bundle:nil];
 	
-	[self.navigationController pushViewController:viewctr animated:YES];
+	[UIView  beginAnimations:@"Showinfo" context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[self.navigationController pushViewController:viewctr animated:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+	[UIView commitAnimations];
+	
+	//[self.navigationController pushViewController:viewctr animated:YES];
 	[viewctr release];
 }
 

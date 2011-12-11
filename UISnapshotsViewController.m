@@ -18,11 +18,28 @@
 @synthesize theSnapshotsArray;
 @synthesize theSnapshotsRootDir;
 
+const double SLIDE_SHOW_DURATION_S = 1.5;
+
 - (void)viewDidLoad 
 {
     [super viewDidLoad];
     
 	self.title = @"Snapshots";
+    
+    [self loadSnapshotsArray];
+    
+    if ([theSnapshotsArray count] > 0)
+    {
+        // create a standard delete button with the trash icon
+        UIBarButtonItem *slideShowButton = 
+        [[UIBarButtonItem alloc] 
+         initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
+         target:self
+         action:@selector(onSlideShowClick:)];
+        slideShowButton.style = UIBarButtonItemStyleBordered;
+        self.navigationItem.rightBarButtonItem = slideShowButton;
+        [slideShowButton release];
+    }  
 }
 
 - (void)viewWillAppear:(BOOL)animated 
@@ -196,14 +213,47 @@
     
     UIImageView *imageView = [[UIImageView alloc] 
                                initWithImage:button.imageView.image];
-	
-	[self.view addSubview:imageView];
     
     UISnapImageViewController *viewctr = [[UISnapImageViewController alloc] 
-                                          initWithNibName:@"UISnapImageViewController" 
+                                          initWithNibName:@"UISnapImageView" 
                                           bundle:nil];
-    [viewctr.view addSubview:imageView];
     viewctr.imagePath = button.imagePath;
+    
+    [viewctr.view addSubview:imageView];
+    
+	[self.navigationController pushViewController:viewctr animated:YES];
+	[viewctr release];
+	[imageView release];
+}
+
+- (void) onSlideShowClick:(id) sender
+{
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    
+    for (NSString *imageName in theSnapshotsArray)
+    {
+        NSString* fullPath = [[NSString alloc] initWithFormat:@"%@/%@", 
+                              theSnapshotsRootDir, 
+                              imageName];
+        [images addObject:[UIImage imageWithContentsOfFile:fullPath]];
+        [fullPath release];
+    }
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    imageView.animationImages = images;
+    
+    imageView.animationDuration = SLIDE_SHOW_DURATION_S * [images count];
+    
+    imageView.animationRepeatCount = 0;
+    
+    [images release];
+    
+    UISnapImageViewController *viewctr = [[UISnapImageViewController alloc] 
+                                          initWithNibName:@"UISnapImageView" 
+                                          bundle:nil];
+    
+    [imageView startAnimating];
+    [viewctr.view addSubview:imageView];
     
 	[self.navigationController pushViewController:viewctr animated:YES];
 	[viewctr release];

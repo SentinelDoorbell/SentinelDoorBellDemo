@@ -16,6 +16,8 @@
 #import "AppDelegate_iPhone.h"
 #import "DefaultCamera.h"
 #import "UILiveFeedViewController.h"
+#import	"TutorialViewController.h"
+#import "AboutViewController.h"
 
 static UILabel *toolTipGlobal;
 CGRect myFrame;
@@ -33,12 +35,87 @@ CGRect myFrame;
 		self.title = @"Sentinel";
     }
 
-	self.navigationItem.leftBarButtonItem = nil;
+
+	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
+							 initWithTitle:@"Tutorial" 
+							 style:UIBarButtonSystemItemDone target:self action:@selector(tutorialPressed:)];
+	self.navigationItem.rightBarButtonItem = item; 
+	[item release];
+	
+	item = [[UIBarButtonItem alloc]   
+							 initWithTitle:@"About" 
+			style:UIBarButtonSystemItemDone target:self action:@selector(aboutPressed:)];
+	self.navigationItem.leftBarButtonItem = item; 
+	[item release];
+	
     return self;
+}
+
+- (void) tutorialPressed:(id)sender
+{
+	NSLog(@"Tutorial");
+	TutorialViewController *tutorialController = [[TutorialViewController alloc] init];
+	
+	[UIView  beginAnimations:@"Showinfo" context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[self.navigationController pushViewController:tutorialController animated:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
+	[UIView commitAnimations];
+	
+	//[self.navigationController pushViewController:tutorialController animated:YES];
+	[tutorialController release];
+}
+
+- (void) aboutPressed:(id)sender
+{
+	NSLog(@"About");
+	
+	AboutViewController *aboutController = [[AboutViewController alloc] init];
+	
+	[UIView  beginAnimations:@"Showinfo" context: nil];
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDuration:0.75];
+	[self.navigationController pushViewController:aboutController animated:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
+	[UIView commitAnimations];
+	
+	
+	//[self.navigationController pushViewController:aboutController animated:YES];
+	[aboutController release];
 }
 
 - (IBAction) selectCameraFromListPressed:(id)sender
 {
+	//validate camera name
+	AppDelegate_iPhone *appDelegate =
+		(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"SentinelInfo" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+	
+	if([fetchedObjects count] == 0)
+	{
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"No Cameras found" 
+							  message:@"Select the 'Configure' button and\nadd a camera"
+							  delegate:self
+							  cancelButtonTitle:@"Ok" 
+							  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
 	UISelectCamViewController *viewctr = [[UISelectCamViewController alloc] 
                                           initWithNibName:@"UISelectCamView" 
                                           bundle:nil];
@@ -77,6 +154,34 @@ CGRect myFrame;
 
 - (IBAction) surveillancePressed:(id)sender
 {
+	AppDelegate_iPhone *appDelegate =
+	(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate];
+	contextDefaultCam = [appDelegate managedObjectContext];
+	
+	NSError *error;
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription 
+								   entityForName:@"SentinelInfo" inManagedObjectContext:contextDefaultCam];
+	
+	[fetchRequest setEntity:entity];
+	[fetchRequest setReturnsObjectsAsFaults:NO];
+	
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	[fetchRequest release];
+	
+	if([fetchedObjects count] == 0)
+	{
+		UIAlertView *alert = [[UIAlertView alloc] 
+							  initWithTitle:@"No Cameras found" 
+							  message:@"Select the 'Configure' button and\nadd a camera"
+							  delegate:self
+							  cancelButtonTitle:@"Ok" 
+							  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
 	UISurveillanceViewController *viewctr = [[UISurveillanceViewController alloc] 
                                           initWithNibName:@"UISurveillanceView" 
                                           bundle:nil];
@@ -216,6 +321,7 @@ CGRect myFrame;
 	CGRect frame = CGRectMake(20, infoSurveillance.frame.origin.y - 100, 280, 100);
 	tooltip.frame = frame;
 }
+	
 
 - (void)dealloc 
 {
