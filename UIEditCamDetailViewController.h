@@ -1,15 +1,30 @@
-//
-//  UIEditCamDetailViewController.h
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/10/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Camera Configuration Editor
+ * Function: This UIView is displayed when a user chooses to modify an existing
+ *         : camera configuration or add a new camera configuration. (Header)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-
+/*
+ * Edit camera configuration for modifying or adding new camera configuraiton.
+ * It has a configuration input for each configuraiton item. It also performs
+ * validation of user input before committing to database.
+ */
 @interface UIEditCamDetailViewController : UIViewController{
 	IBOutlet UIScrollView *cameraParamsScrollView;
 	IBOutlet UITextField *ipaddress;
@@ -37,6 +52,11 @@
 	UIActivityIndicatorView *indicator;
 }
 
+/******************************************************************************
+ * A set of handles that are used to handle events associated with the camera
+ * configuration inputs. They also validate the input of the user. They also
+ * handle deleting a camera configuraion.
+ ******************************************************************************/
 - (IBAction) ipaddressEntryStart:(id)sender;
 - (IBAction) usernameEntryStart:(id)sender;
 - (IBAction) passwordEntryStart:(id)sender;
@@ -57,6 +77,8 @@
 
 - (IBAction)textFieldReturn:(id)sender;
 - (IBAction)backgroundTouched:(id)sender;
+
+-(BOOL)validateUserInput:(int)camIdx;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) NSManagedObjectContext *contextnew;

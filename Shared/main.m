@@ -1,10 +1,20 @@
-//
-//  main.m
-//  navS
-//
-//  Created by Researcher on 11/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Main
+ * Function: Entry Point of the application (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import <UIKit/UIKit.h>
 #import "ConfigAccess.h"

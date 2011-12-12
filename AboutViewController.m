@@ -1,10 +1,21 @@
-//
-//  AboutViewController.m
-//  Sentinel
-//
-//  Created by Guest Account on 11/30/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : About View
+ * Function: View to display a small description about Sentinel and its team.
+ *         : (Header)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "AboutViewController.h"
 
@@ -33,7 +44,9 @@
 	[UIView  beginAnimations: @"Showinfo"context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp 
+                           forView:self.navigationController.view 
+                             cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 	[UIView commitAnimations];
 }
@@ -43,15 +56,6 @@
     [super viewDidLoad];
 	
 }
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

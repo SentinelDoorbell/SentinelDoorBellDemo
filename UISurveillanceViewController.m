@@ -1,10 +1,21 @@
-//
-//  UISurveillanceViewController.m
-//  Sentinel
-//
-//  Created by Guest Account on 11/17/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Surveillance View Controller
+ * Function: UIView that allows users to view live stream from more than one 
+ *         : at the same time. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "UISurveillanceViewController.h"
 #import "AppDelegate_iPhone.h"
@@ -16,17 +27,6 @@
 static NSString* CURRENT_BASE_URL;
 
 @implementation UISurveillanceViewController
-
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,13 +79,17 @@ static NSString* CURRENT_BASE_URL;
 								timeoutInterval:60.0];
 	
 		if(surCamIndex == 0)
-			theConnection1 = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+			theConnection1 = [[NSURLConnection alloc] initWithRequest:theRequest 
+                                                             delegate:self];
 		else if(surCamIndex == 1)
-			theConnection2 = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+			theConnection2 = [[NSURLConnection alloc] initWithRequest:theRequest
+                                                             delegate:self];
 		else if(surCamIndex == 2)
-			theConnection3 = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+			theConnection3 = [[NSURLConnection alloc] initWithRequest:theRequest
+                                                             delegate:self];
 		else if(surCamIndex == 3)
-			theConnection4 = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+			theConnection4 = [[NSURLConnection alloc] initWithRequest:theRequest 
+                                                             delegate:self];
 		
 		surCamIndex++;
 	}
@@ -241,7 +245,8 @@ static NSString* CURRENT_BASE_URL;
 												 password:mo.password
 											  persistence:NSURLCredentialPersistenceForSession];
 		
-			[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+			[[challenge sender] useCredential:newCredential 
+                   forAuthenticationChallenge:challenge];
         
 			NSString *ipINnUrl = [NSString localizedStringWithFormat:
 							  @"%@", CURRENT_BASE_URL]; 

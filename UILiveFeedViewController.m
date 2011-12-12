@@ -1,10 +1,23 @@
-//
-//  UILiveFeedViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/9/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Live Stream View
+ * Function: Live stream view of the selected camera. It also has many action
+ *         : that the user can use to interact with the camera such as tilting
+ *         : up/down, moving the camera left and right, changing brightness, 
+ *         : alarm, taking snapshots etc. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "UILiveFeedViewController.h"
 #import "UIMainViewController.h"
@@ -53,12 +66,14 @@ static double TIMEOUT_INTERVAL = 10.0;
 	
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+								   entityForName:@"EditInfoCameraView" 
+                                   inManagedObjectContext:context];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
 	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
@@ -76,12 +91,14 @@ static double TIMEOUT_INTERVAL = 10.0;
 		NSError *error;
 		NSFetchRequest *fetchRequestDC = [[NSFetchRequest alloc] init];
 		NSEntityDescription *entityDC = [NSEntityDescription 
-								   entityForName:@"DefaultCamera" inManagedObjectContext:contextDefaultCam];
+								   entityForName:@"DefaultCamera" 
+                                         inManagedObjectContext:contextDefaultCam];
 	
 		[fetchRequestDC setEntity:entityDC];
 		[fetchRequestDC setReturnsObjectsAsFaults:NO];
 	
-		NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC error:&error];
+		NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequestDC 
+                                                                     error:&error];
 		
 		if([fetchedObjects count] == 0)
 		{
@@ -362,12 +379,14 @@ static double TIMEOUT_INTERVAL = 10.0;
 		NSError *error;
 		NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 		NSEntityDescription *entity = [NSEntityDescription 
-				entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+				entityForName:@"EditInfoCameraView" 
+                                       inManagedObjectContext:context];
 		
 		[fetchRequest setEntity:entity];
 		[fetchRequest setReturnsObjectsAsFaults:NO];
 		
-		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+		NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                         error:&error];
 		
 		EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
 		NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
@@ -400,12 +419,9 @@ static double TIMEOUT_INTERVAL = 10.0;
 				password:mo.password
 				persistence:NSURLCredentialPersistenceForSession];
 		
-		[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
-        
-		/*
-		NSString *ipINnUrl = [NSString localizedStringWithFormat:
-							  @"%@%@", @"http://", CURRENT_BASE_URL];
-		*/
+		[[challenge sender] useCredential:newCredential 
+               forAuthenticationChallenge:challenge];
+
 		NSString *ipINnUrl = [NSString localizedStringWithFormat:
 							  @"%@", CURRENT_BASE_URL];
 		
@@ -569,15 +585,6 @@ static double TIMEOUT_INTERVAL = 10.0;
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView 
 {
-	/*
-	NSLog(@"webViewDidFinishLoad called");
-	//if(connectionStat == NULL)
-	//return;
-
-	[connectionStat dismissWithClickedButtonIndex:0 animated:YES];
-	[connectionStat release];
-	connectionStat = NULL;
-	 */
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -614,14 +621,6 @@ static double TIMEOUT_INTERVAL = 10.0;
 	[connectionStat release];
 	connectionStat = NULL;
 }
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

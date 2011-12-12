@@ -1,10 +1,22 @@
-//
-//  UISnapImageViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/19/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Single Image View Or Slide Show
+ * Function: This UIView that works in two modes: a selecetd one image that can
+ *         : be deleted or a slide show mode which animates the saved snapshots.
+ *         : (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "UISnapImageViewController.h"
 

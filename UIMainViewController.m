@@ -1,10 +1,21 @@
-//
-//  UIMainViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/9/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Main View Controller
+ * Function: This is the main view of the application, the root of the 
+ *         : navigation. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import <CoreData/CoreData.h>
 #import "UIMainViewController.h"
@@ -38,13 +49,15 @@ CGRect myFrame;
 
 	UIBarButtonItem *item = [[UIBarButtonItem alloc]   
 							 initWithTitle:@"Tutorial" 
-							 style:UIBarButtonSystemItemDone target:self action:@selector(tutorialPressed:)];
+							 style:UIBarButtonSystemItemDone target:self 
+                             action:@selector(tutorialPressed:)];
 	self.navigationItem.rightBarButtonItem = item; 
 	[item release];
 	
 	item = [[UIBarButtonItem alloc]   
 							 initWithTitle:@"About" 
-			style:UIBarButtonSystemItemDone target:self action:@selector(aboutPressed:)];
+			style:UIBarButtonSystemItemDone target:self 
+            action:@selector(aboutPressed:)];
 	self.navigationItem.leftBarButtonItem = item; 
 	[item release];
 	
@@ -60,10 +73,10 @@ CGRect myFrame;
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
 	[self.navigationController pushViewController:tutorialController animated:NO];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown 
+                           forView:self.navigationController.view cache:NO];
 	[UIView commitAnimations];
-	
-	//[self.navigationController pushViewController:tutorialController animated:YES];
+
 	[tutorialController release];
 }
 
@@ -79,9 +92,7 @@ CGRect myFrame;
 	[self.navigationController pushViewController:aboutController animated:NO];
 	[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
 	[UIView commitAnimations];
-	
-	
-	//[self.navigationController pushViewController:aboutController animated:YES];
+    
 	[aboutController release];
 }
 
@@ -95,12 +106,14 @@ CGRect myFrame;
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"SentinelInfo" inManagedObjectContext:contextDefaultCam];
+								   entityForName:@"SentinelInfo" 
+                                   inManagedObjectContext:contextDefaultCam];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest 
+                                                               error:&error];
 	[fetchRequest release];
 	
 	if([fetchedObjects count] == 0)
@@ -161,12 +174,14 @@ CGRect myFrame;
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"SentinelInfo" inManagedObjectContext:contextDefaultCam];
+								   entityForName:@"SentinelInfo" 
+                                   inManagedObjectContext:contextDefaultCam];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest 
+                                                               error:&error];
 	[fetchRequest release];
 	
 	if([fetchedObjects count] == 0)
@@ -196,18 +211,6 @@ CGRect myFrame;
 	
 	UINavigationBar *navBar = [self.navigationController navigationBar];
     [navBar setTintColor:kSCNavBarColor];
-	
-	/*
-	UIImageView *imageView = (UIImageView *)[navBar viewWithTag:kSCNavBarImageTag];
-	if (imageView == nil)
-	{
-		imageView = [[UIImageView alloc] initWithImage:
-					 [UIImage imageNamed:@"mainviewbg.png"]];
-		[imageView setTag:kSCNavBarImageTag];
-		[navBar insertSubview:imageView atIndex:0];
-		[imageView release];
-	}
-	*/
 	
 	/*test: vijay - begin*/
 	AppDelegate_iPhone *appDelegate =

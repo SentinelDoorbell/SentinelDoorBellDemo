@@ -1,10 +1,23 @@
-//
-//  UIEditCamDetailViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/10/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Camera Configuration Editor
+ * Function: This UIView is displayed when a user chooses to modify an existing
+ *         : camera configuration or add a new camera configuration. 
+ *         : (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
+
 
 #import "UIEditCamDetailViewController.h"
 #import "AppDelegate_iPhone.h"
@@ -22,8 +35,6 @@ static NSString* CURRENT_BASE_URL = @"";
 @synthesize context;
 @synthesize contextnew;
 @synthesize contextDefaultCam;
-
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 -(BOOL)validateUserInput:(int)camIdx
 {
@@ -89,12 +100,14 @@ static NSString* CURRENT_BASE_URL = @"";
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-							   entityForName:@"SentinelInfo" inManagedObjectContext:context];
+							   entityForName:@"SentinelInfo" 
+                                   inManagedObjectContext:context];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	[fetchRequest release];
 
 	index = 0;
@@ -180,7 +193,8 @@ static NSString* CURRENT_BASE_URL = @"";
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
 	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
@@ -299,8 +313,6 @@ static NSString* CURRENT_BASE_URL = @"";
 		
 		if(defCameraFlag == 0)
 		{
-			//[moDC setValue:[NSNumber numberWithInt:-1] forKey:@"isDefaultCamera"];
-			//NSLog(@"DefaultCamera Empty in EditCam : Save: New Cam : Default Cam set to -1");
 		}
 		else
 		{
@@ -315,7 +327,8 @@ static NSString* CURRENT_BASE_URL = @"";
 	}
 	else
 	{
-		fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+		fetchedObjects = [contextDefaultCam executeFetchRequest:fetchRequest 
+                                                          error:&error];
 		DefaultCamera *mo = [fetchedObjects objectAtIndex:0];
 		
 		if(defCameraFlag == 0 && totalCameraCnt == [mo.isDefaultCamera intValue])
@@ -342,7 +355,9 @@ static NSString* CURRENT_BASE_URL = @"";
 	[UIView  beginAnimations: @"Showinfo"context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft 
+                           forView:self.navigationController.view 
+                             cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 	[UIView commitAnimations];
 }
@@ -364,12 +379,14 @@ static NSString* CURRENT_BASE_URL = @"";
 	NSError *error;
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"EditInfoCameraView" inManagedObjectContext:context];
+								   entityForName:@"EditInfoCameraView" 
+                                   inManagedObjectContext:context];
 	
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	EditInfoCameraView *obj = [fetchedObjects objectAtIndex:0];
 	NSNumber *index = [NSNumber numberWithInteger:[obj.cameraIndex intValue]];
@@ -464,10 +481,7 @@ static NSString* CURRENT_BASE_URL = @"";
 			NSLog(@"UIEditCameraViewController: isDefaultCamera: index: %d", [index intValue]);
 		}
 	}
-	
-	//setDefaultCamera.hidden = YES;
-	//removeDefaultCamera.hidden = NO;
-	
+
 	[fetchRequest release];
 	fetchRequest = nil;
 }
@@ -598,7 +612,9 @@ static NSString* CURRENT_BASE_URL = @"";
 	[UIView  beginAnimations: @"Showinfo"context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft 
+                           forView:self.navigationController.view 
+                             cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 	[UIView commitAnimations];
 }
@@ -751,7 +767,9 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 	[UIView  beginAnimations: @"Showinfo"context: nil];
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft 
+                           forView:self.navigationController.view 
+                             cache:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 	[UIView commitAnimations];
 }

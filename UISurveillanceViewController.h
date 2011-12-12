@@ -1,15 +1,30 @@
-//
-//  UISurveillanceViewController.h
-//  Sentinel
-//
-//  Created by Guest Account on 11/17/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Surveillance View Controller
+ * Function: UIView that allows users to view live stream from more than one 
+ *         : at the same time. (Header)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-
+/*
+ * This view allows the user to view more than one camera at the same time
+ * it is a container of multiple UIWebview that each connects to a different
+ * camera for streaming.
+ */
 @interface UISurveillanceViewController : UIViewController
 {
 	IBOutlet UIWebView *theWebView1;

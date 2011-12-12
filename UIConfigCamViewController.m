@@ -1,10 +1,22 @@
-//
-//  UIConfigCameraViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/9/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Config Camera View
+ * Function: Table view with a list of all the cameras configured. It is used 
+ *         : for modifying exiting configuration, adding new cameras or deleting 
+ *         : existing ones. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "UIConfigCamViewController.h"
 #import "UIEditCamDetailViewController.h"
@@ -36,7 +48,8 @@
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	if([fetchedObjects count] == 0)
 	{
@@ -76,7 +89,8 @@
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjectsDC = [contextDefaultCam executeFetchRequest:fetchRequest 
+                                                                 error:&error];
 	
 	if([fetchedObjectsDC count] == 0) {
 		NSLog(@"DefaultCamera Empty in EditCam : Save: Add Cam : Default Cam set to -1");
@@ -107,7 +121,8 @@
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView setAnimationDuration:0.75];
 	[self.navigationController pushViewController:viewctr animated:NO];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight 
+                           forView:self.navigationController.view cache:NO];
 	[UIView commitAnimations];
 	
 	//[self.navigationController pushViewController:viewctr animated:YES];
@@ -180,30 +195,6 @@
 	[super viewWillAppear:animated];
 	[camList reloadData];
 }
-
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 
 #pragma mark -
 #pragma mark Table view data source
@@ -299,51 +290,6 @@
 	return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-- (void)saveCredentials:(id)sender
-{
-    
-}
-
 #pragma mark -
 #pragma mark Table view delegate
 
@@ -367,7 +313,8 @@
 	[fetchRequest setEntity:entity];
 	[fetchRequest setReturnsObjectsAsFaults:NO];
 	
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest 
+                                                     error:&error];
 	
 	#ifdef DEBUG
 	NSLog(@"UIConfigCamViewController: 	didSelectRowAtIndexPath Editinfocameradetals count = %d %@",

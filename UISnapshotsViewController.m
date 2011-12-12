@@ -1,10 +1,22 @@
-//
-//  UIViewSnapshotsViewController.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/10/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Snapshots View
+ * Function: Table view with a list of all the snapshots taken. It allow the 
+ *         : user to select and view single image which they can delete. It 
+ *         : also supports slide show. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "UISnapshotsViewController.h"
 #import "UISnapImageViewController.h"

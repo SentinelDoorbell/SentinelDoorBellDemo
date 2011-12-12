@@ -1,10 +1,22 @@
-//
-//  ConfigAccess.m
-//  Sentinel
-//
-//  Created by SentinelTeam on 11/12/11.
-//  Copyright 2011 Self. All rights reserved.
-//
+/*
+ * Copyright 2011 SentinelTeam. All rights reserved.
+ *
+ * Title   : Configuration Access
+ * Function: This is a singleton object that is shared by all the components in 
+ *         : the application. It reads xml file which has the configurations for
+ *         : camera models supported by the app. (Implementation)
+ *
+ * Modifications
+ * 
+ * Date   : December 2011
+ * Change : New file
+ * Author : SentinelTeam
+ *
+ * Date   :
+ * Change :
+ * Author :
+ *
+ */
 
 #import "ConfigAccess.h"
 
